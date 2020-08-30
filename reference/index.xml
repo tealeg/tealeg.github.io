@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reference on Geoffrey J. Teale</title>
+    <link>https://tealeg.github.io/reference/</link>
+    <description>Recent content in Reference on Geoffrey J. Teale</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 16 May 2019 11:54:48 +0200</lastBuildDate>
+    
+	<atom:link href="https://tealeg.github.io/reference/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Previous Employers</title>
+      <link>https://tealeg.github.io/reference/previous-employers/</link>
+      <pubDate>Thu, 16 May 2019 11:54:48 +0200</pubDate>
+      
+      <guid>https://tealeg.github.io/reference/previous-employers/</guid>
+      <description>Prior to my current role at Talanx (HDI Systems AG), I have worked in a number of companies, in varied roles, and worked breifly as freelance consultant. My previous employers were:
+ Heetch &amp;ndash; Staff Engineer and Lead for Developer Care Avocet &amp;ndash; Backend Software Engineer Canonical &amp;ndash; Software Engineer, Cloud Dev-Ops (Landscape and OpenSack Autopilot) Elsevier Germany &amp;ndash; Technical Product Manager / Architect Cmed Technology &amp;ndash; Director of Technical Development Thomson Reuters &amp;ndash; Technical Consultant Rentokil Initial &amp;ndash; Application Programmer  Along the way I&amp;rsquo;ve also earned money as a photographer, guitarist, at Sainsbury&amp;rsquo;s in Canterbury, and in Dungness B nuclear powerstation.</description>
+    </item>
+    
+    <item>
+      <title>Languages and Platforms</title>
+      <link>https://tealeg.github.io/reference/tech/languages-and-platforms/</link>
+      <pubDate>Thu, 16 May 2019 03:12:10 +0200</pubDate>
+      
+      <guid>https://tealeg.github.io/reference/tech/languages-and-platforms/</guid>
+      <description>This page exists mainly to satisfy some deep psychological desire to express everything as lists (I blame LISP) Languages During my life I&amp;rsquo;ve developed in a large number of programming languages. I&amp;rsquo;ll attempt to summarise here:
+   Language Period of use Context     AMOS 1990-1995 Hobby   AmigaBASIC 1989-1995 Hobby   BBC BASIC 1983-1988 Academic   C++ 1989-2001 Academic / Commercial   C 1989-Current Academic / Commercial   Clojure 2007-2011 Commercial / Research   Common Lisp 1997-2010 Academic / Research   Cue 2020-Current Commercial   Erlang 2008-2011 Commercial / Research   Go 2009-Current Commercial / Research   IBM JCL 1998-2000 Commercial   IBM RPG 1998-2000 Commercial   Java 1999-2008 Commercial   Javascript / ECMAScript 1995-Current Academic / Commercial   Microsoft Visual BASIC 4,5 and 6 1998-2000 Commercial   Motorola 68000 Assembly 1989-1995 Hobby   PHP 2011 Commercial   Progress 4GL 1999-2000 Commercial   Prolog 1998 Academic   Python 1999-Current Commercial / Research   Racket 2010-Current Research   Ruby 2000-2003 Commercial   Scheme 1997-Current Academic / Research   Sinclair BASIC 1983-1989 Hobby   Sun UltraSparc Assembly 2000-2008 Hobby   x86_64 Assembly 2008-Current Hobby   XSLT 1999-2017 Commercial    Operating Systems I&amp;rsquo;ve developed software for a range of operating systems:</description>
+    </item>
+    
+    <item>
+      <title>Open Source</title>
+      <link>https://tealeg.github.io/reference/tech/open-source/</link>
+      <pubDate>Thu, 16 May 2019 02:35:08 +0200</pubDate>
+      
+      <guid>https://tealeg.github.io/reference/tech/open-source/</guid>
+      <description>Here is a summary of some of the open source projects I&amp;rsquo;ve either authored or contributed to.
+Go    Title Description Contribution     apexorc Output Apex log messages to ORC files Author   apexovernsq an NSQ bridge for log entries from Apex log Author   callstack find out what called a given function in the current callstack Author   confita load configuration in cascade from multiple backends into a struct Contributor   felice opinionated Kafka library Contributor   idgen bulk UUID generator Author   regula business rules engine Contributor   stdlogtoapex bridge Go&amp;rsquo;s log packge to Apex log Author   xlsx read and write Microsoft XLSX files Author    Emacs modes    Title Description Contribution     YUI mode emacs minor mode to properly indent YUI Javascript files Author    Drivers    Title Description Contribution     Brother P-Touch 2420PC CUPS driver for the Brother P-Touch 2420PC label printer.</description>
+    </item>
+    
+  </channel>
+</rss>

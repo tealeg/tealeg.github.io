@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>h.264 on Geoffrey J. Teale</title>
+    <link>https://tealeg.github.io/tags/h.264/</link>
+    <description>Recent content in h.264 on Geoffrey J. Teale</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 15 May 2019 15:41:30 +0200</lastBuildDate>
+    
+	<atom:link href="https://tealeg.github.io/tags/h.264/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Enabling H.264 playback in Firefox on Intel&#39;s Clearlinux</title>
+      <link>https://tealeg.github.io/blog/tech/clearlinux/h264-firefox-clearlinux/</link>
+      <pubDate>Wed, 15 May 2019 15:41:30 +0200</pubDate>
+      
+      <guid>https://tealeg.github.io/blog/tech/clearlinux/h264-firefox-clearlinux/</guid>
+      <description>In common with most Linux distros, Intel&amp;rsquo;s ClearLinux doesn&amp;rsquo;t ship H.264 decoding by default. Given the novel nature of ClearLinux there isn&amp;rsquo;t a nice off the shelf solution to this yet, so we have to use a workaround. I&amp;rsquo;ll try and find a better way to achieve this, but for now this will get H.264 video working in YouTube / Twitter etc, for now:
+wget http://ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2 tar xf ffmpeg-snapshot.tar.tz2 cd ffmpeg-snapshot .</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>avocet on Geoffrey J. Teale</title>
+    <link>https://tealeg.github.io/tags/avocet/</link>
+    <description>Recent content in avocet on Geoffrey J. Teale</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 15 May 2019 15:57:18 +0200</lastBuildDate>
+    
+	<atom:link href="https://tealeg.github.io/tags/avocet/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Developer Care</title>
+      <link>https://tealeg.github.io/blog/tech/developer-care/</link>
+      <pubDate>Wed, 15 May 2019 15:57:18 +0200</pubDate>
+      
+      <guid>https://tealeg.github.io/blog/tech/developer-care/</guid>
+      <description>Those of you who know me may be aware that at the end of August 2018, I left my job at Avocet to join a new team at Heetch.
+The main allure of the role at Heetch was the chance to be part of a team deliberately set up to act as a catalyst for product developers. The concept under which we work is known as &amp;ldquo;Developer Care&amp;rdquo;, and back in November I wrote a fairly extensive blog post for Heetch about what that means and how it came to be.</description>
+    </item>
+    
+  </channel>
+</rss>
