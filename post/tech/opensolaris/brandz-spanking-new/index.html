@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Brandz spanking new</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Playfair Display', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: teal;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://www.teale.de/css/main.css">
+
+
+ <link rel="stylesheet" href="https://www.teale.de/css/tealeg.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair%20Display">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scheme.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.96.0" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Brandz spanking new</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/reference/">Reference</a></li>
+                            
+                        </ul>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>Brandz spanking new</h2>
+        <h5>Fri May 16 2008 21:42:00 CEST</h5>
+        
+<a href="https://www.teale.de/tags/open_solaris"><kbd class="item-tag">open_solaris</kbd></a>
+
+<a href="https://www.teale.de/tags/unix"><kbd class="item-tag">unix</kbd></a>
+
+<a href="https://www.teale.de/tags/brandz"><kbd class="item-tag">brandz</kbd></a>
+
+<a href="https://www.teale.de/tags/containers"><kbd class="item-tag">containers</kbd></a>
+
+<a href="https://www.teale.de/tags/networking"><kbd class="item-tag">networking</kbd></a>
+
+<a href="https://www.teale.de/tags/vm"><kbd class="item-tag">vm</kbd></a>
+
+<a href="https://www.teale.de/tags/chroot"><kbd class="item-tag">chroot</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content"><h2 id="into-the-solaris">Into the Solaris</h2>
+<p>So, long time no Solaris talk.</p>
+<p>I&rsquo;ve not been sleeping well this last couple of weeks (ironically this seems to have a lot to do with exhausting myself during my recent trip to England), but that inevitably leads to lots of mucking around with computers in the wee hours of the morning.</p>
+<h2 id="the-need-for-containers">The need for containers</h2>
+<p>So OpenSolaris 2008.05 is on my laptop right now, and it&rsquo;s a bit of surprise to find it there as I am trying to hack on some code that is destined to run on Linux. The crux of the biscuit is this: I need a contained environment to muck around with different Python implementations, it needs to be Linux and it needs to have network access from my laptop. Previously I&rsquo;d been trying to achieve this on Linux using:</p>
+<ul>
+<li>Plain old chroots</li>
+<li>VMWare</li>
+<li>VirtualBox</li>
+</ul>
+<p>All of the above turned out to be failures.</p>
+<h2 id="why-not-chroot">Why not <code>chroot</code>?</h2>
+<p>Chroots just don&rsquo;t cut it (the interaction between the chroot and the host is too strong - debootstrapping tends to lead to all sorts of issues with network services (sorry dbus didn&rsquo;t install correctly because it was already running..?!?!).</p>
+<h2 id="why-not-a-vm">Why not a <code>vm</code>?</h2>
+<p>VM&rsquo;s seem like an obvious solution. The problem? My network access is predominantly wireless. Wireless and network bridging don&rsquo;t play well in Linux - you can do it, but it tends to screw up in all sorts of odd ways when the wireless card renegotiates with the AP. This isn&rsquo;t helped by the fact that my laptops wireless card (an Intel 4965ABG) is fairly new and the linux drivers are only just stabilising (Kudos to Ubuntu Hardy Heron for being the only Linux distro I&rsquo;ve tried that made this card &ldquo;just work&rdquo; out of the box).</p>
+<p>Another factor is that same wireless card is also the only physical interface available to bind a tun to for my OpenVPN connection to my clients network. The reality of working with this setup for bridged interfaces is a series of hacks and, unfortunately, rebooting every 40 minutes or so. So I have made do with NAT&rsquo;d and local networking in VMWare and switched between them based on my networking needs. Frustrating doesn&rsquo;t even begin to capture it!</p>
+<p>Of course, I could plug in some cat 5 to the router, but the router is hidden in a cabinet in the front room, no where near a sensible location for doing work, so I&rsquo;ve been living with NAT&rsquo;d VM&rsquo;s for a couple of months now.</p>
+<h2 id="enter-brandz">Enter brandz</h2>
+<p>So where does OpenSolaris come into all of this? Well, I&rsquo;ve been tracking OpenSolaris for a long time now - I&rsquo;ve used Solaris several times over the past decade, but it&rsquo;s always been a fringe thing for me, Linux has always given me more bang for less effort. OpenSolaris 2008.05 is a pretty polished distribution and it&rsquo;s starting to address some of the issues. I don&rsquo;t want to write about that here, but one key thing is that the re-emergance of the iwk wireless driver and the immature, but suprisingly reliable Network Auto Magic Daemon (nwam - a sort of NetworkManager, sans braindamage, for OpenSolaris) combine to make my goddamn tricky wireless card work out of the box.</p>
+<p>OK, that&rsquo;s nice, but what does that give me that Hardy Heron doesn&rsquo;t? Well, whilst OpenSolaris may only just be maturing into an operating system that a sane human being would want to use in the day to day, it does have some seriously powerful and reliable toolsets built in for large scale (if I ever say &ldquo;Enterprise&rdquo; just shoot me..) computing: ZFS, Containers/Zones and by extension Branz - a special kind of zone that can masquerade as something else, i.e. Linux.</p>
+<p>So I have set up a lx branded solaris zone on my laptop. What does this give me, well, it gives me something that&rsquo;s more isolated than a chroot, but more lightweight than a VM. It looks like Linux (like CentOS specifically). It has it&rsquo;s own IP Address on the wireless network, bound to the same card as the global zone (the host) and both the global zone and the lx zone can see each other as first class peers on the same network as well as talking to the outside world. It has it&rsquo;s own ZFS filesystem (linux with ZFS? w00t!). I can choose to access that filesystem from the global zone (just like a chroot), which saves some tedious mucking around with network file transfer protocols to relatively simple things (security is not my prime concern in this case). I believe I can also dtrace this environment.. a unexpected benefit.</p>
+<h2 id="how-did-i-do-this">How did I do this?</h2>
+<p>So what hoops did I have to jump through to set up such a marvel? Here&rsquo;s the transcript:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>-bash-2.05b# zonecfg -z timaeuszone1
+</span></span><span style="display:flex;"><span>zonecfg:timaeuszone1&gt; create -t SUNWlx
+</span></span><span style="display:flex;"><span>zonecfg:timaeuszone1&gt; set zonepath<span style="color:#f92672">=</span>/export/timaeuszone1
+</span></span><span style="display:flex;"><span>zonecfg:timaeuszone1&gt; add net
+</span></span><span style="display:flex;"><span>zonecfg:timaeuszone1:net&gt; set address<span style="color:#f92672">=</span>192.168.0.3/24
+</span></span><span style="display:flex;"><span>zonecfg:timaeuszone1:net&gt; set physical<span style="color:#f92672">=</span>iwk0
+</span></span><span style="display:flex;"><span>zonecfg:timaeuszone1:net&gt; end
+</span></span><span style="display:flex;"><span>zonecfg:timaeuszone1&gt; commit
+</span></span><span style="display:flex;"><span>zonecfg:timaeuszone1&gt; exit
+</span></span><span style="display:flex;"><span>-bash-2.05b# zoneadm -z timaeuszone1 install -d /export/home/gteale/Desktop/Centos_fs_image.tar.bz2
+</span></span><span style="display:flex;"><span>-bash-2.05b# zoneadm -z timaeuszone1 boot
+</span></span><span style="display:flex;"><span>-bash-2.05b# zlogin timaeuszone1
+</span></span></code></pre></div><p>Not too shabby! Now let the hacking commence.</p>
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/mac/mac-foo/">Mac foo I learned today</a></h4>
+    <h5>Fri Mar 27 2009 03:37:00 &#43;0200</h5>
+    
+<a href="https://www.teale.de/tags/apple"><kbd class="item-tag">apple</kbd></a>
+
+<a href="https://www.teale.de/tags/macosx"><kbd class="item-tag">macosx</kbd></a>
+
+<a href="https://www.teale.de/tags/unix"><kbd class="item-tag">unix</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/emacs/truetype-in-emacs/">TrueType fonts in GNU Emacs</a></h4>
+    <h5>Thu Jul 3 2008 14:32:00 CEST</h5>
+    
+<a href="https://www.teale.de/tags/emacs"><kbd class="item-tag">emacs</kbd></a>
+
+<a href="https://www.teale.de/tags/fonts"><kbd class="item-tag">fonts</kbd></a>
+
+<a href="https://www.teale.de/tags/truetype"><kbd class="item-tag">truetype</kbd></a>
+
+<a href="https://www.teale.de/tags/linux"><kbd class="item-tag">linux</kbd></a>
+
+<a href="https://www.teale.de/tags/unix"><kbd class="item-tag">unix</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/opensolaris/openvpn-and-solaris/">OpenVPN and Solaris</a></h4>
+    <h5>Fri May 16 2008 23:07:00 CEST</h5>
+    
+<a href="https://www.teale.de/tags/open_solaris"><kbd class="item-tag">open_solaris</kbd></a>
+
+<a href="https://www.teale.de/tags/unix"><kbd class="item-tag">unix</kbd></a>
+
+<a href="https://www.teale.de/tags/vpn"><kbd class="item-tag">vpn</kbd></a>
+
+<a href="https://www.teale.de/tags/openvpn"><kbd class="item-tag">openvpn</kbd></a>
+
+<a href="https://www.teale.de/tags/networking"><kbd class="item-tag">networking</kbd></a>
+
+
+
+</div>
+ 
+    
+
+    
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">Copyright © Geoffrey J. Teale. All rights reserved. Powered by <a href='https://gohugo.io'>Hugo</a> and <a href='https://github.com/calintat/minimal'>Minimal</a>.</p>
+        </footer>
+
+        
+
+        
+    </body>
+
+</html>
+

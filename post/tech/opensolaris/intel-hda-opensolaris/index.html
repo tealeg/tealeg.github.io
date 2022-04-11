@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Intel HDA working under OpenSolaris</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Playfair Display', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: teal;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://www.teale.de/css/main.css">
+
+
+ <link rel="stylesheet" href="https://www.teale.de/css/tealeg.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair%20Display">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scheme.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.96.0" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Intel HDA working under OpenSolaris</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/reference/">Reference</a></li>
+                            
+                        </ul>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>Intel HDA working under OpenSolaris</h2>
+        <h5>Sun May 6 2007 12:26:00 &#43;0100</h5>
+        
+<a href="https://www.teale.de/tags/tech"><kbd class="item-tag">tech</kbd></a>
+
+<a href="https://www.teale.de/tags/hardware"><kbd class="item-tag">hardware</kbd></a>
+
+<a href="https://www.teale.de/tags/open_solaris"><kbd class="item-tag">open_solaris</kbd></a>
+
+<a href="https://www.teale.de/tags/sound"><kbd class="item-tag">sound</kbd></a>
+
+<a href="https://www.teale.de/tags/unix"><kbd class="item-tag">unix</kbd></a>
+
+<a href="https://www.teale.de/tags/intel"><kbd class="item-tag">intel</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content"><p>Another minor victory in my quest to get more familiar with OpenSolaris. I&rsquo;ve upgraded to Nexenta unstable, and I noticed a package called sunwaudiohd being installed. That looked like a promising solution to the lack of audio on my OpenSolaris machine - the Intel HDA soundcard has never worked under any version I&rsquo;ve used.</p>
+<p>Sadly, the mere presence of this driver didn&rsquo;t seem to fix things (it&rsquo;s never that simple). A little research confirmed that it was the right driver, but that this bug had been discovered. The workaround noted:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>update_drv -a -i <span style="color:#e6db74">&#39;&#34;pci8086,27d8&#34;&#39;</span> audiohd
+</span></span></code></pre></div><p>&hellip;seemed to do the trick and now I have excellent sound coming from my machine again.</p>
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/software-engineers-dont-scale/">Software Engineers Don&#39;t Scale</a></h4>
+    <h5>Thu Jul 4 2019 15:57:18 CEST</h5>
+    
+<a href="https://www.teale.de/tags/tech"><kbd class="item-tag">tech</kbd></a>
+
+<a href="https://www.teale.de/tags/management"><kbd class="item-tag">management</kbd></a>
+
+<a href="https://www.teale.de/tags/organisation"><kbd class="item-tag">organisation</kbd></a>
+
+<a href="https://www.teale.de/tags/teams"><kbd class="item-tag">teams</kbd></a>
+
+<a href="https://www.teale.de/tags/developer-care"><kbd class="item-tag">developer care</kbd></a>
+
+<a href="https://www.teale.de/tags/heetch"><kbd class="item-tag">heetch</kbd></a>
+
+<a href="https://www.teale.de/tags/scaling"><kbd class="item-tag">scaling</kbd></a>
+
+<a href="https://www.teale.de/tags/software"><kbd class="item-tag">software</kbd></a>
+
+<a href="https://www.teale.de/tags/engineering"><kbd class="item-tag">engineering</kbd></a>
+
+<a href="https://www.teale.de/tags/commenting"><kbd class="item-tag">commenting</kbd></a>
+
+<a href="https://www.teale.de/tags/documentation"><kbd class="item-tag">documentation</kbd></a>
+
+<a href="https://www.teale.de/tags/efficiency"><kbd class="item-tag">efficiency</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/developer-care/">Developer Care</a></h4>
+    <h5>Wed May 15 2019 15:57:18 CEST</h5>
+    
+<a href="https://www.teale.de/tags/tech"><kbd class="item-tag">tech</kbd></a>
+
+<a href="https://www.teale.de/tags/management"><kbd class="item-tag">management</kbd></a>
+
+<a href="https://www.teale.de/tags/organisation"><kbd class="item-tag">organisation</kbd></a>
+
+<a href="https://www.teale.de/tags/teams"><kbd class="item-tag">teams</kbd></a>
+
+<a href="https://www.teale.de/tags/developer-care"><kbd class="item-tag">developer care</kbd></a>
+
+<a href="https://www.teale.de/tags/heetch"><kbd class="item-tag">heetch</kbd></a>
+
+<a href="https://www.teale.de/tags/avocet"><kbd class="item-tag">avocet</kbd></a>
+
+<a href="https://www.teale.de/tags/devx"><kbd class="item-tag">devx</kbd></a>
+
+<a href="https://www.teale.de/tags/dx"><kbd class="item-tag">dx</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/mac/mac-foo/">Mac foo I learned today</a></h4>
+    <h5>Fri Mar 27 2009 03:37:00 &#43;0200</h5>
+    
+<a href="https://www.teale.de/tags/apple"><kbd class="item-tag">apple</kbd></a>
+
+<a href="https://www.teale.de/tags/macosx"><kbd class="item-tag">macosx</kbd></a>
+
+<a href="https://www.teale.de/tags/unix"><kbd class="item-tag">unix</kbd></a>
+
+
+
+</div>
+ 
+    
+
+    
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">Copyright © Geoffrey J. Teale. All rights reserved. Powered by <a href='https://gohugo.io'>Hugo</a> and <a href='https://github.com/calintat/minimal'>Minimal</a>.</p>
+        </footer>
+
+        
+
+        
+    </body>
+
+</html>
+

@@ -1,175 +1,1494 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Geoffrey J. Teale</title>
-    <link>https://tealeg.github.io/tags/</link>
-    <description>Recent content in Tags on Geoffrey J. Teale</description>
+    <title>Tags on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/</link>
+    <description>Recent content in Tags on The ol&#39; tealeg ruminates</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 04 Jul 2019 15:57:18 +0200</lastBuildDate>
-    
-	<atom:link href="https://tealeg.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 08 Apr 2022 12:49:00 +0200</lastBuildDate><atom:link href="https://www.teale.de/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>commenting</title>
-      <link>https://tealeg.github.io/tags/commenting/</link>
-      <pubDate>Thu, 04 Jul 2019 15:57:18 +0200</pubDate>
+      <title>book</title>
+      <link>https://www.teale.de/tags/book/</link>
+      <pubDate>Fri, 08 Apr 2022 12:49:00 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/tags/commenting/</guid>
+      <guid>https://www.teale.de/tags/book/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>developer care</title>
-      <link>https://tealeg.github.io/tags/developer-care/</link>
-      <pubDate>Thu, 04 Jul 2019 15:57:18 +0200</pubDate>
+      <title>canonical</title>
+      <link>https://www.teale.de/tags/canonical/</link>
+      <pubDate>Fri, 08 Apr 2022 12:49:00 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/tags/developer-care/</guid>
+      <guid>https://www.teale.de/tags/canonical/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>documentation</title>
-      <link>https://tealeg.github.io/tags/documentation/</link>
-      <pubDate>Thu, 04 Jul 2019 15:57:18 +0200</pubDate>
+      <title>developer_experience</title>
+      <link>https://www.teale.de/tags/developer_experience/</link>
+      <pubDate>Fri, 08 Apr 2022 12:49:00 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/tags/documentation/</guid>
+      <guid>https://www.teale.de/tags/developer_experience/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>efficiency</title>
-      <link>https://tealeg.github.io/tags/efficiency/</link>
-      <pubDate>Thu, 04 Jul 2019 15:57:18 +0200</pubDate>
+      <title>devx</title>
+      <link>https://www.teale.de/tags/devx/</link>
+      <pubDate>Fri, 08 Apr 2022 12:49:00 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/tags/efficiency/</guid>
+      <guid>https://www.teale.de/tags/devx/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>engineering</title>
-      <link>https://tealeg.github.io/tags/engineering/</link>
-      <pubDate>Thu, 04 Jul 2019 15:57:18 +0200</pubDate>
+      <title>dx</title>
+      <link>https://www.teale.de/tags/dx/</link>
+      <pubDate>Fri, 08 Apr 2022 12:49:00 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/tags/engineering/</guid>
+      <guid>https://www.teale.de/tags/dx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://www.teale.de/tags/go/</link>
+      <pubDate>Fri, 08 Apr 2022 12:49:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://www.teale.de/tags/golang/</link>
+      <pubDate>Fri, 08 Apr 2022 12:49:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>heetch</title>
-      <link>https://tealeg.github.io/tags/heetch/</link>
+      <link>https://www.teale.de/tags/heetch/</link>
+      <pubDate>Fri, 08 Apr 2022 12:49:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/heetch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kids</title>
+      <link>https://www.teale.de/tags/kids/</link>
+      <pubDate>Fri, 08 Apr 2022 12:49:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/kids/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>https://www.teale.de/tags/life/</link>
+      <pubDate>Fri, 08 Apr 2022 12:49:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>meta</title>
+      <link>https://www.teale.de/tags/meta/</link>
+      <pubDate>Fri, 08 Apr 2022 12:49:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/meta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>update</title>
+      <link>https://www.teale.de/tags/update/</link>
+      <pubDate>Fri, 08 Apr 2022 12:49:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/update/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>user_experience</title>
+      <link>https://www.teale.de/tags/user_experience/</link>
+      <pubDate>Fri, 08 Apr 2022 12:49:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/user_experience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ux</title>
+      <link>https://www.teale.de/tags/ux/</link>
+      <pubDate>Fri, 08 Apr 2022 12:49:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/ux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>commenting</title>
+      <link>https://www.teale.de/tags/commenting/</link>
       <pubDate>Thu, 04 Jul 2019 15:57:18 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/tags/heetch/</guid>
+      <guid>https://www.teale.de/tags/commenting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>developer care</title>
+      <link>https://www.teale.de/tags/developer-care/</link>
+      <pubDate>Thu, 04 Jul 2019 15:57:18 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/developer-care/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>documentation</title>
+      <link>https://www.teale.de/tags/documentation/</link>
+      <pubDate>Thu, 04 Jul 2019 15:57:18 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/documentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>efficiency</title>
+      <link>https://www.teale.de/tags/efficiency/</link>
+      <pubDate>Thu, 04 Jul 2019 15:57:18 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/efficiency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>engineering</title>
+      <link>https://www.teale.de/tags/engineering/</link>
+      <pubDate>Thu, 04 Jul 2019 15:57:18 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/engineering/</guid>
       <description></description>
     </item>
     
     <item>
       <title>management</title>
-      <link>https://tealeg.github.io/tags/management/</link>
+      <link>https://www.teale.de/tags/management/</link>
       <pubDate>Thu, 04 Jul 2019 15:57:18 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/tags/management/</guid>
+      <guid>https://www.teale.de/tags/management/</guid>
       <description></description>
     </item>
     
     <item>
       <title>organisation</title>
-      <link>https://tealeg.github.io/tags/organisation/</link>
+      <link>https://www.teale.de/tags/organisation/</link>
       <pubDate>Thu, 04 Jul 2019 15:57:18 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/tags/organisation/</guid>
+      <guid>https://www.teale.de/tags/organisation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>scaling</title>
-      <link>https://tealeg.github.io/tags/scaling/</link>
+      <link>https://www.teale.de/tags/scaling/</link>
       <pubDate>Thu, 04 Jul 2019 15:57:18 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/tags/scaling/</guid>
+      <guid>https://www.teale.de/tags/scaling/</guid>
       <description></description>
     </item>
     
     <item>
       <title>software</title>
-      <link>https://tealeg.github.io/tags/software/</link>
+      <link>https://www.teale.de/tags/software/</link>
       <pubDate>Thu, 04 Jul 2019 15:57:18 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/tags/software/</guid>
+      <guid>https://www.teale.de/tags/software/</guid>
       <description></description>
     </item>
     
     <item>
       <title>teams</title>
-      <link>https://tealeg.github.io/tags/teams/</link>
+      <link>https://www.teale.de/tags/teams/</link>
       <pubDate>Thu, 04 Jul 2019 15:57:18 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/tags/teams/</guid>
+      <guid>https://www.teale.de/tags/teams/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tech</title>
-      <link>https://tealeg.github.io/tags/tech/</link>
+      <link>https://www.teale.de/tags/tech/</link>
       <pubDate>Thu, 04 Jul 2019 15:57:18 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/tags/tech/</guid>
+      <guid>https://www.teale.de/tags/tech/</guid>
       <description></description>
     </item>
     
     <item>
       <title>clearlinux</title>
-      <link>https://tealeg.github.io/tags/clearlinux/</link>
+      <link>https://www.teale.de/tags/clearlinux/</link>
       <pubDate>Wed, 15 May 2019 16:25:21 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/tags/clearlinux/</guid>
+      <guid>https://www.teale.de/tags/clearlinux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>https://tealeg.github.io/tags/linux/</link>
+      <link>https://www.teale.de/tags/linux/</link>
       <pubDate>Wed, 15 May 2019 16:25:21 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/tags/linux/</guid>
+      <guid>https://www.teale.de/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mixin</title>
-      <link>https://tealeg.github.io/tags/mixin/</link>
+      <link>https://www.teale.de/tags/mixin/</link>
       <pubDate>Wed, 15 May 2019 16:25:21 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/tags/mixin/</guid>
+      <guid>https://www.teale.de/tags/mixin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>package-management</title>
-      <link>https://tealeg.github.io/tags/package-management/</link>
+      <link>https://www.teale.de/tags/package-management/</link>
       <pubDate>Wed, 15 May 2019 16:25:21 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/tags/package-management/</guid>
+      <guid>https://www.teale.de/tags/package-management/</guid>
       <description></description>
     </item>
     
     <item>
       <title>avocet</title>
-      <link>https://tealeg.github.io/tags/avocet/</link>
+      <link>https://www.teale.de/tags/avocet/</link>
       <pubDate>Wed, 15 May 2019 15:57:18 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/tags/avocet/</guid>
+      <guid>https://www.teale.de/tags/avocet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>h.264</title>
-      <link>https://tealeg.github.io/tags/h.264/</link>
+      <link>https://www.teale.de/tags/h.264/</link>
       <pubDate>Wed, 15 May 2019 15:41:30 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/tags/h.264/</guid>
+      <guid>https://www.teale.de/tags/h.264/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>excel</title>
+      <link>https://www.teale.de/tags/excel/</link>
+      <pubDate>Thu, 19 Aug 2010 04:53:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/excel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fods</title>
+      <link>https://www.teale.de/tags/fods/</link>
+      <pubDate>Thu, 19 Aug 2010 04:53:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/fods/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>libre_office</title>
+      <link>https://www.teale.de/tags/libre_office/</link>
+      <pubDate>Thu, 19 Aug 2010 04:53:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/libre_office/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>open_office</title>
+      <link>https://www.teale.de/tags/open_office/</link>
+      <pubDate>Thu, 19 Aug 2010 04:53:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/open_office/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spreadsheet</title>
+      <link>https://www.teale.de/tags/spreadsheet/</link>
+      <pubDate>Thu, 19 Aug 2010 04:53:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/spreadsheet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xml</title>
+      <link>https://www.teale.de/tags/xml/</link>
+      <pubDate>Thu, 19 Aug 2010 04:53:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/xml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xslt</title>
+      <link>https://www.teale.de/tags/xslt/</link>
+      <pubDate>Thu, 19 Aug 2010 04:53:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/xslt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>6x9</title>
+      <link>https://www.teale.de/tags/6x9/</link>
+      <pubDate>Mon, 05 Apr 2010 10:59:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/6x9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>agfa</title>
+      <link>https://www.teale.de/tags/agfa/</link>
+      <pubDate>Mon, 05 Apr 2010 10:59:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/agfa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>camera</title>
+      <link>https://www.teale.de/tags/camera/</link>
+      <pubDate>Mon, 05 Apr 2010 10:59:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/camera/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>diy</title>
+      <link>https://www.teale.de/tags/diy/</link>
+      <pubDate>Mon, 05 Apr 2010 10:59:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/diy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>greyhound</title>
+      <link>https://www.teale.de/tags/greyhound/</link>
+      <pubDate>Mon, 05 Apr 2010 10:59:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/greyhound/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>medium_format</title>
+      <link>https://www.teale.de/tags/medium_format/</link>
+      <pubDate>Mon, 05 Apr 2010 10:59:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/medium_format/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>repair</title>
+      <link>https://www.teale.de/tags/repair/</link>
+      <pubDate>Mon, 05 Apr 2010 10:59:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/repair/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vintage</title>
+      <link>https://www.teale.de/tags/vintage/</link>
+      <pubDate>Mon, 05 Apr 2010 10:59:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/vintage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bicycle</title>
+      <link>https://www.teale.de/tags/bicycle/</link>
+      <pubDate>Mon, 05 Apr 2010 07:21:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/bicycle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>maintenance</title>
+      <link>https://www.teale.de/tags/maintenance/</link>
+      <pubDate>Mon, 05 Apr 2010 07:21:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/maintenance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>overwork</title>
+      <link>https://www.teale.de/tags/overwork/</link>
+      <pubDate>Tue, 23 Mar 2010 13:04:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/overwork/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shimano</title>
+      <link>https://www.teale.de/tags/shimano/</link>
+      <pubDate>Tue, 23 Mar 2010 13:04:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/shimano/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stress</title>
+      <link>https://www.teale.de/tags/stress/</link>
+      <pubDate>Tue, 23 Mar 2010 13:04:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/stress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>munich</title>
+      <link>https://www.teale.de/tags/munich/</link>
+      <pubDate>Sun, 21 Mar 2010 10:42:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/munich/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vandalism</title>
+      <link>https://www.teale.de/tags/vandalism/</link>
+      <pubDate>Sun, 21 Mar 2010 10:42:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/vandalism/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>35mm</title>
+      <link>https://www.teale.de/tags/35mm/</link>
+      <pubDate>Tue, 02 Mar 2010 13:29:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/35mm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>analogue</title>
+      <link>https://www.teale.de/tags/analogue/</link>
+      <pubDate>Tue, 02 Mar 2010 13:29:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/analogue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>clojure</title>
+      <link>https://www.teale.de/tags/clojure/</link>
+      <pubDate>Sun, 10 Jan 2010 00:31:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/clojure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emacs</title>
+      <link>https://www.teale.de/tags/emacs/</link>
+      <pubDate>Sun, 10 Jan 2010 00:31:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flash</title>
+      <link>https://www.teale.de/tags/flash/</link>
+      <pubDate>Sun, 10 Jan 2010 00:31:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/flash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>frontend</title>
+      <link>https://www.teale.de/tags/frontend/</link>
+      <pubDate>Sun, 10 Jan 2010 00:31:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/frontend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>google_gears</title>
+      <link>https://www.teale.de/tags/google_gears/</link>
+      <pubDate>Sun, 10 Jan 2010 00:31:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/google_gears/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://www.teale.de/tags/html/</link>
+      <pubDate>Sun, 10 Jan 2010 00:31:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nxml</title>
+      <link>https://www.teale.de/tags/nxml/</link>
+      <pubDate>Sun, 10 Jan 2010 00:31:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/nxml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>apple</title>
+      <link>https://www.teale.de/tags/apple/</link>
+      <pubDate>Fri, 27 Mar 2009 03:37:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/apple/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>macosx</title>
+      <link>https://www.teale.de/tags/macosx/</link>
+      <pubDate>Fri, 27 Mar 2009 03:37:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/macosx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unix</title>
+      <link>https://www.teale.de/tags/unix/</link>
+      <pubDate>Fri, 27 Mar 2009 03:37:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/unix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>core_data</title>
+      <link>https://www.teale.de/tags/core_data/</link>
+      <pubDate>Tue, 13 Jan 2009 13:43:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/core_data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lisp</title>
+      <link>https://www.teale.de/tags/lisp/</link>
+      <pubDate>Tue, 13 Jan 2009 13:43:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/lisp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nicole</title>
+      <link>https://www.teale.de/tags/nicole/</link>
+      <pubDate>Tue, 13 Jan 2009 13:43:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/nicole/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ant</title>
+      <link>https://www.teale.de/tags/ant/</link>
+      <pubDate>Sun, 30 Nov 2008 03:00:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/ant/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aot</title>
+      <link>https://www.teale.de/tags/aot/</link>
+      <pubDate>Sun, 30 Nov 2008 03:00:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/aot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>https://www.teale.de/tags/java/</link>
+      <pubDate>Sun, 30 Nov 2008 03:00:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lancet</title>
+      <link>https://www.teale.de/tags/lancet/</link>
+      <pubDate>Sun, 30 Nov 2008 03:00:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/lancet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>recursion</title>
+      <link>https://www.teale.de/tags/recursion/</link>
+      <pubDate>Sun, 30 Nov 2008 00:52:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/recursion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>qt</title>
+      <link>https://www.teale.de/tags/qt/</link>
+      <pubDate>Sun, 09 Nov 2008 11:29:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/qt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>qt_designer</title>
+      <link>https://www.teale.de/tags/qt_designer/</link>
+      <pubDate>Sun, 09 Nov 2008 11:29:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/qt_designer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>qtjambi</title>
+      <link>https://www.teale.de/tags/qtjambi/</link>
+      <pubDate>Sun, 09 Nov 2008 11:29:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/qtjambi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>slots</title>
+      <link>https://www.teale.de/tags/slots/</link>
+      <pubDate>Sun, 09 Nov 2008 11:29:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/slots/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scheme</title>
+      <link>https://www.teale.de/tags/scheme/</link>
+      <pubDate>Sat, 08 Nov 2008 06:54:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/scheme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sqlite</title>
+      <link>https://www.teale.de/tags/sqlite/</link>
+      <pubDate>Sat, 08 Nov 2008 06:54:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/sqlite/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>swing</title>
+      <link>https://www.teale.de/tags/swing/</link>
+      <pubDate>Sat, 08 Nov 2008 06:54:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/swing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>arch_linux</title>
+      <link>https://www.teale.de/tags/arch_linux/</link>
+      <pubDate>Tue, 26 Aug 2008 01:18:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/arch_linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ikarus</title>
+      <link>https://www.teale.de/tags/ikarus/</link>
+      <pubDate>Tue, 26 Aug 2008 01:18:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/ikarus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>r6rs</title>
+      <link>https://www.teale.de/tags/r6rs/</link>
+      <pubDate>Tue, 26 Aug 2008 01:18:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/r6rs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ypsilon</title>
+      <link>https://www.teale.de/tags/ypsilon/</link>
+      <pubDate>Tue, 26 Aug 2008 01:18:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/ypsilon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bill_gates</title>
+      <link>https://www.teale.de/tags/bill_gates/</link>
+      <pubDate>Fri, 04 Jul 2008 00:56:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/bill_gates/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gates_foundation</title>
+      <link>https://www.teale.de/tags/gates_foundation/</link>
+      <pubDate>Fri, 04 Jul 2008 00:56:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/gates_foundation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>microsoft</title>
+      <link>https://www.teale.de/tags/microsoft/</link>
+      <pubDate>Fri, 04 Jul 2008 00:56:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/microsoft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>richard_stallman</title>
+      <link>https://www.teale.de/tags/richard_stallman/</link>
+      <pubDate>Fri, 04 Jul 2008 00:56:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/richard_stallman/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fonts</title>
+      <link>https://www.teale.de/tags/fonts/</link>
+      <pubDate>Thu, 03 Jul 2008 14:32:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/fonts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>truetype</title>
+      <link>https://www.teale.de/tags/truetype/</link>
+      <pubDate>Thu, 03 Jul 2008 14:32:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/truetype/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>apps</title>
+      <link>https://www.teale.de/tags/apps/</link>
+      <pubDate>Wed, 02 Jul 2008 01:13:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/apps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>photography</title>
+      <link>https://www.teale.de/tags/photography/</link>
+      <pubDate>Wed, 02 Jul 2008 01:13:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/photography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>smart_phones</title>
+      <link>https://www.teale.de/tags/smart_phones/</link>
+      <pubDate>Wed, 02 Jul 2008 01:13:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/smart_phones/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>toolwood</title>
+      <link>https://www.teale.de/tags/toolwood/</link>
+      <pubDate>Wed, 02 Jul 2008 01:13:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/toolwood/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aphids</title>
+      <link>https://www.teale.de/tags/aphids/</link>
+      <pubDate>Tue, 24 Jun 2008 09:04:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/aphids/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>insects</title>
+      <link>https://www.teale.de/tags/insects/</link>
+      <pubDate>Tue, 24 Jun 2008 09:04:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/insects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ladybird</title>
+      <link>https://www.teale.de/tags/ladybird/</link>
+      <pubDate>Tue, 24 Jun 2008 09:04:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/ladybird/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nature</title>
+      <link>https://www.teale.de/tags/nature/</link>
+      <pubDate>Tue, 24 Jun 2008 09:04:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/nature/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plants</title>
+      <link>https://www.teale.de/tags/plants/</link>
+      <pubDate>Tue, 24 Jun 2008 09:04:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/plants/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>beer</title>
+      <link>https://www.teale.de/tags/beer/</link>
+      <pubDate>Mon, 23 Jun 2008 14:13:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/beer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>beer_garden</title>
+      <link>https://www.teale.de/tags/beer_garden/</link>
+      <pubDate>Mon, 23 Jun 2008 14:13:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/beer_garden/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>euro_2008</title>
+      <link>https://www.teale.de/tags/euro_2008/</link>
+      <pubDate>Mon, 23 Jun 2008 14:13:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/euro_2008/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>football</title>
+      <link>https://www.teale.de/tags/football/</link>
+      <pubDate>Mon, 23 Jun 2008 14:13:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/football/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>germany</title>
+      <link>https://www.teale.de/tags/germany/</link>
+      <pubDate>Mon, 23 Jun 2008 14:13:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/germany/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>funny</title>
+      <link>https://www.teale.de/tags/funny/</link>
+      <pubDate>Mon, 26 May 2008 23:01:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/funny/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>richard_dawkins</title>
+      <link>https://www.teale.de/tags/richard_dawkins/</link>
+      <pubDate>Mon, 26 May 2008 23:01:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/richard_dawkins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>science</title>
+      <link>https://www.teale.de/tags/science/</link>
+      <pubDate>Mon, 26 May 2008 23:01:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>video</title>
+      <link>https://www.teale.de/tags/video/</link>
+      <pubDate>Mon, 26 May 2008 23:01:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/video/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>networking</title>
+      <link>https://www.teale.de/tags/networking/</link>
+      <pubDate>Fri, 16 May 2008 23:07:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/networking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>open_solaris</title>
+      <link>https://www.teale.de/tags/open_solaris/</link>
+      <pubDate>Fri, 16 May 2008 23:07:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/open_solaris/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>openvpn</title>
+      <link>https://www.teale.de/tags/openvpn/</link>
+      <pubDate>Fri, 16 May 2008 23:07:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/openvpn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vpn</title>
+      <link>https://www.teale.de/tags/vpn/</link>
+      <pubDate>Fri, 16 May 2008 23:07:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/vpn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>brandz</title>
+      <link>https://www.teale.de/tags/brandz/</link>
+      <pubDate>Fri, 16 May 2008 21:42:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/brandz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chroot</title>
+      <link>https://www.teale.de/tags/chroot/</link>
+      <pubDate>Fri, 16 May 2008 21:42:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/chroot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>containers</title>
+      <link>https://www.teale.de/tags/containers/</link>
+      <pubDate>Fri, 16 May 2008 21:42:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/containers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vm</title>
+      <link>https://www.teale.de/tags/vm/</link>
+      <pubDate>Fri, 16 May 2008 21:42:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/vm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>africa</title>
+      <link>https://www.teale.de/tags/africa/</link>
+      <pubDate>Wed, 16 Apr 2008 03:50:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/africa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sustainability</title>
+      <link>https://www.teale.de/tags/sustainability/</link>
+      <pubDate>Wed, 16 Apr 2008 03:50:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/sustainability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tardigrade</title>
+      <link>https://www.teale.de/tags/tardigrade/</link>
+      <pubDate>Wed, 16 Apr 2008 03:50:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/tardigrade/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oktoberfest</title>
+      <link>https://www.teale.de/tags/oktoberfest/</link>
+      <pubDate>Sun, 13 Apr 2008 12:11:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/oktoberfest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>birthday</title>
+      <link>https://www.teale.de/tags/birthday/</link>
+      <pubDate>Fri, 22 Feb 2008 08:16:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/birthday/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cmed</title>
+      <link>https://www.teale.de/tags/cmed/</link>
+      <pubDate>Tue, 01 Jan 2008 15:17:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/cmed/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>olympus</title>
+      <link>https://www.teale.de/tags/olympus/</link>
+      <pubDate>Tue, 01 Jan 2008 15:17:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/olympus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://www.teale.de/tags/python/</link>
+      <pubDate>Tue, 01 Jan 2008 15:17:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ruby</title>
+      <link>https://www.teale.de/tags/ruby/</link>
+      <pubDate>Tue, 01 Jan 2008 15:17:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>creative_commons</title>
+      <link>https://www.teale.de/tags/creative_commons/</link>
+      <pubDate>Sun, 23 Dec 2007 08:33:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/creative_commons/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flickr</title>
+      <link>https://www.teale.de/tags/flickr/</link>
+      <pubDate>Sun, 23 Dec 2007 08:33:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/flickr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>legal</title>
+      <link>https://www.teale.de/tags/legal/</link>
+      <pubDate>Sun, 23 Dec 2007 08:33:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/legal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>licensing</title>
+      <link>https://www.teale.de/tags/licensing/</link>
+      <pubDate>Sun, 23 Dec 2007 08:33:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/licensing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>photos</title>
+      <link>https://www.teale.de/tags/photos/</link>
+      <pubDate>Sun, 23 Dec 2007 08:33:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/photos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sex</title>
+      <link>https://www.teale.de/tags/sex/</link>
+      <pubDate>Sun, 23 Dec 2007 08:33:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/sex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chicken</title>
+      <link>https://www.teale.de/tags/chicken/</link>
+      <pubDate>Mon, 17 Dec 2007 14:25:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/chicken/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://www.teale.de/tags/programming/</link>
+      <pubDate>Mon, 17 Dec 2007 14:25:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>racket</title>
+      <link>https://www.teale.de/tags/racket/</link>
+      <pubDate>Mon, 17 Dec 2007 14:25:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/racket/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>castle</title>
+      <link>https://www.teale.de/tags/castle/</link>
+      <pubDate>Mon, 12 Nov 2007 15:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/castle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>date</title>
+      <link>https://www.teale.de/tags/date/</link>
+      <pubDate>Mon, 12 Nov 2007 15:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/date/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>restaurant</title>
+      <link>https://www.teale.de/tags/restaurant/</link>
+      <pubDate>Mon, 12 Nov 2007 15:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/restaurant/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windsor</title>
+      <link>https://www.teale.de/tags/windsor/</link>
+      <pubDate>Mon, 12 Nov 2007 15:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/windsor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hardware</title>
+      <link>https://www.teale.de/tags/hardware/</link>
+      <pubDate>Tue, 28 Aug 2007 07:21:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/hardware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hp</title>
+      <link>https://www.teale.de/tags/hp/</link>
+      <pubDate>Tue, 28 Aug 2007 07:21:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/hp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>officejet</title>
+      <link>https://www.teale.de/tags/officejet/</link>
+      <pubDate>Tue, 28 Aug 2007 07:21:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/officejet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>printing</title>
+      <link>https://www.teale.de/tags/printing/</link>
+      <pubDate>Tue, 28 Aug 2007 07:21:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/printing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cider</title>
+      <link>https://www.teale.de/tags/cider/</link>
+      <pubDate>Tue, 21 Aug 2007 14:34:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/cider/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flock</title>
+      <link>https://www.teale.de/tags/flock/</link>
+      <pubDate>Sat, 04 Aug 2007 15:00:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/flock/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>guadec</title>
+      <link>https://www.teale.de/tags/guadec/</link>
+      <pubDate>Sat, 04 Aug 2007 15:00:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/guadec/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ml</title>
+      <link>https://www.teale.de/tags/ml/</link>
+      <pubDate>Sat, 04 Aug 2007 15:00:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/ml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bsd</title>
+      <link>https://www.teale.de/tags/bsd/</link>
+      <pubDate>Tue, 26 Jun 2007 14:25:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/bsd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>free_software</title>
+      <link>https://www.teale.de/tags/free_software/</link>
+      <pubDate>Tue, 26 Jun 2007 14:25:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/free_software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gnu</title>
+      <link>https://www.teale.de/tags/gnu/</link>
+      <pubDate>Tue, 26 Jun 2007 14:25:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/gnu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gpl</title>
+      <link>https://www.teale.de/tags/gpl/</link>
+      <pubDate>Tue, 26 Jun 2007 14:25:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/gpl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>open_source</title>
+      <link>https://www.teale.de/tags/open_source/</link>
+      <pubDate>Tue, 26 Jun 2007 14:25:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/open_source/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>storage</title>
+      <link>https://www.teale.de/tags/storage/</link>
+      <pubDate>Wed, 13 Jun 2007 16:57:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/storage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zfs</title>
+      <link>https://www.teale.de/tags/zfs/</link>
+      <pubDate>Wed, 13 Jun 2007 16:57:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/zfs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>anaïs_mitchell</title>
+      <link>https://www.teale.de/tags/ana%C3%AFs_mitchell/</link>
+      <pubDate>Wed, 13 Jun 2007 14:51:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/ana%C3%AFs_mitchell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>concert</title>
+      <link>https://www.teale.de/tags/concert/</link>
+      <pubDate>Wed, 13 Jun 2007 14:51:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/concert/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>music</title>
+      <link>https://www.teale.de/tags/music/</link>
+      <pubDate>Wed, 13 Jun 2007 14:51:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>arch</title>
+      <link>https://www.teale.de/tags/arch/</link>
+      <pubDate>Sat, 19 May 2007 15:34:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/arch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deb</title>
+      <link>https://www.teale.de/tags/deb/</link>
+      <pubDate>Sat, 19 May 2007 15:34:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/deb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>debian</title>
+      <link>https://www.teale.de/tags/debian/</link>
+      <pubDate>Sat, 19 May 2007 15:34:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pacman</title>
+      <link>https://www.teale.de/tags/pacman/</link>
+      <pubDate>Sat, 19 May 2007 15:34:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/pacman/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rpm</title>
+      <link>https://www.teale.de/tags/rpm/</link>
+      <pubDate>Sat, 19 May 2007 15:34:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/rpm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>intel</title>
+      <link>https://www.teale.de/tags/intel/</link>
+      <pubDate>Sun, 06 May 2007 12:26:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/intel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sound</title>
+      <link>https://www.teale.de/tags/sound/</link>
+      <pubDate>Sun, 06 May 2007 12:26:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/tags/sound/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>open-solaris</title>
+      <link>https://www.teale.de/tags/open-solaris/</link>
+      <pubDate>Tue, 01 May 2007 17:44:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/open-solaris/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>solaris</title>
+      <link>https://www.teale.de/tags/solaris/</link>
+      <pubDate>Tue, 01 May 2007 17:44:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/tags/solaris/</guid>
       <description></description>
     </item>
     

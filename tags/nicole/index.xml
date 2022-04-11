@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nicole on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/nicole/</link>
+    <description>Recent content in nicole on The ol&#39; tealeg ruminates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 13 Jan 2009 13:43:00 +0100</lastBuildDate><atom:link href="https://www.teale.de/tags/nicole/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Clojure (part 7)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-7/</link>
+      <pubDate>Tue, 13 Jan 2009 13:43:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-7/</guid>
+      <description>Some good Clojure news, some bad Clojure news So&amp;hellip; first the bad news.
+I&amp;rsquo;ve had to drop the Qt port of my little Clojure recruitment database. I was just hitting too many problems using Qt-Jambi and it was taking too long. The client needed a working database ASAP and I wasn&amp;rsquo;t gonna get there. At the same time I also learned to use Apple&amp;rsquo;s Core Data on Mac Os X 10.</description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 2)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-2/</link>
+      <pubDate>Sat, 08 Nov 2008 06:54:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-2/</guid>
+      <description>Distributing QtJambi with Clojure. How to bundle up Clojure programs for distribution One of the questions I&amp;rsquo;ve seen coming up a few times is how to distribute clojure programs. The obvious answer is to build executable JAR files.
+A while ago I produced a simple database application for my girlfriends recruitment business, NRecruit. I developed this using Clojure on my Arch Linux based laptop, and deployed to her MacBook running OS X Leopard.</description>
+    </item>
+    
+    <item>
+      <title>Things that happened yesterday</title>
+      <link>https://www.teale.de/post/life/germany/things-that-happened-yesterday/</link>
+      <pubDate>Wed, 02 Jul 2008 01:13:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/life/germany/things-that-happened-yesterday/</guid>
+      <description>Tech content? Hmmm I am aware that I should put more technical content here, trouble is I don&amp;rsquo;t have much to say at the moment. Work is dragging on with the same old problems with different hardware. Outside work I am actively working on something (smallish) using Erlang to get my skills in that area up to scratch before starting something else (still smallish, but bigger).
+Schmap In the mean time here are a couple of things that happened yesterday.</description>
+    </item>
+    
+    <item>
+      <title>dude</title>
+      <link>https://www.teale.de/post/life/germany/dude/</link>
+      <pubDate>Sun, 13 Apr 2008 12:11:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/life/germany/dude/</guid>
+      <description>So, this weekend we found ourselves in the Thereisen fair ground looking for a new lens (long story - we ended up buying a dining table instead of a lens, such is life!). Whilst in this area of Munich, where Oktoberfest takes place, we got to see the young and trendy types and I realised that I was not as &amp;ldquo;down&amp;rdquo; with the young people as I imagined (I mean, can you even imagine me not being cool?</description>
+    </item>
+    
+    <item>
+      <title>Guest appearance</title>
+      <link>https://www.teale.de/post/life/germany/guest-appearance/</link>
+      <pubDate>Sat, 05 Apr 2008 05:51:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/life/germany/guest-appearance/</guid>
+      <description>I made a guest appearance in Nic&amp;rsquo;s day-shot the other day. We were sitting having drinks on our balcony for the first time.
+Very nice. I was actually pulling this expression on purpose but I do look like I&amp;rsquo;ve got something way too hot in that mug :-)</description>
+    </item>
+    
+    <item>
+      <title>2⁵-1</title>
+      <link>https://www.teale.de/post/life/two-to-the-five-minus-one/</link>
+      <pubDate>Fri, 22 Feb 2008 08:16:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/life/two-to-the-five-minus-one/</guid>
+      <description>Birthday It was my birthday two days ago. At this age they tend to go with less of a bang. I think this pretty much sums it up:
+http://www.dieselsweeties.com/archive/1955
+Nic&amp;rsquo;s contribution Thank quantum theory (in the absence of God) then for my wonderful girlfriend who tried to make my day more interesting from 700 miles away by setting me this little puzzle:
+http://www.flickr.com/photos/tanzbar/sets/72157603945426840/
+&amp;hellip; and in doing that proving herself once again to be a very inventive photographer :-)</description>
+    </item>
+    
+    <item>
+      <title>Auf Deutsch</title>
+      <link>https://www.teale.de/post/life/germany/auf-deutsch/</link>
+      <pubDate>Sun, 25 Nov 2007 11:32:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/post/life/germany/auf-deutsch/</guid>
+      <description>A little Danish elefant embraces his future in Germany.
+I guess everyone knows now that Nic and I are moving to Munich next year.</description>
+    </item>
+    
+    <item>
+      <title>Schokolade</title>
+      <link>https://www.teale.de/post/life/windsor/</link>
+      <pubDate>Mon, 12 Nov 2007 15:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/post/life/windsor/</guid>
+      <description>Nic and I went to Windsor on Sunday on a whim. I took Nic to Carluccio&amp;rsquo;s for the first time. She was very pleased with the ciocolatte Fiorentina - it&amp;rsquo;s nice that little things make her so happy. :-)
+We also wandered round the castle for a bit and took at quick trip to the shops to buy my mums birthday present.</description>
+    </item>
+    
+  </channel>
+</rss>

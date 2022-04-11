@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>unix on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/unix/</link>
+    <description>Recent content in unix on The ol&#39; tealeg ruminates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 27 Mar 2009 03:37:00 +0200</lastBuildDate><atom:link href="https://www.teale.de/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mac foo I learned today</title>
+      <link>https://www.teale.de/post/tech/mac/mac-foo/</link>
+      <pubDate>Fri, 27 Mar 2009 03:37:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/mac/mac-foo/</guid>
+      <description>Long time no post! Ho hum, been busy as ever.
+Anyhow, for my own benefit just wanted to write down some Mac foo I learned today.
+I was searching for the Mac equivalent of the Linux &amp;ldquo;eject&amp;rdquo; command. Lots of people online are spouting off about needing to reboot their macs and hold down keys to eject disks that aren&amp;rsquo;t recognised, but what you really need is:
+hdiutil eject /dev/disk1 </description>
+    </item>
+    
+    <item>
+      <title>TrueType fonts in GNU Emacs</title>
+      <link>https://www.teale.de/post/tech/emacs/truetype-in-emacs/</link>
+      <pubDate>Thu, 03 Jul 2008 14:32:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/emacs/truetype-in-emacs/</guid>
+      <description>Listing installed TrueType fonts in Emacs In this new fangled age of TrueType support in Emacs it&amp;rsquo;s really useful to know the names of the Monospace fonts installed on your system in the format that Emacs understands. If you are on a Linux/UNIX system running Xorg with fontconfig installed then add this function to your .emacs file
+(defun list-monospace-truetype-fonts ()  &amp;#34;Provide a list of available monospaced truetype fonts on this machine&amp;#34;  (interactive)  (set-buffer (get-buffer-create &amp;#34;Monospaced Fonts&amp;#34;))  (call-process-shell-command &amp;#34;fc-list :spacing=mono:scalable=true family | sort&amp;#34; nil t)  (setq buffer-read-only t)  (switch-to-buffer-other-window (current-buffer))) You can set these fonts in a number of ways, currently I am getting the most joy using this form:</description>
+    </item>
+    
+    <item>
+      <title>OpenVPN and Solaris</title>
+      <link>https://www.teale.de/post/tech/opensolaris/openvpn-and-solaris/</link>
+      <pubDate>Fri, 16 May 2008 23:07:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/opensolaris/openvpn-and-solaris/</guid>
+      <description>Solaris Joy A little more solaris joy. Mainly as a note for myself here is how to setup an OpenVPN client on OpenSolaris 2008.05:
+Steps Add package repositories Add Blastwave and SunFreeWare IPS repositories to the Image Packaging System:
+-bash-2.05b# pkg set-authority -O http://pkg.sunfreeware.com:9000/ Companion -bash-2.05b# pkg set-authority -O http://blastwave.network.com:10000/ Blastwave -bash-2.05b# pkg refresh Install and setup the TUN device -bash-2.05b# pkg install IPStun -bash-2.05b# add_drv tun Install OpenVPN -bash-2.05b# pkg install IPSopenvpn &amp;hellip; and now you&amp;rsquo;re ready to put your openvpn.</description>
+    </item>
+    
+    <item>
+      <title>Brandz spanking new</title>
+      <link>https://www.teale.de/post/tech/opensolaris/brandz-spanking-new/</link>
+      <pubDate>Fri, 16 May 2008 21:42:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/opensolaris/brandz-spanking-new/</guid>
+      <description>Into the Solaris So, long time no Solaris talk.
+I&amp;rsquo;ve not been sleeping well this last couple of weeks (ironically this seems to have a lot to do with exhausting myself during my recent trip to England), but that inevitably leads to lots of mucking around with computers in the wee hours of the morning.
+The need for containers So OpenSolaris 2008.05 is on my laptop right now, and it&amp;rsquo;s a bit of surprise to find it there as I am trying to hack on some code that is destined to run on Linux.</description>
+    </item>
+    
+    <item>
+      <title>Printing on an HP OfficeJet 6310 from Solaris</title>
+      <link>https://www.teale.de/post/tech/opensolaris/printing/</link>
+      <pubDate>Tue, 28 Aug 2007 07:21:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/opensolaris/printing/</guid>
+      <description>I thought this would be hard but essentially it was very easy - I guess and seemed to get it right first time.
+You don&amp;rsquo;t need to install CUPS as the SUNWhpijs package already supports Sun&amp;rsquo;s own print system. Simply run:
+/usr/sadm/admin/bin/printmgr &amp;hellip; as root, choose PRINTER-&amp;gt;NEW ATTACHED PRINTER from the menu and then add the printer. I found it to be attached to /dev/usb/printer0 and I had to claim it was an OfficeJet 6110, but essentially everything worked perfectly and seconds later I was printing in colour on A4 paper.</description>
+    </item>
+    
+    <item>
+      <title>Project Indiana Wishlist</title>
+      <link>https://www.teale.de/post/tech/opensolaris/indiana-wishlist/</link>
+      <pubDate>Sat, 19 May 2007 15:34:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/opensolaris/indiana-wishlist/</guid>
+      <description>OK, so many, many people will be saying many things about project Indiana before we ever see anything concrete, and then many more people will inevitably form two camps - the &amp;ldquo;Indianaphiles&amp;rdquo; and the &amp;ldquo;Indianaphobes&amp;rdquo;.
+All of that is inevitable and I guess we should just enjoy the ride. However, given the scope for Indiana thus far expressed is &amp;ldquo;Make a Sun branded Solaris distribution that&amp;rsquo;s a lot more like Linux&amp;rdquo;, and that the top man is Ian Murdoch, I have exactly one wish for this project.</description>
+    </item>
+    
+    <item>
+      <title>Intel HDA working under OpenSolaris</title>
+      <link>https://www.teale.de/post/tech/opensolaris/intel-hda-opensolaris/</link>
+      <pubDate>Sun, 06 May 2007 12:26:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/opensolaris/intel-hda-opensolaris/</guid>
+      <description>Another minor victory in my quest to get more familiar with OpenSolaris. I&amp;rsquo;ve upgraded to Nexenta unstable, and I noticed a package called sunwaudiohd being installed. That looked like a promising solution to the lack of audio on my OpenSolaris machine - the Intel HDA soundcard has never worked under any version I&amp;rsquo;ve used.
+Sadly, the mere presence of this driver didn&amp;rsquo;t seem to fix things (it&amp;rsquo;s never that simple). A little research confirmed that it was the right driver, but that this bug had been discovered.</description>
+    </item>
+    
+  </channel>
+</rss>

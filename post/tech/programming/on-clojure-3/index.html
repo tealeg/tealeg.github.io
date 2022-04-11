@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>On Clojure (part 3)</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Playfair Display', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: teal;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://www.teale.de/css/main.css">
+
+
+ <link rel="stylesheet" href="https://www.teale.de/css/tealeg.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair%20Display">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scheme.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.96.0" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">On Clojure (part 3)</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/reference/">Reference</a></li>
+                            
+                        </ul>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>On Clojure (part 3)</h2>
+        <h5>Sun Nov 9 2008 11:29:00 CET</h5>
+        
+<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
+
+<a href="https://www.teale.de/tags/lisp"><kbd class="item-tag">lisp</kbd></a>
+
+<a href="https://www.teale.de/tags/qt"><kbd class="item-tag">qt</kbd></a>
+
+<a href="https://www.teale.de/tags/qt_designer"><kbd class="item-tag">qt_designer</kbd></a>
+
+<a href="https://www.teale.de/tags/slots"><kbd class="item-tag">slots</kbd></a>
+
+<a href="https://www.teale.de/tags/qtjambi"><kbd class="item-tag">qtjambi</kbd></a>
+
+<a href="https://www.teale.de/tags/java"><kbd class="item-tag">java</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content"><h2 id="qt-designer-with-clojure">QT Designer with Clojure</h2>
+<p>So, as promised, here&rsquo;s a few notes on how I am using Qt Designer with Clojure.
+Some important things to remember:</p>
+<ul>
+<li>You must use Qt Designer with the <a href="https://wiki.qt.io/Qt_Jambi">QtJambi</a> plugins installed. The easiest way to do this is to run designer.sh (Linux / UNIX / Mac OS X) or designer.bat (Windows) from the distribution folder that QtJambi came in. If you&rsquo;ve got QtJambi installed as a package under Linux then you may need to check that the QtJambi plugins are correctly installed , they weren&rsquo;t in my case.</li>
+<li>If you have the QtJambi plugins installed designer should be able to save <code>.jui</code> files instead of <code>.ui</code> files.</li>
+</ul>
+<h2 id="custom-slots">Custom slots</h2>
+<p>I don&rsquo;t intend to tell you how to use Qt Designer, there&rsquo;s a good user manual available.
+Once you&rsquo;ve put together a UI in Designer plugging it into a clojure application is relatively simple, though there are some subtleties that took me a while to work out (along with a large chunk of time trawling #clojure logs, the wiki and various blog post - thanks to all who share their work!)</p>
+<p>What follows is the full source code for an incredibly simple app that uses a single QMainWindow with a Designer derived layout, I&rsquo;ll explain some more after the code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>(<span style="color:#a6e22e">gen-and-load-class</span> <span style="color:#e6db74">&#34;foo.gen.Slot&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">:methods</span> [[<span style="color:#e6db74">&#34;slot&#34;</span> [] Void]])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">ns </span>foo
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:import</span> (<span style="color:#a6e22e">foo</span> Ui_MainWindow))
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:import</span> (<span style="color:#a6e22e">com.trolltech.qt.gui</span> QApplication QMainWindow))
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:import</span> (<span style="color:#a6e22e">com.trolltech.qt.core</span> QCoreApplication))
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:import</span> (<span style="color:#a6e22e">foo.gen</span> Slot)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">def </span>slots 
+</span></span><span style="display:flex;"><span>     (proxy [Slot] []
+</span></span><span style="display:flex;"><span>  (<span style="color:#a6e22e">slot</span> [] (prn <span style="color:#e6db74">&#34;Slot Called&#34;</span>))))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">defn </span>init []
+</span></span><span style="display:flex;"><span>  (<span style="color:#a6e22e">QApplication/initialize</span> (make-array String <span style="color:#ae81ff">0</span>)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">defn </span>exec []
+</span></span><span style="display:flex;"><span>  (<span style="color:#a6e22e">QApplication/exec</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">defmacro </span>qt4 [<span style="color:#f92672">&amp;</span> rest]
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">`</span>(<span style="color:#a6e22e">do</span>
+</span></span><span style="display:flex;"><span>     (<span style="color:#a6e22e">try</span> (<span style="color:#a6e22e">init</span>) (<span style="color:#a6e22e">catch</span> RuntimeException e# (println e#)))
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">~@</span>rest
+</span></span><span style="display:flex;"><span>     (<span style="color:#a6e22e">exec</span>)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">def </span>Foo-main
+</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">fn </span>[<span style="color:#f92672">&amp;</span> args]
+</span></span><span style="display:flex;"><span>    (<span style="color:#a6e22e">qt4</span>
+</span></span><span style="display:flex;"><span>     (<span style="color:#66d9ef">let </span>[ui_main (<span style="color:#66d9ef">new </span>Ui_MainWindow)
+</span></span><span style="display:flex;"><span>    mainWindow (<span style="color:#66d9ef">new </span>QMainWindow)]
+</span></span><span style="display:flex;"><span>       (<span style="color:#66d9ef">. </span>ui_main (<span style="color:#a6e22e">setupUi</span> mainWindow))
+</span></span><span style="display:flex;"><span>       (<span style="color:#66d9ef">let </span>[pushButton (<span style="color:#66d9ef">. </span>ui_main pushButton)]
+</span></span><span style="display:flex;"><span>  (.. pushButton clicked (<span style="color:#a6e22e">connect</span> slots <span style="color:#e6db74">&#34;slot()&#34;</span>)))
+</span></span><span style="display:flex;"><span>       (<span style="color:#66d9ef">. </span>mainWindow (<span style="color:#a6e22e">show</span>))))))
+</span></span></code></pre></div><p>This code lives in the package <code>foo</code>, in the file <code>Foo.clj</code>. If you&rsquo;re familiar <a href="http://rpdillon.googlepages.com/creatingexecutablejarswithclojure">R.P. Dillon&rsquo;s guide to with making Jar&rsquo;s from clojure</a> you&rsquo;ll know that <code>Foo-main</code> is the <code>main</code> function of the resulting JAR. Notice that we also import <code>Ui_MainWindow</code> from the same package. This is the generated Java code from the Designer file <code>Ui_MainWindow.jui</code>. In order to generate the java code you simply run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    juic Ui_MainWindow.jui
+</span></span></code></pre></div><p>As I want the resulting code to live in a package, <code>foo</code>&quot;, I need to manually add the following line to the top of the resulting file, <code>Ui_MainWindow.java</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#f92672">package</span> foo<span style="color:#f92672">;</span>
+</span></span></code></pre></div><p>We also need to arrange for this <code>.java</code> file to be compiled before we can use it. How you use this depends on your build system, but you can choose to just compile it by hand when it changes (as this should be comparitevly rare). I guess you know how, but just for completeness:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    javac foo/Ui_MainWindow.java
+</span></span></code></pre></div><p>Now, the qt4 macro I&rsquo;ve defined there is directly lifted from <a href="http://briancarper.net/2008/10/31/qt4-in-lisp/">Brian Carper&rsquo;s blog posting on using Qt4 in Clojure</a>, and again I won&rsquo;t go into that here. Instead lets look at <code>Foo-main</code>. Note that we create instances of both the <code>Ui_MainWindow</code> class from the generated java code and the <code>QMainWindow</code> class. We call the <code>setupUI</code> method of the <code>Ui_MainWindow</code> class with the <code>QMainWindow</code> class as it&rsquo;s argument (this essentially fills out the <code>QMainWindow</code> with the layout you put together in designer). Note also that I reference the <code>pushButton</code> widget inside the <code>Ui_MainWindow</code> class.</p>
+<p>The remaining interesting thing about this file is that it defines a custom slot. Signals and Slots are fundemental to the way that Qt hangs together. Wiring together the prexisting signals and slots is very easy and can be done either in Designer or in code (as R.P. Dillon&rsquo;s example shows). Making a custom slot turns out to be rather more difficult. I naively assumed that I could just use a proxy around the <code>QMainWindow</code> class and add a slot function there, but this simply doesn&rsquo;t work. Instead I need to use <code>(gen-class)</code> to make a real class and bind a clojure function to it. For convenience I use <code>(gen-and-load-class)</code> - this call generates the bytecode and loads it. You have to pass it a fully qualifed class name - I&rsquo;ve found it better to make it a subpackage, so I place it in <code>foo.gen</code>, and therefore the classname is <code>foo.gen.Slot</code>. I also have to give a place holder for the slot method. Confusingly enough I&rsquo;ve chosen to call it <code>slot</code> here. We pass a vector containing a vector for each method, which in turn contains a method name, a vector of arguements and a return type. The method name will get bound to a function in the current namespace (not <code>foo.gen</code>, but <code>foo</code>) with the name <code>-</code>. In my example code this is contained in the proxy &ldquo;slots&rdquo; as the &ldquo;slot&rdquo; method. It&rsquo;s possible to just use a normal <code>(defn)</code> for this mapped method, in which case the function name would be <code>Slot-slot</code>, I just find the proxy cleaner. Lastly you&rsquo;ll see that, back in <code>Foo-main</code>, I connect the <code>pushButton</code>&rsquo;s clicked signal to the custom slot, <code>slot</code> in the proxy, <code>slots</code>. I hope that&rsquo;s clear!</p>
+<p>Now all things being equal you should be able to make your JAR and execute the code. I hope that helps someone avoid spending a lot of time trying to work this out.</p>
+<p>When I need to implement a custom signal I&rsquo;ll try and write that up too. Till then, ta ta!</p>
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/frontend/html5-and-all-that/">HTML5 and all that</a></h4>
+    <h5>Sun Jan 10 2010 00:31:00 CET</h5>
+    
+<a href="https://www.teale.de/tags/frontend"><kbd class="item-tag">frontend</kbd></a>
+
+<a href="https://www.teale.de/tags/html"><kbd class="item-tag">html</kbd></a>
+
+<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
+
+<a href="https://www.teale.de/tags/xml"><kbd class="item-tag">xml</kbd></a>
+
+<a href="https://www.teale.de/tags/flash"><kbd class="item-tag">flash</kbd></a>
+
+<a href="https://www.teale.de/tags/google_gears"><kbd class="item-tag">google_gears</kbd></a>
+
+<a href="https://www.teale.de/tags/emacs"><kbd class="item-tag">emacs</kbd></a>
+
+<a href="https://www.teale.de/tags/nxml"><kbd class="item-tag">nxml</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/programming/on-clojure-7/">On Clojure (part 7)</a></h4>
+    <h5>Tue Jan 13 2009 13:43:00 CET</h5>
+    
+<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
+
+<a href="https://www.teale.de/tags/lisp"><kbd class="item-tag">lisp</kbd></a>
+
+<a href="https://www.teale.de/tags/apple"><kbd class="item-tag">apple</kbd></a>
+
+<a href="https://www.teale.de/tags/macosx"><kbd class="item-tag">macosx</kbd></a>
+
+<a href="https://www.teale.de/tags/core_data"><kbd class="item-tag">core_data</kbd></a>
+
+<a href="https://www.teale.de/tags/nicole"><kbd class="item-tag">nicole</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/programming/on-clojure-6/">On Clojure (part 6)</a></h4>
+    <h5>Sun Nov 30 2008 03:00:00 CET</h5>
+    
+<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
+
+<a href="https://www.teale.de/tags/lisp"><kbd class="item-tag">lisp</kbd></a>
+
+<a href="https://www.teale.de/tags/aot"><kbd class="item-tag">aot</kbd></a>
+
+<a href="https://www.teale.de/tags/ant"><kbd class="item-tag">ant</kbd></a>
+
+<a href="https://www.teale.de/tags/lancet"><kbd class="item-tag">lancet</kbd></a>
+
+<a href="https://www.teale.de/tags/java"><kbd class="item-tag">java</kbd></a>
+
+
+
+</div>
+ 
+    
+
+    
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">Copyright © Geoffrey J. Teale. All rights reserved. Powered by <a href='https://gohugo.io'>Hugo</a> and <a href='https://github.com/calintat/minimal'>Minimal</a>.</p>
+        </footer>
+
+        
+
+        
+    </body>
+
+</html>
+

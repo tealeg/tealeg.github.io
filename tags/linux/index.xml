@@ -1,34 +1,70 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on Geoffrey J. Teale</title>
-    <link>https://tealeg.github.io/tags/linux/</link>
-    <description>Recent content in linux on Geoffrey J. Teale</description>
+    <title>linux on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/linux/</link>
+    <description>Recent content in linux on The ol&#39; tealeg ruminates</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 15 May 2019 16:25:21 +0200</lastBuildDate>
-    
-	<atom:link href="https://tealeg.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 15 May 2019 16:25:21 +0200</lastBuildDate><atom:link href="https://www.teale.de/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>System Updates With Mixin</title>
-      <link>https://tealeg.github.io/blog/tech/clearlinux/system-updates-with-mixin/</link>
+      <link>https://www.teale.de/post/tech/clearlinux/system-updates-with-mixin/</link>
       <pubDate>Wed, 15 May 2019 16:25:21 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/blog/tech/clearlinux/system-updates-with-mixin/</guid>
+      <guid>https://www.teale.de/post/tech/clearlinux/system-updates-with-mixin/</guid>
       <description>If you use ClearLinux&amp;rsquo;s mixin to add custom bundles to your installation, you will still be able to update your upstream bundles, however it will nolonger be as simple as doing a sudo swupd update. Here are the step&amp;rsquo;s you need to go through, assuming you defined your mixin repository in ~/mixin-repo:
 cd ~/mixin-repo createrepo_c . sudo mixin build sudo swupd update --migrate &amp;hellip; this is at least the process I have used, and which worked for me.</description>
     </item>
     
     <item>
       <title>Enabling H.264 playback in Firefox on Intel&#39;s Clearlinux</title>
-      <link>https://tealeg.github.io/blog/tech/clearlinux/h264-firefox-clearlinux/</link>
+      <link>https://www.teale.de/post/tech/clearlinux/h264-firefox-clearlinux/</link>
       <pubDate>Wed, 15 May 2019 15:41:30 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/blog/tech/clearlinux/h264-firefox-clearlinux/</guid>
+      <guid>https://www.teale.de/post/tech/clearlinux/h264-firefox-clearlinux/</guid>
       <description>In common with most Linux distros, Intel&amp;rsquo;s ClearLinux doesn&amp;rsquo;t ship H.264 decoding by default. Given the novel nature of ClearLinux there isn&amp;rsquo;t a nice off the shelf solution to this yet, so we have to use a workaround. I&amp;rsquo;ll try and find a better way to achieve this, but for now this will get H.264 video working in YouTube / Twitter etc, for now:
 wget http://ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2 tar xf ffmpeg-snapshot.tar.tz2 cd ffmpeg-snapshot .</description>
+    </item>
+    
+    <item>
+      <title>TrueType fonts in GNU Emacs</title>
+      <link>https://www.teale.de/post/tech/emacs/truetype-in-emacs/</link>
+      <pubDate>Thu, 03 Jul 2008 14:32:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/emacs/truetype-in-emacs/</guid>
+      <description>Listing installed TrueType fonts in Emacs In this new fangled age of TrueType support in Emacs it&amp;rsquo;s really useful to know the names of the Monospace fonts installed on your system in the format that Emacs understands. If you are on a Linux/UNIX system running Xorg with fontconfig installed then add this function to your .emacs file
+(defun list-monospace-truetype-fonts ()  &amp;#34;Provide a list of available monospaced truetype fonts on this machine&amp;#34;  (interactive)  (set-buffer (get-buffer-create &amp;#34;Monospaced Fonts&amp;#34;))  (call-process-shell-command &amp;#34;fc-list :spacing=mono:scalable=true family | sort&amp;#34; nil t)  (setq buffer-read-only t)  (switch-to-buffer-other-window (current-buffer))) You can set these fonts in a number of ways, currently I am getting the most joy using this form:</description>
+    </item>
+    
+    <item>
+      <title>Ikarus ascends</title>
+      <link>https://www.teale.de/post/tech/programming/ikarus-ascends/</link>
+      <pubDate>Mon, 17 Dec 2007 14:25:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/ikarus-ascends/</guid>
+      <description>If you follow scheme or lisp news in even a passing fashion you can&amp;rsquo;t have failed to notice the arrival of Ikarus Scheme, the nifty incremental, native scheme code compiler. It&amp;rsquo;s an lovely new version of scheme based around R6RS. That means it supports a nice clean library system (standardised!) and scripting in the manner of Perl, Python and Ruby.
+Though it lacks the maturity and library base you&amp;rsquo;d find in chicken or PLT, it&amp;rsquo;s still a very attractive proposition, and the quality of the product thus far, combined with the nascent community feel around it has certainly got my spider sense tingling.</description>
+    </item>
+    
+    <item>
+      <title>Project Indiana Wishlist</title>
+      <link>https://www.teale.de/post/tech/opensolaris/indiana-wishlist/</link>
+      <pubDate>Sat, 19 May 2007 15:34:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/opensolaris/indiana-wishlist/</guid>
+      <description>OK, so many, many people will be saying many things about project Indiana before we ever see anything concrete, and then many more people will inevitably form two camps - the &amp;ldquo;Indianaphiles&amp;rdquo; and the &amp;ldquo;Indianaphobes&amp;rdquo;.
+All of that is inevitable and I guess we should just enjoy the ride. However, given the scope for Indiana thus far expressed is &amp;ldquo;Make a Sun branded Solaris distribution that&amp;rsquo;s a lot more like Linux&amp;rdquo;, and that the top man is Ian Murdoch, I have exactly one wish for this project.</description>
+    </item>
+    
+    <item>
+      <title>Making ZFS work on removable media</title>
+      <link>https://www.teale.de/post/tech/zfs/zfs-on-removable-media/</link>
+      <pubDate>Tue, 01 May 2007 17:44:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/zfs/zfs-on-removable-media/</guid>
+      <description>I&amp;rsquo;ve been playing around with ZFS for quite a while now and I&amp;rsquo;m very impressed. Everything that&amp;rsquo;s claimed of it holds up under my limited investigation. I&amp;rsquo;ve been working with both the OpenSolaris native version (thank you Nexenta!) and the ZFS-FUSE implementation for Linux.
+The one thing that proved hard to do was to build a ZFS pool on my USB2 hard drive and move that pool between machines. For a couple of days I struggled in vane to see why I couldn&amp;rsquo;t ZFS export from my linux box and ZFS import on my OpenSolaris box (or visa versa).</description>
     </item>
     
   </channel>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>core_data on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/core_data/</link>
+    <description>Recent content in core_data on The ol&#39; tealeg ruminates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 13 Jan 2009 13:43:00 +0100</lastBuildDate><atom:link href="https://www.teale.de/tags/core_data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Clojure (part 7)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-7/</link>
+      <pubDate>Tue, 13 Jan 2009 13:43:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-7/</guid>
+      <description>Some good Clojure news, some bad Clojure news So&amp;hellip; first the bad news.
+I&amp;rsquo;ve had to drop the Qt port of my little Clojure recruitment database. I was just hitting too many problems using Qt-Jambi and it was taking too long. The client needed a working database ASAP and I wasn&amp;rsquo;t gonna get there. At the same time I also learned to use Apple&amp;rsquo;s Core Data on Mac Os X 10.</description>
+    </item>
+    
+  </channel>
+</rss>

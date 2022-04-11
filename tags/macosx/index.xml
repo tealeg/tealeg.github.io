@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>macosx on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/macosx/</link>
+    <description>Recent content in macosx on The ol&#39; tealeg ruminates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 27 Mar 2009 03:37:00 +0200</lastBuildDate><atom:link href="https://www.teale.de/tags/macosx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mac foo I learned today</title>
+      <link>https://www.teale.de/post/tech/mac/mac-foo/</link>
+      <pubDate>Fri, 27 Mar 2009 03:37:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/mac/mac-foo/</guid>
+      <description>Long time no post! Ho hum, been busy as ever.
+Anyhow, for my own benefit just wanted to write down some Mac foo I learned today.
+I was searching for the Mac equivalent of the Linux &amp;ldquo;eject&amp;rdquo; command. Lots of people online are spouting off about needing to reboot their macs and hold down keys to eject disks that aren&amp;rsquo;t recognised, but what you really need is:
+hdiutil eject /dev/disk1 </description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 7)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-7/</link>
+      <pubDate>Tue, 13 Jan 2009 13:43:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-7/</guid>
+      <description>Some good Clojure news, some bad Clojure news So&amp;hellip; first the bad news.
+I&amp;rsquo;ve had to drop the Qt port of my little Clojure recruitment database. I was just hitting too many problems using Qt-Jambi and it was taking too long. The client needed a working database ASAP and I wasn&amp;rsquo;t gonna get there. At the same time I also learned to use Apple&amp;rsquo;s Core Data on Mac Os X 10.</description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 2)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-2/</link>
+      <pubDate>Sat, 08 Nov 2008 06:54:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-2/</guid>
+      <description>Distributing QtJambi with Clojure. How to bundle up Clojure programs for distribution One of the questions I&amp;rsquo;ve seen coming up a few times is how to distribute clojure programs. The obvious answer is to build executable JAR files.
+A while ago I produced a simple database application for my girlfriends recruitment business, NRecruit. I developed this using Clojure on my Arch Linux based laptop, and deployed to her MacBook running OS X Leopard.</description>
+    </item>
+    
+  </channel>
+</rss>

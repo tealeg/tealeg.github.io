@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Convert OpenOffice.org Calc FODS XML to something meaningful</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Playfair Display', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: teal;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://www.teale.de/css/main.css">
+
+
+ <link rel="stylesheet" href="https://www.teale.de/css/tealeg.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair%20Display">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scheme.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.96.0" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Convert OpenOffice.org Calc FODS XML to something meaningful</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/reference/">Reference</a></li>
+                            
+                        </ul>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>Convert OpenOffice.org Calc FODS XML to something meaningful</h2>
+        <h5>Thu Aug 19 2010 04:53:00 CEST</h5>
+        
+<a href="https://www.teale.de/tags/xslt"><kbd class="item-tag">xslt</kbd></a>
+
+<a href="https://www.teale.de/tags/open_office"><kbd class="item-tag">open_office</kbd></a>
+
+<a href="https://www.teale.de/tags/libre_office"><kbd class="item-tag">libre_office</kbd></a>
+
+<a href="https://www.teale.de/tags/fods"><kbd class="item-tag">fods</kbd></a>
+
+<a href="https://www.teale.de/tags/xml"><kbd class="item-tag">xml</kbd></a>
+
+<a href="https://www.teale.de/tags/spreadsheet"><kbd class="item-tag">spreadsheet</kbd></a>
+
+<a href="https://www.teale.de/tags/excel"><kbd class="item-tag">excel</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content"><h2 id="get-the-code">Get the code:</h2>
+<p>The code in this blog post is now available at:</p>
+<p><a href="http://github.com/tealeg/FODS2XML">http://github.com/tealeg/FODS2XML</a></p>
+<h2 id="background">Background</h2>
+<p>For a while now I&rsquo;ve been receiving data in Excel files that needed to be integrated into some better structured XML data. Originally I was using a little xls2csv from the catdoc package in Arch Linux to pull the data from the horrible bloated XLS files into something usable.</p>
+<p>The trouble is the conversion to CSV was a little error prone and it&rsquo;s really hard to see such errors in a 40MB CSV file. What I really needed was something a bit more structured to work with. I decided I would try processing the data directly from an XML version of the spreadsheet. In OpenOffice.org 3 I have a few XML options (Microsoft XLSX, Open Document Format, and FODS) - I wasn&rsquo;t aware of FODS XML before so I took a look. What FODS seems to be is a single file equivalent of the XML content that usually spans multiple files in the Zipped up folder that is an Open Document Format file. (I may be wrong - but this is my naive view of what I saw).</p>
+<h2 id="converting-fods-with-xslt">Converting FODS with XSLT</h2>
+<p>With the handy FODS verison of the spreadsheet I set about writing a two stage XSLT conversion that strips out the data and results in a meaningful XML file. This is all quick and dirty XSLT 2.0 - I&rsquo;ve only tested in Saxon 9.2.0.6 and I wouldn&rsquo;t put it forwards as an exemplary piece of XSLT 2.0, but I figured someone might find is useful.</p>
+<p>My code assumes the following:</p>
+<ul>
+<li>The data is arranged in tabular format</li>
+<li>There is only one table per tab in the sheet</li>
+<li>There is no extraneous data around the tab</li>
+<li>The first row contains column titles that are also valid XML element names (i.e. no spaces or other restricted characters).</li>
+<li>Stage 1 simplified the FODS data too a simple tabular XML format. The trickiest thing here is the expansion of repeated columns. Note as well, this XSLT 2.0 takes a parameter &ldquo;collimit&rdquo; that tells it to ignore columns that fall after that number - this makes the XSLT run a lot faster.</li>
+</ul>
+<p><code>fods2tbl.xsl</code> looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xslt" data-lang="xslt"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;iso-8859-1&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">xsl:stylesheet</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">version</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2.0&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:xsl</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.w3.org/1999/XSL/Transform&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:office</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;urn:oasis:names:tc:opendocument:xmlns:office:1.0&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;urn:oasis:names:tc:opendocument:xmlns:style:1.0&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;urn:oasis:names:tc:opendocument:xmlns:text:1.0&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:table</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;urn:oasis:names:tc:opendocument:xmlns:table:1.0&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:draw</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;urn:oasis:names:tc:opendocument:xmlns:drawing:1.0&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:fo</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:xlink</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.w3.org/1999/xlink&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:dc</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://purl.org/dc/elements/1.1/&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:meta</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;urn:oasis:names:tc:opendocument:xmlns:meta:1.0&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:number</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:presentation</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;urn:oasis:names:tc:opendocument:xmlns:presentation:1.0&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:svg</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:chart</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;urn:oasis:names:tc:opendocument:xmlns:chart:1.0&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:dr3d</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:math</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.w3.org/1998/Math/MathML&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:form</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;urn:oasis:names:tc:opendocument:xmlns:form:1.0&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:script</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;urn:oasis:names:tc:opendocument:xmlns:script:1.0&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:config</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;urn:oasis:names:tc:opendocument:xmlns:config:1.0&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:ooo</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://openoffice.org/2004/office&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:ooow</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://openoffice.org/2004/writer&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:oooc</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://openoffice.org/2004/calc&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:dom</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/xml-events&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:xforms</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.w3.org/2002/xforms&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:xsd</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:xsi</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:rpt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://openoffice.org/2005/report&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:of</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;urn:oasis:names:tc:opendocument:xmlns:of:1.2&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:xhtml</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.w3.org/1999/xhtml&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:grddl</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.w3.org/2003/g/data-view#&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:tableooo</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://openoffice.org/2009/table&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:field</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:formx</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0&#34;</span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:css3t</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.w3.org/TR/css3-text/&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">xmlns:saxon</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://icl.com/saxon&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">extension-element-prefixes</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;saxon&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">xsl:output</span> <span style="color:#a6e22e">indent</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;yes&#34;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;xml&#34;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">encoding</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">saxon:character-representation</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;native;decimal&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">xsl:param</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;collimit&#34;</span> <span style="color:#a6e22e">select</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">xsl:template</span> <span style="color:#a6e22e">match</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;*&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!-- Do Nothing --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">xsl:template</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">xsl:template</span> <span style="color:#a6e22e">match</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;office:document&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">document</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">xsl:apply-templates</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">document</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">xsl:template</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">xsl:template</span> <span style="color:#a6e22e">match</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;office:body&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">xsl:apply-templates</span>/&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">xsl:template</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">xsl:template</span> <span style="color:#a6e22e">match</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;office:spreadsheet&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">xsl:apply-templates</span>/&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">xsl:template</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">xsl:template</span> <span style="color:#a6e22e">match</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;table:table&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">table</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">xsl:attribute</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">xsl:value-of</span> <span style="color:#a6e22e">select</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@table:name&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">xsl:attribute</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">xsl:apply-templates</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">table</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">xsl:template</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">xsl:template</span> <span style="color:#a6e22e">match</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;table:table-row&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">row</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">xsl:attribute</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rownum&#34;</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">xsl:value-of</span> <span style="color:#a6e22e">select</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count(preceding-sibling::table:table-row) + 1&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">xsl:attribute</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">xsl:apply-templates</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">row</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">xsl:template</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">xsl:template</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;repeat-cells&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">xsl:param</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;index&#34;</span> <span style="color:#a6e22e">select</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">xsl:param</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cellnum&#34;</span> <span style="color:#a6e22e">select</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">xsl:if</span> <span style="color:#a6e22e">test</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;$collimit &gt;= $cellnum&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">xsl:if</span> <span style="color:#a6e22e">test</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;$index &gt; 0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">cell</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">xsl:attribute</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cellnum&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>     &lt;<span style="color:#f92672">xsl:value-of</span> <span style="color:#a6e22e">select</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;$cellnum&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>   &lt;/<span style="color:#f92672">xsl:attribute</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;/<span style="color:#f92672">cell</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">xsl:call-template</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;repeat-cells&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">xsl:with-param</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;index&#34;</span> <span style="color:#a6e22e">select</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;$index - 1&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">xsl:with-param</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cellnum&#34;</span> <span style="color:#a6e22e">select</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;$cellnum + 1&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span> &lt;/<span style="color:#f92672">xsl:call-template</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">xsl:if</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">xsl:if</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">xsl:template</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">xsl:template</span> <span style="color:#a6e22e">match</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;table:table-cell&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">xsl:variable</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;repeats&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">select</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sum(preceding-sibling::table:table-cell/@table:number-columns-repeated) -
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     count(preceding-sibling::table:table-cell[@table:number-columns-repeated &gt; 0])&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">xsl:variable</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cellnum&#34;</span> <span style="color:#a6e22e">select</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count(preceding-sibling::table:table-cell) + $repeats + 1&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">xsl:if</span> <span style="color:#a6e22e">test</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;$collimit &gt;= $cellnum&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">cell</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">xsl:attribute</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cellnum&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">xsl:value-of</span> <span style="color:#a6e22e">select</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;$cellnum&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span> &lt;/<span style="color:#f92672">xsl:attribute</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">xsl:apply-templates</span> /&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">cell</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">xsl:if</span> <span style="color:#a6e22e">test</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@table:number-columns-repeated &gt; 0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">xsl:call-template</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;repeat-cells&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">xsl:with-param</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;index&#34;</span> <span style="color:#a6e22e">select</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@table:number-columns-repeated -1&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">xsl:with-param</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cellnum&#34;</span> <span style="color:#a6e22e">select</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;$cellnum + 1&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span> &lt;/<span style="color:#f92672">xsl:call-template</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">xsl:if</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">xsl:if</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">xsl:template</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">xsl:template</span> <span style="color:#a6e22e">match</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text:p&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">xsl:value-of</span> <span style="color:#a6e22e">select</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;.&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">xsl:template</span>&gt;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">xsl:stylesheet</span>&gt;
+</span></span></code></pre></div><p>The second stage is to take the resulting tabular XML file and convert it to meaningful XML. The output essentially wraps each cell in a XML element with the name of the column it was taking from (extracted from the first row).</p>
+<p><code>tbl2data.xsl</code> looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xslt" data-lang="xslt"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;iso-8859-1&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">xsl:stylesheet</span> <span style="color:#a6e22e">version</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2.0&#34;</span> <span style="color:#a6e22e">xmlns:xsl</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.w3.org/1999/XSL/Transform&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">xsl:output</span> <span style="color:#a6e22e">indent</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;yes&#34;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;xml&#34;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">encoding</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">xmlns:saxon</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://icl.com/saxon&#34;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#a6e22e">saxon:character-representation</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;native;decimal&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">xsl:template</span> <span style="color:#a6e22e">match</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;*&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">&lt;!-- Do Nothing --&gt;</span>
+</span></span><span style="display:flex;"><span> &lt;/<span style="color:#f92672">xsl:template</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">xsl:template</span> <span style="color:#a6e22e">match</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;document&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">subjects</span>&gt;
+</span></span><span style="display:flex;"><span>     &lt;<span style="color:#f92672">xsl:apply-templates</span> <span style="color:#a6e22e">select</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;table/row[@rownum &gt; 1]&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>   &lt;/<span style="color:#f92672">subjects</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;/<span style="color:#f92672">xsl:template</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">xsl:template</span> <span style="color:#a6e22e">match</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;row&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">record</span>&gt;
+</span></span><span style="display:flex;"><span>     &lt;<span style="color:#f92672">xsl:apply-templates</span> /&gt;
+</span></span><span style="display:flex;"><span>   &lt;/<span style="color:#f92672">record</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;/<span style="color:#f92672">xsl:template</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">xsl:template</span> <span style="color:#a6e22e">match</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cell&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">xsl:variable</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cellnum&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>     &lt;<span style="color:#f92672">xsl:value-of</span> <span style="color:#a6e22e">select</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@cellnum&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>   &lt;/<span style="color:#f92672">xsl:variable</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">xsl:variable</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;table&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>     &lt;<span style="color:#f92672">xsl:value-of</span> <span style="color:#a6e22e">select</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ancestor::table/@name&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>   &lt;/<span style="color:#f92672">xsl:variable</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">xsl:variable</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cellname&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>     &lt;<span style="color:#f92672">xsl:value-of</span> <span style="color:#a6e22e">select</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/document/table[@name=$table]/row[@rownum=1]/cell[@cellnum=$cellnum]/p[1]&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>   &lt;/<span style="color:#f92672">xsl:variable</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">xsl:choose</span>&gt;
+</span></span><span style="display:flex;"><span>     &lt;<span style="color:#f92672">xsl:when</span> <span style="color:#a6e22e">test</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;string-length($cellname) &gt; 0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">xsl:element</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{$cellname}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">xsl:apply-templates</span> /&gt;
+</span></span><span style="display:flex;"><span> &lt;/<span style="color:#f92672">xsl:element</span>&gt;
+</span></span><span style="display:flex;"><span>     &lt;/<span style="color:#f92672">xsl:when</span>&gt;
+</span></span><span style="display:flex;"><span>     &lt;<span style="color:#f92672">xsl:otherwise</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">xsl:element</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;OOPS&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">xsl:apply-templates</span> /&gt;
+</span></span><span style="display:flex;"><span> &lt;/<span style="color:#f92672">xsl:element</span>&gt;
+</span></span><span style="display:flex;"><span>     &lt;/<span style="color:#f92672">xsl:otherwise</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;/<span style="color:#f92672">xsl:choose</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;/<span style="color:#f92672">xsl:template</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">xsl:template</span> <span style="color:#a6e22e">match</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;p&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>   &lt;<span style="color:#f92672">xsl:value-of</span> <span style="color:#a6e22e">select</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;.&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span> &lt;/<span style="color:#f92672">xsl:template</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">xsl:stylesheet</span>&gt;
+</span></span></code></pre></div><p>I hope someone finds that helpful.</p>
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/frontend/html5-and-all-that/">HTML5 and all that</a></h4>
+    <h5>Sun Jan 10 2010 00:31:00 CET</h5>
+    
+<a href="https://www.teale.de/tags/frontend"><kbd class="item-tag">frontend</kbd></a>
+
+<a href="https://www.teale.de/tags/html"><kbd class="item-tag">html</kbd></a>
+
+<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
+
+<a href="https://www.teale.de/tags/xml"><kbd class="item-tag">xml</kbd></a>
+
+<a href="https://www.teale.de/tags/flash"><kbd class="item-tag">flash</kbd></a>
+
+<a href="https://www.teale.de/tags/google_gears"><kbd class="item-tag">google_gears</kbd></a>
+
+<a href="https://www.teale.de/tags/emacs"><kbd class="item-tag">emacs</kbd></a>
+
+<a href="https://www.teale.de/tags/nxml"><kbd class="item-tag">nxml</kbd></a>
+
+
+
+</div>
+ 
+    
+
+    
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">Copyright © Geoffrey J. Teale. All rights reserved. Powered by <a href='https://gohugo.io'>Hugo</a> and <a href='https://github.com/calintat/minimal'>Minimal</a>.</p>
+        </footer>
+
+        
+
+        
+    </body>
+
+</html>
+

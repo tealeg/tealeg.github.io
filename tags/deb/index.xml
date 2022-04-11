@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>deb on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/deb/</link>
+    <description>Recent content in deb on The ol&#39; tealeg ruminates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 19 May 2007 15:34:00 +0100</lastBuildDate><atom:link href="https://www.teale.de/tags/deb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project Indiana Wishlist</title>
+      <link>https://www.teale.de/post/tech/opensolaris/indiana-wishlist/</link>
+      <pubDate>Sat, 19 May 2007 15:34:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/opensolaris/indiana-wishlist/</guid>
+      <description>OK, so many, many people will be saying many things about project Indiana before we ever see anything concrete, and then many more people will inevitably form two camps - the &amp;ldquo;Indianaphiles&amp;rdquo; and the &amp;ldquo;Indianaphobes&amp;rdquo;.
+All of that is inevitable and I guess we should just enjoy the ride. However, given the scope for Indiana thus far expressed is &amp;ldquo;Make a Sun branded Solaris distribution that&amp;rsquo;s a lot more like Linux&amp;rdquo;, and that the top man is Ian Murdoch, I have exactly one wish for this project.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>free_software on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/free_software/</link>
+    <description>Recent content in free_software on The ol&#39; tealeg ruminates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 26 Jun 2007 14:25:00 +0100</lastBuildDate><atom:link href="https://www.teale.de/tags/free_software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>It makes me mad!</title>
+      <link>https://www.teale.de/post/tech/legal/</link>
+      <pubDate>Tue, 26 Jun 2007 14:25:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/legal/</guid>
+      <description>If there&amp;rsquo;s one thing in this world that makes me mad (and there isn&amp;rsquo;t, there&amp;rsquo;s loads of things) it&amp;rsquo;s the portions of the Free/Libre/Open Source Software community who assume that anything to do with the law is inherently evil.
+Every time I see this is riles me - from the anti-GFDL people in the Debian community, through the &amp;ldquo;me too&amp;rdquo; boys who decry the GPL (and especially the GPL3) as being &amp;ldquo;less free&amp;rdquo; than BSD licenses without understanding the effect of either, right down to those whom, even with the best of intentions, make statements like this.</description>
+    </item>
+    
+  </channel>
+</rss>

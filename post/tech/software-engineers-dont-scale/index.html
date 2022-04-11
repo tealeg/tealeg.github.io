@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Software Engineers Don&#39;t Scale</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Playfair Display', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: teal;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://www.teale.de/css/main.css">
+
+
+ <link rel="stylesheet" href="https://www.teale.de/css/tealeg.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair%20Display">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scheme.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.96.0" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Software Engineers Don&#39;t Scale</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/reference/">Reference</a></li>
+                            
+                        </ul>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>Software Engineers Don&#39;t Scale</h2>
+        <h5>Thu Jul 4 2019 15:57:18 CEST</h5>
+        
+<a href="https://www.teale.de/tags/tech"><kbd class="item-tag">tech</kbd></a>
+
+<a href="https://www.teale.de/tags/management"><kbd class="item-tag">management</kbd></a>
+
+<a href="https://www.teale.de/tags/organisation"><kbd class="item-tag">organisation</kbd></a>
+
+<a href="https://www.teale.de/tags/teams"><kbd class="item-tag">teams</kbd></a>
+
+<a href="https://www.teale.de/tags/developer-care"><kbd class="item-tag">developer care</kbd></a>
+
+<a href="https://www.teale.de/tags/heetch"><kbd class="item-tag">heetch</kbd></a>
+
+<a href="https://www.teale.de/tags/scaling"><kbd class="item-tag">scaling</kbd></a>
+
+<a href="https://www.teale.de/tags/software"><kbd class="item-tag">software</kbd></a>
+
+<a href="https://www.teale.de/tags/engineering"><kbd class="item-tag">engineering</kbd></a>
+
+<a href="https://www.teale.de/tags/commenting"><kbd class="item-tag">commenting</kbd></a>
+
+<a href="https://www.teale.de/tags/documentation"><kbd class="item-tag">documentation</kbd></a>
+
+<a href="https://www.teale.de/tags/efficiency"><kbd class="item-tag">efficiency</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content"><h1 id="software-engineers-dont-scale--or-how-i-learned-to-stop-worrying-and-love-commenting-my-code">Software Engineers don&rsquo;t scale &hellip; or how I learned to stop worrying and love commenting my code.</h1>
+<p><em>NOTE: I originally published this on the <a href="https://medium.com/inside-heetch/software-engineers-dont-scale-9e374b6ee90a">Inside Heetch blog</a></em></p>
+<p><a href="https://techbeacon.com/app-dev-testing/forget-monoliths-vs-microservices-cognitive-load-what-matters">This
+article</a>,
+by Mathew Skelton and Manuel Pais, reminds me that, for everything
+that’s been made simpler in this era of cloud computing and
+micro-services, we’ve paid a price in terms of cognitive load. We
+simply need to keep more context in mind when making or evaluating any
+change to our code.</p>
+<p>When we work in small teams this mass of context is quickly
+internalised, but what was easy to understand initially can become a
+problem as teams scale up. I’d like to explain why, and suggest some
+simple steps you can take from day one to ease that pain.</p>
+<h2 id="get-comfortable-its-story-time">Get comfortable, it’s story time…</h2>
+<p>In the early days of a company or project, there’s very little code
+maintained by very few people. This is where our story begins.</p>
+<p>Imagine you’re the 2nd engineer hired into a start-up. You spend your
+first days reading the few thousand lines of code that exist thus far,
+and you ask your colleague “hey, in the fulfillment service I don’t
+see where we charge the customer, can you help me?”. Your colleague
+leans in and says, “sure, let me show you. I actually message this
+other service…”, and as quick as that you’re back on track.</p>
+<p>It’s easy to communicate, and to keep the context of what you’re doing
+in your head, and even the context of what your colleague is doing, to
+a degree.</p>
+<p>You hire another engineer, let them read the code and then give them
+some low-hanging fruit to work on. As they get started with one of the
+tasks, they find that they are a little stuck, so they ask you “Hey,
+can you show me where in the fulfillment service we initiate a charge
+to the customer?” “Oh”, you say, “yes, I remember, we actually send a
+message over to the charge service…”</p>
+<p>After a while, you scale up and more engineers get involved. Initially
+this is easy. You spend a little time explaining things and answering
+questions, but eventually the new engineers get up to speed and become
+productive. You’re now a senior engineer (congratulations!). One day a
+new engineer asks one of the other junior engineers “Where in the
+fulfillment service do we initiate the charge?”, and the junior
+engineer replies “Hmm, I don’t actually remember, but I know who
+will!”, and you get pulled into the conversation.</p>
+<p>Now the code is growing faster and the amount of activity you have to
+keep in your head is growing too. It’s no longer possible for you to
+know everything that is going on.</p>
+<p>Eventually, the company grows again, more engineers are hired, you’re
+now a team leader (your career is stellar!). Each time an engineer
+joins you and the senior engineers spend time walking them through the
+projects, and then eventually they begin work. Because there is more
+code now it’s harder and harder for each new engineer to understand
+the full context of what is happening.</p>
+<p>To be productive it’s necessary for engineers to isolate sections of
+code and work on them without understanding the full context of a
+program. They can confidently do this because you have good test
+coverage.</p>
+<p>Every day your new Slack channels are full of questions like “Hey,
+Dave, where do we initiate a customer charge when fulfilling a
+request?”, and answers like “I don’t know, but perhaps @Jane or
+@Rakesh will?”. Your new QA Engineer is asking questions like: “I want
+to make a robot test that establishes that all customers are billed
+before we fulfill an order; what’s the entrance point I should use?”,
+and your help-desk engineer is asking, “The customer says her browser
+crashed as she was completing an order; she’s been charged, but we’ve
+got no record of the order. Is that something that can happen?” The
+team starts looking into these questions, but 5 minutes in comes the
+question: “Hey, where do we initiate charges?”</p>
+<h2 id="code-level-documentation-is-a-scaling-issue">Code level documentation is a scaling issue</h2>
+<p>What is it I’m trying to show with the story above? As time
+progresses, the most experienced engineers spend more and more of
+their time helping the juniors in relatively trivial ways. Resolving
+indirection, and providing context, not to mention all the
+meta-discussion about what was or wasn’t decided, when, and by
+who. Every time the senior engineering staff gets asked a question
+they themselves lose track of what they were doing and have to spend
+time to regain that context.</p>
+<p>The cost of each change made to the code gets higher and higher, even
+though we’ve been meticulous about writing good code, with good test
+coverage, in a great language, backed by CI/CD and world class
+tooling.</p>
+<p>This might sound like a straw man argument, but it is not. It’s based
+on a real-life experience of working at a start-up that lived by the
+mantra “The code is the documentation”. Ultimately this policy made
+scaling the engineering team hard, and wasteful.</p>
+<h2 id="why-did-that-happen-and-how-can-we-avoid-it">Why did that happen, and how can we avoid it?</h2>
+<p>One of the main reasons software engineers don’t always understand the
+value of human language commentary mixed into their code is because
+they don’t see the use case. After all, to work on source code you
+must first understand it, and that means reading the code. Surely
+repeating yourself in the form of in-line
+comments just costs time and clutters up the source code?</p>
+<p>Well, let’s take that idea a little further. Reading code implies
+something more than that. Making a change to some software requires
+that you read enough of the code to find the specific path through the
+software that must be changed, hold a summary of that context in your
+head and make a change within that context. Often you’ll cross-check
+details of that context by visiting the files and functions that
+comprise it.</p>
+<p>This contextual summary in your mind is the very thing that is so
+easily lost when someone distracts you from your code — and why we
+feel frustration at those moments. This real-world context-switching
+is very costly, as we have to go back, and regain the train of
+thought, and frame of reference required to continue what
+we were doing prior to interruption.</p>
+<p>We engineers have built lots of fancy tools to help us in this quest
+to navigate and understand code quickly. We have complex search tools,
+automated lookup of symbol definition and consumption. Many of us
+invest large amounts of time and effort into this, whilst studiously
+avoiding a more direct answer.</p>
+<h2 id="yes-its-just-an-engineering-problem">Yes, it’s just an engineering problem</h2>
+<p>Lets think about the way we work when coding, and compare it to the
+way our programs work. Here are two cases that occur commonly in
+computer systems:</p>
+<ul>
+<li>I have some summary information that I have
+calculated at a significant cost. I need to reference this information
+a second time, how do I approach that?  Well, I store it. Perhaps in a
+variable, if it’s only relevant locally, and in the short term, or in
+some persistent store if it has broader or longer-term relevance. In
+either case, when our process is interrupted and then later scheduled
+on CPU again, we pay the cost of saving and reloading the state,
+including what we calculated, but not the cost of calculating
+it. Likewise, if we re-use the result, there is no additional cost.</li>
+<li>I wish to access some information that I know is somewhere in a large
+store of data. I have two options. I can either scan through the data
+checking each item for a match, or maintain an index that can lead me
+quickly to it. There is a small trade-off to be made in terms of
+creating and maintaining the index, but in a great many cases this is
+worthwhile because of the speed of access to the data.</li>
+</ul>
+<p>Can we translate these ideas to our own patterns of work? How do we
+cache and index for an engineer? In-line comments fulfill both these
+roles, they can act to cache contextual information where it is
+required, and they can act as indexes to other information. Consider
+the following comments from Go code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// The Service.Config struct was initialised in Service.Configure.
+</span></span></span></code></pre></div><p>This comment captures a little bit of context about where some
+information being used in a function comes from. The two seconds it
+took to write will save me a <code>grep</code> and trawl when I revisit this code
+in 6 months time. When reading some code for the first time, I often
+try and add this kind of commentary as I go.</p>
+<p>Likewise, I make sure that the functions I visit are properly
+documented:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// Configure initializes the Service.Config struct from the
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// configuration values stored in the file with the given path.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">s</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">Service</span>) <span style="color:#a6e22e">Configure</span>(<span style="color:#a6e22e">configPath</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">error</span> {
+</span></span></code></pre></div><p>Why have I duplicated that information? Because referencing the member
+of the structure that it initialises makes it possible to see at a
+glance what it does, which again saves time.</p>
+<p>Why have I deviated from the norms of Go commenting style by including
+the struct name <code>Service</code>? It allows me to grep specifically for
+<code>Service.Config</code> rather that <code>s.Config</code>. The code itself will refer to
+<code>s.Config</code>, but in order to know that variable name used internally is s
+one must already be looking at the code you want to find. Of course
+convention suggest it would probably be <code>s</code>, but you cannot always be
+sure.</p>
+<p>As this is Go code, and <code>Service.Configure</code> is a public method of a
+public structure, this comment will wind up in auto-generated
+documentation as well, and such a facility exists in a great many
+modern languages.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// Send an asynchronous message to the Charge
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// service. Either a ChargeInitiated message or ChargeError 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// message will be sent back and handled by 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// handlers.ChargeResponseHandler.
+</span></span></span></code></pre></div><p>This comment is even more of time saver — it describes the actions
+with relation to another service with which this code interacts. The
+message it describes might be considered a side effect of the code,
+especially as we won’t block on the call, and the pointer to where the
+response is handled nullifies the conceptual cost of the indirection
+in the code.</p>
+<p>Finally, this example points us at a non-code external
+resource and answers the fundamental “why” question:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">CountryCode</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;DE&#34;</span> { 
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// We&#39;re in Germany, so we cannot apply discounts to books. See 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//  https://github.com/MyFirm/our-project/issues/156
+</span></span></span></code></pre></div><h2 id="reusable-information">Reusable information</h2>
+<p>Now, the great thing about comments in code is that they are
+persistent and accessible by audiences other than me. Think about the
+following use cases. Every one of these scenarios can be made more
+efficient by spending a few seconds writing notes in your code.</p>
+<h3 id="a-new-engineer-approaching-the-project">A new engineer approaching the project</h3>
+<p>A decent README, detailing the intent of a program or library and its
+entrance points will get a new engineer from 0-100 (or 0-60 for you
+imperial types) much faster than just staring at the code. If you hand
+someone a map, they&rsquo;ll get much further before they ask for
+directions.</p>
+<h3 id="another-software-engineer-performing-code-review-on-your-code">Another software engineer performing code review on your code</h3>
+<p>I find code review is much more difficult than writing code. To do it
+well requires some mental gymnastics.</p>
+<p>You have to understand the flow and context of what the code was doing
+before the change. You have to understand the intent of the change,
+and perhaps some additional discussions and decision that led to
+it. You have to understand the flow and detail of the solution, and
+within that you have to see what actually changed and what effects
+that will have.</p>
+<p>With all of that in your head, you have to check that the right thing
+has been done, and that this is in line with stylistic constraints
+your team places upon code.</p>
+<p>Some explanatory notes in line can work wonders with understanding the
+intent of the changes whilst browsing a diff.</p>
+<p>Better reviews mean  fewer bugs, and better understanding means fewer
+invalid review points, which in turn makes less work for everyone
+involved!</p>
+<h3 id="engineers-consuming-a-library-or-package">Engineers consuming a library or package</h3>
+<p>This should be obvious, but if you’re using a library to achieve
+something, it is probably not your intent to invest the time to fully
+understand the implementation of the library before you use it. Well
+written doc-strings or documentation comments, especially where those
+get automatically translated into reference documents, obviate the
+need to read the code to understand the intended flow and effects of a
+library.</p>
+<p>This saves immeasurable time. It doesn’t matter if the engineers are
+in a different company, different team, or even just dealing with a
+package in a project large enough to have several of them. They could
+even be QA engineers doing white box testing. The point remains: If
+you make an abstraction, you should make it consumable in an abstract
+way, and that means explaining what can’t be seen purely from function
+signatures and variable names.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>My intent in this post has been to show that far from being a time
+sink, taking the time to write down what is in your head, whilst you
+work on the code can save everyone time. The time it saves only
+increases as the development team grows bigger.</p>
+<p>Yes, of course, there is a cost to maintaining comments and
+documentation strings, but if you make this part of your work routine
+you’ll find the cost is negligible when compared to the cost of
+repeating the same answers over and over again in response to
+inquiries. My tip is that each team member checks that comments and
+documentation strings are updated when they review pull requests. If
+your comments are out of sync with your code that’s an engineering
+failure just as much as a poorly expressed piece of code.</p>
+<p>The idea that “the code is the documentation” appeals strongly to the
+engineers impulse to do what they do well, and efficiently, but it’s a
+mantra that fails to recognise the difference between giving clear
+instructions to a system of related computer programs, and the ability
+of individual humans to deal with that complexity, or the fundamental
+questions that humans always ask, and computers never do: “Why?” and
+“What the ..?”</p>
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/life/why-the-long-pauses/">Why the long pause?</a></h4>
+    <h5>Fri Apr 8 2022 12:49:00 CEST</h5>
+    
+<a href="https://www.teale.de/tags/life"><kbd class="item-tag">life</kbd></a>
+
+<a href="https://www.teale.de/tags/update"><kbd class="item-tag">update</kbd></a>
+
+<a href="https://www.teale.de/tags/ux"><kbd class="item-tag">ux</kbd></a>
+
+<a href="https://www.teale.de/tags/dx"><kbd class="item-tag">dx</kbd></a>
+
+<a href="https://www.teale.de/tags/user_experience"><kbd class="item-tag">user_experience</kbd></a>
+
+<a href="https://www.teale.de/tags/developer_experience"><kbd class="item-tag">developer_experience</kbd></a>
+
+<a href="https://www.teale.de/tags/devx"><kbd class="item-tag">devx</kbd></a>
+
+<a href="https://www.teale.de/tags/go"><kbd class="item-tag">go</kbd></a>
+
+<a href="https://www.teale.de/tags/golang"><kbd class="item-tag">golang</kbd></a>
+
+<a href="https://www.teale.de/tags/book"><kbd class="item-tag">book</kbd></a>
+
+<a href="https://www.teale.de/tags/canonical"><kbd class="item-tag">canonical</kbd></a>
+
+<a href="https://www.teale.de/tags/kids"><kbd class="item-tag">kids</kbd></a>
+
+<a href="https://www.teale.de/tags/heetch"><kbd class="item-tag">heetch</kbd></a>
+
+<a href="https://www.teale.de/tags/meta"><kbd class="item-tag">meta</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/developer-care/">Developer Care</a></h4>
+    <h5>Wed May 15 2019 15:57:18 CEST</h5>
+    
+<a href="https://www.teale.de/tags/tech"><kbd class="item-tag">tech</kbd></a>
+
+<a href="https://www.teale.de/tags/management"><kbd class="item-tag">management</kbd></a>
+
+<a href="https://www.teale.de/tags/organisation"><kbd class="item-tag">organisation</kbd></a>
+
+<a href="https://www.teale.de/tags/teams"><kbd class="item-tag">teams</kbd></a>
+
+<a href="https://www.teale.de/tags/developer-care"><kbd class="item-tag">developer care</kbd></a>
+
+<a href="https://www.teale.de/tags/heetch"><kbd class="item-tag">heetch</kbd></a>
+
+<a href="https://www.teale.de/tags/avocet"><kbd class="item-tag">avocet</kbd></a>
+
+<a href="https://www.teale.de/tags/devx"><kbd class="item-tag">devx</kbd></a>
+
+<a href="https://www.teale.de/tags/dx"><kbd class="item-tag">dx</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/legal/">It makes me mad!</a></h4>
+    <h5>Tue Jun 26 2007 14:25:00 &#43;0100</h5>
+    
+<a href="https://www.teale.de/tags/tech"><kbd class="item-tag">tech</kbd></a>
+
+<a href="https://www.teale.de/tags/legal"><kbd class="item-tag">legal</kbd></a>
+
+<a href="https://www.teale.de/tags/open_source"><kbd class="item-tag">open_source</kbd></a>
+
+<a href="https://www.teale.de/tags/free_software"><kbd class="item-tag">free_software</kbd></a>
+
+<a href="https://www.teale.de/tags/gnu"><kbd class="item-tag">gnu</kbd></a>
+
+<a href="https://www.teale.de/tags/gpl"><kbd class="item-tag">gpl</kbd></a>
+
+<a href="https://www.teale.de/tags/bsd"><kbd class="item-tag">bsd</kbd></a>
+
+
+
+</div>
+ 
+    
+
+    
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">Copyright © Geoffrey J. Teale. All rights reserved. Powered by <a href='https://gohugo.io'>Hugo</a> and <a href='https://github.com/calintat/minimal'>Minimal</a>.</p>
+        </footer>
+
+        
+
+        
+    </body>
+
+</html>
+

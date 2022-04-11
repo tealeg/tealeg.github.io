@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>package-management on Geoffrey J. Teale</title>
-    <link>https://tealeg.github.io/tags/package-management/</link>
-    <description>Recent content in package-management on Geoffrey J. Teale</description>
+    <title>package-management on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/package-management/</link>
+    <description>Recent content in package-management on The ol&#39; tealeg ruminates</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 15 May 2019 16:25:21 +0200</lastBuildDate>
-    
-	<atom:link href="https://tealeg.github.io/tags/package-management/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 15 May 2019 16:25:21 +0200</lastBuildDate><atom:link href="https://www.teale.de/tags/package-management/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>System Updates With Mixin</title>
-      <link>https://tealeg.github.io/blog/tech/clearlinux/system-updates-with-mixin/</link>
+      <link>https://www.teale.de/post/tech/clearlinux/system-updates-with-mixin/</link>
       <pubDate>Wed, 15 May 2019 16:25:21 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/blog/tech/clearlinux/system-updates-with-mixin/</guid>
+      <guid>https://www.teale.de/post/tech/clearlinux/system-updates-with-mixin/</guid>
       <description>If you use ClearLinux&amp;rsquo;s mixin to add custom bundles to your installation, you will still be able to update your upstream bundles, however it will nolonger be as simple as doing a sudo swupd update. Here are the step&amp;rsquo;s you need to go through, assuming you defined your mixin repository in ~/mixin-repo:
 cd ~/mixin-repo createrepo_c . sudo mixin build sudo swupd update --migrate &amp;hellip; this is at least the process I have used, and which worked for me.</description>
     </item>

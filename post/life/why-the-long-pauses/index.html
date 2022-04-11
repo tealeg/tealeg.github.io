@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Why the long pause?</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Playfair Display', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: teal;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://www.teale.de/css/main.css">
+
+
+ <link rel="stylesheet" href="https://www.teale.de/css/tealeg.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair%20Display">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scheme.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.96.0" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Why the long pause?</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/reference/">Reference</a></li>
+                            
+                        </ul>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>Why the long pause?</h2>
+        <h5>Fri Apr 8 2022 12:49:00 CEST</h5>
+        
+<a href="https://www.teale.de/tags/life"><kbd class="item-tag">life</kbd></a>
+
+<a href="https://www.teale.de/tags/update"><kbd class="item-tag">update</kbd></a>
+
+<a href="https://www.teale.de/tags/ux"><kbd class="item-tag">ux</kbd></a>
+
+<a href="https://www.teale.de/tags/dx"><kbd class="item-tag">dx</kbd></a>
+
+<a href="https://www.teale.de/tags/user_experience"><kbd class="item-tag">user_experience</kbd></a>
+
+<a href="https://www.teale.de/tags/developer_experience"><kbd class="item-tag">developer_experience</kbd></a>
+
+<a href="https://www.teale.de/tags/devx"><kbd class="item-tag">devx</kbd></a>
+
+<a href="https://www.teale.de/tags/go"><kbd class="item-tag">go</kbd></a>
+
+<a href="https://www.teale.de/tags/golang"><kbd class="item-tag">golang</kbd></a>
+
+<a href="https://www.teale.de/tags/book"><kbd class="item-tag">book</kbd></a>
+
+<a href="https://www.teale.de/tags/canonical"><kbd class="item-tag">canonical</kbd></a>
+
+<a href="https://www.teale.de/tags/kids"><kbd class="item-tag">kids</kbd></a>
+
+<a href="https://www.teale.de/tags/heetch"><kbd class="item-tag">heetch</kbd></a>
+
+<a href="https://www.teale.de/tags/meta"><kbd class="item-tag">meta</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content"><h2 id="the-history-of-my-blog">The history of my blog</h2>
+<p>If you look back through my historic posts (many of which I&rsquo;ve recently migrated here from my historic <a href="https://tealeg.blogspot.com">blog spot</a> blog), you&rsquo;ll notice that I&rsquo;ve been blogging, on and off, since 2007.  That&rsquo;s actually not true - I had done some previous blogging on another platform (all now lost), and actually I&rsquo;d written occasional thoughts on various &ldquo;home pages&rdquo; going all the way back to 1995. Still, the oldest stuff that&rsquo;s readily available, and presented here is from 2007.</p>
+<p>The &ldquo;on and off&rdquo; comment above is a little tongue in cheek.  There have been large gaps in my writing, but you&rsquo;ll see a huge one from 2010 until 2019, and a smaller one from 2019 to now.</p>
+<h2 id="why-are-you-writing-again-now">Why are you writing again now?</h2>
+<p>Well, mainly because I have things to say about <a href="/tags/developer_experience/">Developer eXperience</a>.  I was working on a book with some colleagues, in an attempt to put down ideas I have in writing.  Sadly, however, that book has stalled.  Initially because we had agreed on a format that I found fun an innovative, but ultimately made it hard to convey what I needed to convey.  The second, more important reason while that book will probably never get finished is because I&rsquo;m moving companies in a couple of months - Developer eXperience is a rapidly expanding field, and with that came new and exciting opportunities.</p>
+<p>So, my hope is that I&rsquo;ll be able to get some ideas down here instead.</p>
+<h2 id="why-havent-you-written-anything-since-2019">Why haven&rsquo;t you written anything since 2019?</h2>
+<p>I was actually writing a lot, and doing a fair few talks but you didn&rsquo;t get to see most of it.</p>
+<p>The writing I was doing in 2019 was mostly part of my job at <a href="https://heetch.com">Heetch</a>.  I would have still been at Heetch and still writing, occasionally but COVID made it very hard for a company like that (Heetch is the French equivalent of Uber or Lyft) to operate. HDI Systems, where I landed, gave me a DevX role, but with a focus on internal cloud platforms - and whilst the company is big enough that doing DevX for customers can feel a lot like doing it for external customers, there is still that barrier that much of the communication doesn&rsquo;t penetrate.</p>
+<p>Some of what I said and thought during the last couple of years will definitely be included in what I say from now on though.</p>
+<h2 id="why-the-gap-prior-to-2019">Why the gap prior to 2019?</h2>
+<p>So many reasons. All these things happened since I wrote the last entry in 2010.</p>
+<ul>
+<li>I married my 2nd wife Nicole in 2010.</li>
+<li>We have had two daughters, Elisa and Freya who&rsquo;ve objectively eaten up a lot of my spare time.</li>
+<li>The job I was doing in 2009 became very time intensive and pressured (<a href="/post/life/cycling/bicycle-maintenance-2">I referenced this in one of the posts</a>)</li>
+</ul>
+<p>.. but actually the main reason was <a href="https://golang.org">Go</a>.</p>
+<h2 id="go-changed-things-a-lot">Go changed things a lot</h2>
+<p>In November 2009 a team at Google announced Go.  I immediately started working on it, and in 2010 I launched an open source library to read <a href="https://github.com/tealeg/xlsx">Microsoft&rsquo;s XML based XLSX file format for Excel</a>.  That project had a life of it&rsquo;s own, way beyond my limited use case, and ended up eating huge amounts of my time.</p>
+<p>The next thing that happened, at least in part because of the success of that library, is that I took a job working at <a href="https://canonical.com">Canonical</a> which led to me being deeply involved in Cloud technology and working remotely in a really wonderful team of brilliant engineers from all over the world. Lots of bad things get said about Canonical, and there are reasons, but my team there was probably the best team I&rsquo;ve ever worked in.</p>
+<p>I worked at Canonical for 6 years, and I really didn&rsquo;t have time or motivation to write during that period.  The year after that was chaotic and disjointed, and then I started doing DevX at Heetch.  So that&rsquo;s pretty much that.</p>
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/software-engineers-dont-scale/">Software Engineers Don&#39;t Scale</a></h4>
+    <h5>Thu Jul 4 2019 15:57:18 CEST</h5>
+    
+<a href="https://www.teale.de/tags/tech"><kbd class="item-tag">tech</kbd></a>
+
+<a href="https://www.teale.de/tags/management"><kbd class="item-tag">management</kbd></a>
+
+<a href="https://www.teale.de/tags/organisation"><kbd class="item-tag">organisation</kbd></a>
+
+<a href="https://www.teale.de/tags/teams"><kbd class="item-tag">teams</kbd></a>
+
+<a href="https://www.teale.de/tags/developer-care"><kbd class="item-tag">developer care</kbd></a>
+
+<a href="https://www.teale.de/tags/heetch"><kbd class="item-tag">heetch</kbd></a>
+
+<a href="https://www.teale.de/tags/scaling"><kbd class="item-tag">scaling</kbd></a>
+
+<a href="https://www.teale.de/tags/software"><kbd class="item-tag">software</kbd></a>
+
+<a href="https://www.teale.de/tags/engineering"><kbd class="item-tag">engineering</kbd></a>
+
+<a href="https://www.teale.de/tags/commenting"><kbd class="item-tag">commenting</kbd></a>
+
+<a href="https://www.teale.de/tags/documentation"><kbd class="item-tag">documentation</kbd></a>
+
+<a href="https://www.teale.de/tags/efficiency"><kbd class="item-tag">efficiency</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/developer-care/">Developer Care</a></h4>
+    <h5>Wed May 15 2019 15:57:18 CEST</h5>
+    
+<a href="https://www.teale.de/tags/tech"><kbd class="item-tag">tech</kbd></a>
+
+<a href="https://www.teale.de/tags/management"><kbd class="item-tag">management</kbd></a>
+
+<a href="https://www.teale.de/tags/organisation"><kbd class="item-tag">organisation</kbd></a>
+
+<a href="https://www.teale.de/tags/teams"><kbd class="item-tag">teams</kbd></a>
+
+<a href="https://www.teale.de/tags/developer-care"><kbd class="item-tag">developer care</kbd></a>
+
+<a href="https://www.teale.de/tags/heetch"><kbd class="item-tag">heetch</kbd></a>
+
+<a href="https://www.teale.de/tags/avocet"><kbd class="item-tag">avocet</kbd></a>
+
+<a href="https://www.teale.de/tags/devx"><kbd class="item-tag">devx</kbd></a>
+
+<a href="https://www.teale.de/tags/dx"><kbd class="item-tag">dx</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/programming/superfluity/">The danger of superfluity.</a></h4>
+    <h5>Thu Aug 14 2008 01:02:00 CEST</h5>
+    
+<a href="https://www.teale.de/tags/ux"><kbd class="item-tag">ux</kbd></a>
+
+<a href="https://www.teale.de/tags/user_experience"><kbd class="item-tag">user_experience</kbd></a>
+
+<a href="https://www.teale.de/tags/dx"><kbd class="item-tag">dx</kbd></a>
+
+<a href="https://www.teale.de/tags/devx"><kbd class="item-tag">devx</kbd></a>
+
+<a href="https://www.teale.de/tags/developer_experience"><kbd class="item-tag">developer_experience</kbd></a>
+
+
+
+</div>
+ 
+    
+
+    
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">Copyright © Geoffrey J. Teale. All rights reserved. Powered by <a href='https://gohugo.io'>Hugo</a> and <a href='https://github.com/calintat/minimal'>Minimal</a>.</p>
+        </footer>
+
+        
+
+        
+    </body>
+
+</html>
+

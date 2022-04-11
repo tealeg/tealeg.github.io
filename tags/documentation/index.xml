@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>documentation on Geoffrey J. Teale</title>
-    <link>https://tealeg.github.io/tags/documentation/</link>
-    <description>Recent content in documentation on Geoffrey J. Teale</description>
+    <title>documentation on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/documentation/</link>
+    <description>Recent content in documentation on The ol&#39; tealeg ruminates</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 04 Jul 2019 15:57:18 +0200</lastBuildDate>
-    
-	<atom:link href="https://tealeg.github.io/tags/documentation/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 04 Jul 2019 15:57:18 +0200</lastBuildDate><atom:link href="https://www.teale.de/tags/documentation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Software Engineers Don&#39;t Scale</title>
-      <link>https://tealeg.github.io/blog/tech/software-engineers-dont-scale/</link>
+      <link>https://www.teale.de/post/tech/software-engineers-dont-scale/</link>
       <pubDate>Thu, 04 Jul 2019 15:57:18 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/blog/tech/software-engineers-dont-scale/</guid>
+      <guid>https://www.teale.de/post/tech/software-engineers-dont-scale/</guid>
       <description>Software Engineers don&amp;rsquo;t scale &amp;hellip; or how I learned to stop worrying and love commenting my code. NOTE: I originally published this on the Inside Heetch blog
 This article, by Mathew Skelton and Manuel Pais, reminds me that, for everything that’s been made simpler in this era of cloud computing and micro-services, we’ve paid a price in terms of cognitive load. We simply need to keep more context in mind when making or evaluating any change to our code.</description>
     </item>

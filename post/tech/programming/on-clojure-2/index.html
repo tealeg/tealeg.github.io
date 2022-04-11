@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>On Clojure (part 2)</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Playfair Display', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: teal;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://www.teale.de/css/main.css">
+
+
+ <link rel="stylesheet" href="https://www.teale.de/css/tealeg.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair%20Display">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scheme.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.96.0" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">On Clojure (part 2)</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/reference/">Reference</a></li>
+                            
+                        </ul>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>On Clojure (part 2)</h2>
+        <h5>Sat Nov 8 2008 06:54:00 CET</h5>
+        
+<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
+
+<a href="https://www.teale.de/tags/lisp"><kbd class="item-tag">lisp</kbd></a>
+
+<a href="https://www.teale.de/tags/scheme"><kbd class="item-tag">scheme</kbd></a>
+
+<a href="https://www.teale.de/tags/java"><kbd class="item-tag">java</kbd></a>
+
+<a href="https://www.teale.de/tags/swing"><kbd class="item-tag">swing</kbd></a>
+
+<a href="https://www.teale.de/tags/qt"><kbd class="item-tag">qt</kbd></a>
+
+<a href="https://www.teale.de/tags/nicole"><kbd class="item-tag">nicole</kbd></a>
+
+<a href="https://www.teale.de/tags/apple"><kbd class="item-tag">apple</kbd></a>
+
+<a href="https://www.teale.de/tags/macosx"><kbd class="item-tag">macosx</kbd></a>
+
+<a href="https://www.teale.de/tags/sqlite"><kbd class="item-tag">sqlite</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content"><h2 id="distributing-qtjambi-with-clojure">Distributing QtJambi with Clojure.</h2>
+<h3 id="how-to-bundle-up-clojure-programs-for-distribution">How to bundle up Clojure programs for distribution</h3>
+<p>One of the questions I&rsquo;ve seen coming up a few times is how to distribute clojure programs. The obvious answer is to build executable JAR files.</p>
+<p>A while ago I produced a simple database application for my girlfriends recruitment business, NRecruit. I developed this using Clojure on my Arch Linux based laptop, and deployed to her MacBook running OS X Leopard. The underlying database is sqlite3, but it could just as well be MySQL or anything else that is supported by JDBC. For simplicity I unzip the required JAR files in the root directory of the project and then rebundle them into a single distributable JAR following <a href="http://rpdillon.googlepages.com/creatingexecutablejarswithclojure">this guide</a>.</p>
+<h3 id="using-qtjambi">Using QTJambi</h3>
+<p>That application is in production use right now, but there have been a number of problems with the Swing based GUI. I have been trying to address them, but I find Swing an unnecessarily painful toolkit to use.</p>
+<p>Several years back (circa KDE 2, and early KDE 3) I used to do some development with Qt in C++ and Ruby. I have looked at Qt4 a couple of time before and I still feel that Qt is one of the nicest GUI toolkits out there. So I read <a href="http://briancarper.net/2008/10/31/qt4-in-lisp/">this blog entry on using Qt4 with clojure</a> with great excitement I started porting the NRecruit database UI over to Qt.</p>
+<p>So far I&rsquo;ve hit two issues. The first one (using Qt Designer files from within Clojure) I&rsquo;ll address in a later post; the second one is more fundemental. Distributing QtJambi in your jar has a few gotchas. The most succesful approach I&rsquo;ve found is this:</p>
+<ul>
+<li>unzip the <code>qtjambi-4.4.3_01.jar</code> and <code>qtjambi-linux32-gcc-4.4.3_01.jar</code> files in your projects root directory (where the version number and platform name vary based on the version of QtJambi you&rsquo;re using and the platform you&rsquo;re targetting).</li>
+<li>When you make your jar file make sure you include the <code>com</code> and <code>lib</code> directories and the file <code>qtjambi-deployment.xml</code></li>
+</ul>
+<p>That leaves me with what I&rsquo;d describe as a &ldquo;statically linked&rdquo; executable (it isn&rsquo;t in any sense statically linked, but the effect is the same).</p>
+<p>More later&hellip;</p>
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/frontend/html5-and-all-that/">HTML5 and all that</a></h4>
+    <h5>Sun Jan 10 2010 00:31:00 CET</h5>
+    
+<a href="https://www.teale.de/tags/frontend"><kbd class="item-tag">frontend</kbd></a>
+
+<a href="https://www.teale.de/tags/html"><kbd class="item-tag">html</kbd></a>
+
+<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
+
+<a href="https://www.teale.de/tags/xml"><kbd class="item-tag">xml</kbd></a>
+
+<a href="https://www.teale.de/tags/flash"><kbd class="item-tag">flash</kbd></a>
+
+<a href="https://www.teale.de/tags/google_gears"><kbd class="item-tag">google_gears</kbd></a>
+
+<a href="https://www.teale.de/tags/emacs"><kbd class="item-tag">emacs</kbd></a>
+
+<a href="https://www.teale.de/tags/nxml"><kbd class="item-tag">nxml</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/mac/mac-foo/">Mac foo I learned today</a></h4>
+    <h5>Fri Mar 27 2009 03:37:00 &#43;0200</h5>
+    
+<a href="https://www.teale.de/tags/apple"><kbd class="item-tag">apple</kbd></a>
+
+<a href="https://www.teale.de/tags/macosx"><kbd class="item-tag">macosx</kbd></a>
+
+<a href="https://www.teale.de/tags/unix"><kbd class="item-tag">unix</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/programming/on-clojure-7/">On Clojure (part 7)</a></h4>
+    <h5>Tue Jan 13 2009 13:43:00 CET</h5>
+    
+<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
+
+<a href="https://www.teale.de/tags/lisp"><kbd class="item-tag">lisp</kbd></a>
+
+<a href="https://www.teale.de/tags/apple"><kbd class="item-tag">apple</kbd></a>
+
+<a href="https://www.teale.de/tags/macosx"><kbd class="item-tag">macosx</kbd></a>
+
+<a href="https://www.teale.de/tags/core_data"><kbd class="item-tag">core_data</kbd></a>
+
+<a href="https://www.teale.de/tags/nicole"><kbd class="item-tag">nicole</kbd></a>
+
+
+
+</div>
+ 
+    
+
+    
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">Copyright © Geoffrey J. Teale. All rights reserved. Powered by <a href='https://gohugo.io'>Hugo</a> and <a href='https://github.com/calintat/minimal'>Minimal</a>.</p>
+        </footer>
+
+        
+
+        
+    </body>
+
+</html>
+

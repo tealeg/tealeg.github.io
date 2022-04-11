@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>qt on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/qt/</link>
+    <description>Recent content in qt on The ol&#39; tealeg ruminates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 09 Nov 2008 11:29:00 +0100</lastBuildDate><atom:link href="https://www.teale.de/tags/qt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Clojure (part 3)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-3/</link>
+      <pubDate>Sun, 09 Nov 2008 11:29:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-3/</guid>
+      <description>QT Designer with Clojure So, as promised, here&amp;rsquo;s a few notes on how I am using Qt Designer with Clojure. Some important things to remember:
+ You must use Qt Designer with the QtJambi plugins installed. The easiest way to do this is to run designer.sh (Linux / UNIX / Mac OS X) or designer.bat (Windows) from the distribution folder that QtJambi came in. If you&amp;rsquo;ve got QtJambi installed as a package under Linux then you may need to check that the QtJambi plugins are correctly installed , they weren&amp;rsquo;t in my case.</description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 2)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-2/</link>
+      <pubDate>Sat, 08 Nov 2008 06:54:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-2/</guid>
+      <description>Distributing QtJambi with Clojure. How to bundle up Clojure programs for distribution One of the questions I&amp;rsquo;ve seen coming up a few times is how to distribute clojure programs. The obvious answer is to build executable JAR files.
+A while ago I produced a simple database application for my girlfriends recruitment business, NRecruit. I developed this using Clojure on my Arch Linux based laptop, and deployed to her MacBook running OS X Leopard.</description>
+    </item>
+    
+  </channel>
+</rss>

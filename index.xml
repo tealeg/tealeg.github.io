@@ -1,94 +1,549 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Geoffrey J. Teale</title>
-    <link>https://tealeg.github.io/</link>
-    <description>Recent content on Geoffrey J. Teale</description>
+    <title>The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/</link>
+    <description>Recent content on The ol&#39; tealeg ruminates</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 04 Jul 2019 15:57:18 +0200</lastBuildDate>
-    
-	<atom:link href="https://tealeg.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Fri, 08 Apr 2022 12:49:00 +0200</lastBuildDate><atom:link href="https://www.teale.de/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why the long pause?</title>
+      <link>https://www.teale.de/post/life/why-the-long-pauses/</link>
+      <pubDate>Fri, 08 Apr 2022 12:49:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/life/why-the-long-pauses/</guid>
+      <description>The history of my blog If you look back through my historic posts (many of which I&amp;rsquo;ve recently migrated here from my historic blog spot blog), you&amp;rsquo;ll notice that I&amp;rsquo;ve been blogging, on and off, since 2007. That&amp;rsquo;s actually not true - I had done some previous blogging on another platform (all now lost), and actually I&amp;rsquo;d written occasional thoughts on various &amp;ldquo;home pages&amp;rdquo; going all the way back to 1995.</description>
+    </item>
     
     <item>
       <title>Software Engineers Don&#39;t Scale</title>
-      <link>https://tealeg.github.io/blog/tech/software-engineers-dont-scale/</link>
+      <link>https://www.teale.de/post/tech/software-engineers-dont-scale/</link>
       <pubDate>Thu, 04 Jul 2019 15:57:18 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/blog/tech/software-engineers-dont-scale/</guid>
+      <guid>https://www.teale.de/post/tech/software-engineers-dont-scale/</guid>
       <description>Software Engineers don&amp;rsquo;t scale &amp;hellip; or how I learned to stop worrying and love commenting my code. NOTE: I originally published this on the Inside Heetch blog
 This article, by Mathew Skelton and Manuel Pais, reminds me that, for everything that’s been made simpler in this era of cloud computing and micro-services, we’ve paid a price in terms of cognitive load. We simply need to keep more context in mind when making or evaluating any change to our code.</description>
     </item>
     
     <item>
       <title>Previous Employers</title>
-      <link>https://tealeg.github.io/reference/previous-employers/</link>
+      <link>https://www.teale.de/reference/previous-employers/</link>
       <pubDate>Thu, 16 May 2019 11:54:48 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/reference/previous-employers/</guid>
+      <guid>https://www.teale.de/reference/previous-employers/</guid>
       <description>Prior to my current role at Talanx (HDI Systems AG), I have worked in a number of companies, in varied roles, and worked breifly as freelance consultant. My previous employers were:
  Heetch &amp;ndash; Staff Engineer and Lead for Developer Care Avocet &amp;ndash; Backend Software Engineer Canonical &amp;ndash; Software Engineer, Cloud Dev-Ops (Landscape and OpenSack Autopilot) Elsevier Germany &amp;ndash; Technical Product Manager / Architect Cmed Technology &amp;ndash; Director of Technical Development Thomson Reuters &amp;ndash; Technical Consultant Rentokil Initial &amp;ndash; Application Programmer  Along the way I&amp;rsquo;ve also earned money as a photographer, guitarist, at Sainsbury&amp;rsquo;s in Canterbury, and in Dungness B nuclear powerstation.</description>
     </item>
     
     <item>
       <title>Languages and Platforms</title>
-      <link>https://tealeg.github.io/reference/tech/languages-and-platforms/</link>
+      <link>https://www.teale.de/reference/tech/languages-and-platforms/</link>
       <pubDate>Thu, 16 May 2019 03:12:10 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/reference/tech/languages-and-platforms/</guid>
-      <description>This page exists mainly to satisfy some deep psychological desire to express everything as lists (I blame LISP) Languages During my life I&amp;rsquo;ve developed in a large number of programming languages. I&amp;rsquo;ll attempt to summarise here:
-   Language Period of use Context     AMOS 1990-1995 Hobby   AmigaBASIC 1989-1995 Hobby   BBC BASIC 1983-1988 Academic   C++ 1989-2001 Academic / Commercial   C 1989-Current Academic / Commercial   Clojure 2007-2011 Commercial / Research   Common Lisp 1997-2010 Academic / Research   Cue 2020-Current Commercial   Erlang 2008-2011 Commercial / Research   Go 2009-Current Commercial / Research   IBM JCL 1998-2000 Commercial   IBM RPG 1998-2000 Commercial   Java 1999-2008 Commercial   Javascript / ECMAScript 1995-Current Academic / Commercial   Microsoft Visual BASIC 4,5 and 6 1998-2000 Commercial   Motorola 68000 Assembly 1989-1995 Hobby   PHP 2011 Commercial   Progress 4GL 1999-2000 Commercial   Prolog 1998 Academic   Python 1999-Current Commercial / Research   Racket 2010-Current Research   Ruby 2000-2003 Commercial   Scheme 1997-Current Academic / Research   Sinclair BASIC 1983-1989 Hobby   Sun UltraSparc Assembly 2000-2008 Hobby   x86_64 Assembly 2008-Current Hobby   XSLT 1999-2017 Commercial    Operating Systems I&amp;rsquo;ve developed software for a range of operating systems:</description>
+      <guid>https://www.teale.de/reference/tech/languages-and-platforms/</guid>
+      <description>This page exists mainly to satisfy some deep psychological desire to express everything as lists (I blame LISP).
+ Languages During my life I&amp;rsquo;ve developed in a large number of programming languages. I&amp;rsquo;ll attempt to summarise here:
+Programming Languages  AMOS 1990-1995 Hobby   AmigaBASIC 1989-1995 Hobby   BBC BASIC 1983-1988 Academic   C++ 1989-2001 Academic + Commercial   C 1989-Current Academic / Commercial   Clojure 2007-2011 Commercial / Research   Common Lisp 1997-2010 Academic / Research   Cue 2020-Current Commercial   Erlang 2008-2011 Commercial / Research   Go 2009-Current Commercial / Research   IBM JCL 1998-2000 Commercial   IBM RPG 1998-2000 Commercial   Java 1999-2008 Commercial   Javascript / ECMAScript 1995-Current Academic / Commercial   Microsoft Visual BASIC 4,5 and 6 1998-2000 Commercial   Motorola 68000 Assembly 1989-1995 Hobby   PHP 2011 Commercial   Progress 4GL 1999-2000 Commercial   Prolog 1998 Academic   Python 1999-Current Commercial / Research   Racket 2010-Current Research   Ruby 2000-2003 Commercial   Scheme 1997-Current Academic / Research   Sinclair BASIC 1983-1989 Hobby   Sun UltraSparc Assembly 2000-2008 Hobby   x86_64 Assembly 2008-Current Hobby   XSLT 1999-2017 Commercial   Operating Systems I&amp;rsquo;ve developed software for a range of operating systems:</description>
     </item>
     
     <item>
       <title>Open Source</title>
-      <link>https://tealeg.github.io/reference/tech/open-source/</link>
+      <link>https://www.teale.de/reference/tech/open-source/</link>
       <pubDate>Thu, 16 May 2019 02:35:08 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/reference/tech/open-source/</guid>
+      <guid>https://www.teale.de/reference/tech/open-source/</guid>
       <description>Here is a summary of some of the open source projects I&amp;rsquo;ve either authored or contributed to.
-Go    Title Description Contribution     apexorc Output Apex log messages to ORC files Author   apexovernsq an NSQ bridge for log entries from Apex log Author   callstack find out what called a given function in the current callstack Author   confita load configuration in cascade from multiple backends into a struct Contributor   felice opinionated Kafka library Contributor   idgen bulk UUID generator Author   regula business rules engine Contributor   stdlogtoapex bridge Go&amp;rsquo;s log packge to Apex log Author   xlsx read and write Microsoft XLSX files Author    Emacs modes    Title Description Contribution     YUI mode emacs minor mode to properly indent YUI Javascript files Author    Drivers    Title Description Contribution     Brother P-Touch 2420PC CUPS driver for the Brother P-Touch 2420PC label printer.</description>
+Applications csv2xlsx (Author) Convert CSV files to XLSX files
+xlsx2csv (Author) Convert XLSX files to CSV files
+naturalsort (Author) Perform natural sorting of data on the command line
+XSLXFindReplace (Author) Command line find and replace for content in XLSX files
+regula (Contributor) Business rules engine
+Landscape Client (Contributor) Client daemon of the Landscape systems management tool for Ubuntu.</description>
     </item>
     
     <item>
-      <title>Home</title>
-      <link>https://tealeg.github.io/home/</link>
+      <title>About</title>
+      <link>https://www.teale.de/about/</link>
       <pubDate>Thu, 16 May 2019 01:22:08 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/home/</guid>
-      <description>What I do I&amp;rsquo;m a highly experienced software engineer, currently working for Talanx (HDI Systems AG) in the Cloud Competency Center. My primary technical focus is on backend systems and libraries, usually in the context of cloud-based micro-service architectures. I&amp;rsquo;ve used a great many languages and platforms, but today the majority of my work is developed for GNU/Linux in Go, Python and Racket.
-Where I do it I live and work in Hanover, Lower Saxony, Germany.</description>
+      <guid>https://www.teale.de/about/</guid>
+      <description>What I do I am a Developer eXperience engineer. I&amp;rsquo;ll probably write a post about what that actually means sometime soon. In short it means I use my engineering, writing, media and communication skills to craft the entire experience a software developer has whilst utilising a software product. DevX is a role I&amp;rsquo;ve slowly evolved into over a long career in software engineering.
+I started programming, as a child, in 1983, and have made a living from it since 1998.</description>
     </item>
     
     <item>
       <title>System Updates With Mixin</title>
-      <link>https://tealeg.github.io/blog/tech/clearlinux/system-updates-with-mixin/</link>
+      <link>https://www.teale.de/post/tech/clearlinux/system-updates-with-mixin/</link>
       <pubDate>Wed, 15 May 2019 16:25:21 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/blog/tech/clearlinux/system-updates-with-mixin/</guid>
+      <guid>https://www.teale.de/post/tech/clearlinux/system-updates-with-mixin/</guid>
       <description>If you use ClearLinux&amp;rsquo;s mixin to add custom bundles to your installation, you will still be able to update your upstream bundles, however it will nolonger be as simple as doing a sudo swupd update. Here are the step&amp;rsquo;s you need to go through, assuming you defined your mixin repository in ~/mixin-repo:
 cd ~/mixin-repo createrepo_c . sudo mixin build sudo swupd update --migrate &amp;hellip; this is at least the process I have used, and which worked for me.</description>
     </item>
     
     <item>
       <title>Developer Care</title>
-      <link>https://tealeg.github.io/blog/tech/developer-care/</link>
+      <link>https://www.teale.de/post/tech/developer-care/</link>
       <pubDate>Wed, 15 May 2019 15:57:18 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/blog/tech/developer-care/</guid>
+      <guid>https://www.teale.de/post/tech/developer-care/</guid>
       <description>Those of you who know me may be aware that at the end of August 2018, I left my job at Avocet to join a new team at Heetch.
 The main allure of the role at Heetch was the chance to be part of a team deliberately set up to act as a catalyst for product developers. The concept under which we work is known as &amp;ldquo;Developer Care&amp;rdquo;, and back in November I wrote a fairly extensive blog post for Heetch about what that means and how it came to be.</description>
     </item>
     
     <item>
       <title>Enabling H.264 playback in Firefox on Intel&#39;s Clearlinux</title>
-      <link>https://tealeg.github.io/blog/tech/clearlinux/h264-firefox-clearlinux/</link>
+      <link>https://www.teale.de/post/tech/clearlinux/h264-firefox-clearlinux/</link>
       <pubDate>Wed, 15 May 2019 15:41:30 +0200</pubDate>
       
-      <guid>https://tealeg.github.io/blog/tech/clearlinux/h264-firefox-clearlinux/</guid>
+      <guid>https://www.teale.de/post/tech/clearlinux/h264-firefox-clearlinux/</guid>
       <description>In common with most Linux distros, Intel&amp;rsquo;s ClearLinux doesn&amp;rsquo;t ship H.264 decoding by default. Given the novel nature of ClearLinux there isn&amp;rsquo;t a nice off the shelf solution to this yet, so we have to use a workaround. I&amp;rsquo;ll try and find a better way to achieve this, but for now this will get H.264 video working in YouTube / Twitter etc, for now:
 wget http://ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2 tar xf ffmpeg-snapshot.tar.tz2 cd ffmpeg-snapshot .</description>
+    </item>
+    
+    <item>
+      <title>Convert OpenOffice.org Calc FODS XML to something meaningful</title>
+      <link>https://www.teale.de/post/tech/programming/convert-openoffice-fods-xml/</link>
+      <pubDate>Thu, 19 Aug 2010 04:53:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/convert-openoffice-fods-xml/</guid>
+      <description>Get the code: The code in this blog post is now available at:
+http://github.com/tealeg/FODS2XML
+Background For a while now I&amp;rsquo;ve been receiving data in Excel files that needed to be integrated into some better structured XML data. Originally I was using a little xls2csv from the catdoc package in Arch Linux to pull the data from the horrible bloated XLS files into something usable.
+The trouble is the conversion to CSV was a little error prone and it&amp;rsquo;s really hard to see such errors in a 40MB CSV file.</description>
+    </item>
+    
+    <item>
+      <title>Project Greyhound: My Granddad&#39;s camera</title>
+      <link>https://www.teale.de/post/life/photography/project-greyhound/</link>
+      <pubDate>Mon, 05 Apr 2010 10:59:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/life/photography/project-greyhound/</guid>
+      <description>How this began A year or so ago, whilst I was visiting England on a business trip I took the time to go down and visit my parents. During this visit my dad indulged my interest in old cameras by digging out a few of his own old cameras and a couple of his fathers. The oldest two in this group were a Kodak Number 2 Brownie, in very good order, and an extremely battered looking Ensign Greyhound folding camera.</description>
+    </item>
+    
+    <item>
+      <title>Bicycle maintenance (part 3)</title>
+      <link>https://www.teale.de/post/life/cycling/bicycle-maintenance-3/</link>
+      <pubDate>Mon, 05 Apr 2010 07:21:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/life/cycling/bicycle-maintenance-3/</guid>
+      <description>Still waiting on parts to show up from the USA. Will update here when I have made progress</description>
+    </item>
+    
+    <item>
+      <title>Bicycle maintenance (Part 2)</title>
+      <link>https://www.teale.de/post/life/cycling/bicycle-maintenance-2/</link>
+      <pubDate>Tue, 23 Mar 2010 13:04:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/life/cycling/bicycle-maintenance-2/</guid>
+      <description>Working too hard I&amp;rsquo;ve been working too hard this last week or so (most evenings and a little at the weekend too). Nasty little data conversion tasks are an ongoing theme - to much human controlled data means lots of special cases and a never ending stream of little problems. Ho hum.
+Some good news about bike parts However, I am happy to report that DerailleurHanger.com came through on their online offer and identified the correct part for my bike from my photos.</description>
+    </item>
+    
+    <item>
+      <title>Bicycle maintenance</title>
+      <link>https://www.teale.de/post/life/cycling/bicycle-maintenance/</link>
+      <pubDate>Sun, 21 Mar 2010 10:42:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/life/cycling/bicycle-maintenance/</guid>
+      <description>Vandalism Those of you who follow me on Twitter will be well aware that back in February (on my birthday no less!) my bike was vandalised. Some enterprising mind burdoned, no doubt, by the unending pressures of modern life, decided to releave a little stress by kicking my rear deraileur through the spokes of my back wheel.
+DIY I thought breifly about having a bike shop repair the resulting damage but instead I decided I would repair it myself.</description>
+    </item>
+    
+    <item>
+      <title>Voigtländer Vitomatic II</title>
+      <link>https://www.teale.de/post/life/photography/voigtlaender-vitomatic-ii/</link>
+      <pubDate>Tue, 02 Mar 2010 13:29:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/life/photography/voigtlaender-vitomatic-ii/</guid>
+      <description>I&amp;rsquo;ve purchased one of these on E-bay for the princely sum of 20€. This is essentially the same as the Voigtlaender Vito CL I have been using recently but with a coupled rangefinder and with the meter mirrored in the viewfinder.
+Ebay listing suggests it&amp;rsquo;s fully functional, and given the classic West-German build quality of these late 1950s / early 1960s Voigtländers I have high hopes.
+To date I haven&amp;rsquo;t really found the &amp;ldquo;perfect&amp;rdquo; 35mm camera.</description>
+    </item>
+    
+    <item>
+      <title>HTML5 and all that</title>
+      <link>https://www.teale.de/post/tech/frontend/html5-and-all-that/</link>
+      <pubDate>Sun, 10 Jan 2010 00:31:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/frontend/html5-and-all-that/</guid>
+      <description>Clojure So..
+Firstly a quick update re: clojure. I&amp;rsquo;m still using it, productively and occasionally frustraitedly. Most frustration comes from my lack of available time and the relative newness of the language. Now Clojure is 2 years old there are often libraries are available to do things in a way idiomatic to Clojure rather than just using Java libraries directly, however there&amp;rsquo;s no a great deal of documentation of examples for these libraries.</description>
+    </item>
+    
+    <item>
+      <title>Mac foo I learned today</title>
+      <link>https://www.teale.de/post/tech/mac/mac-foo/</link>
+      <pubDate>Fri, 27 Mar 2009 03:37:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/mac/mac-foo/</guid>
+      <description>Long time no post! Ho hum, been busy as ever.
+Anyhow, for my own benefit just wanted to write down some Mac foo I learned today.
+I was searching for the Mac equivalent of the Linux &amp;ldquo;eject&amp;rdquo; command. Lots of people online are spouting off about needing to reboot their macs and hold down keys to eject disks that aren&amp;rsquo;t recognised, but what you really need is:
+hdiutil eject /dev/disk1 </description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 7)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-7/</link>
+      <pubDate>Tue, 13 Jan 2009 13:43:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-7/</guid>
+      <description>Some good Clojure news, some bad Clojure news So&amp;hellip; first the bad news.
+I&amp;rsquo;ve had to drop the Qt port of my little Clojure recruitment database. I was just hitting too many problems using Qt-Jambi and it was taking too long. The client needed a working database ASAP and I wasn&amp;rsquo;t gonna get there. At the same time I also learned to use Apple&amp;rsquo;s Core Data on Mac Os X 10.</description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 6)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-6/</link>
+      <pubDate>Sun, 30 Nov 2008 03:00:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-6/</guid>
+      <description>AOT problem solved Thanks to the swift responses of the Clojure google group I have got past my little problem. It was, of course, deceptively simple, but not clear to someone who doesn&amp;rsquo;t do Java programming much.
+The problem was basically that whatever I did I could not get Clojure to recognise that the source files existed in the classpath.
+When you invoke java with the -jar command line option it completely ignores the classpath (both the environment variable, or the -cp argument.</description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 5)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-5/</link>
+      <pubDate>Sun, 30 Nov 2008 00:52:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-5/</guid>
+      <description>Caught on a Clojure roller-coaster I was hoping to make some decent progress this weekend with my Clojure code. The plan was to port it to the new AOT model of compilation.
+However, my efforts have been frustrated by me not being able to get AOT working. I have posted my problem to the group, so hopefully there will be some solution soon.
+Clojure is developing so rapidly it&amp;rsquo;s hard to keep up, I think that&amp;rsquo;s how I got into this mess with AOT.</description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 4)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-4/</link>
+      <pubDate>Thu, 27 Nov 2008 00:22:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-4/</guid>
+      <description>AOT is cool, but it breaks some of what I&amp;rsquo;ve already talked about Clojure is a young language, and as such it&amp;rsquo;s developing fast. It&amp;rsquo;s an exhilarating ride to be on, but sometime it means things I&amp;rsquo;ve written change.
+So, when reading my previous posts, please note that the latest revisions to Clojure include the provision of Ahead-Of-Time (AOT) compilation. This will break the compilation mechanisms I used in some of the content below.</description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 3)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-3/</link>
+      <pubDate>Sun, 09 Nov 2008 11:29:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-3/</guid>
+      <description>QT Designer with Clojure So, as promised, here&amp;rsquo;s a few notes on how I am using Qt Designer with Clojure. Some important things to remember:
+ You must use Qt Designer with the QtJambi plugins installed. The easiest way to do this is to run designer.sh (Linux / UNIX / Mac OS X) or designer.bat (Windows) from the distribution folder that QtJambi came in. If you&amp;rsquo;ve got QtJambi installed as a package under Linux then you may need to check that the QtJambi plugins are correctly installed , they weren&amp;rsquo;t in my case.</description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 2)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-2/</link>
+      <pubDate>Sat, 08 Nov 2008 06:54:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-2/</guid>
+      <description>Distributing QtJambi with Clojure. How to bundle up Clojure programs for distribution One of the questions I&amp;rsquo;ve seen coming up a few times is how to distribute clojure programs. The obvious answer is to build executable JAR files.
+A while ago I produced a simple database application for my girlfriends recruitment business, NRecruit. I developed this using Clojure on my Arch Linux based laptop, and deployed to her MacBook running OS X Leopard.</description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 1)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-1/</link>
+      <pubDate>Sat, 08 Nov 2008 06:31:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-1/</guid>
+      <description>After many a dalliance with R6RS compliant(ish) Scheme implementations I have found myself inevitably drawn towards as new Lisp dialect instead. While I&amp;rsquo;m pleased to see Ikarus maturing to the state where it really is a very usable it&amp;rsquo;s not what I&amp;rsquo;ve been using to get stuff done. No, instead, I (like everyone else it seems) have fallen for Clojure.
+I won&amp;rsquo;t harp on about Clojure - you can read about it everywhere, instead I&amp;rsquo;ll just make some practical notes in the following posts.</description>
+    </item>
+    
+    <item>
+      <title>What&#39;s next? Ypsilon</title>
+      <link>https://www.teale.de/post/tech/programming/ypsilon/</link>
+      <pubDate>Tue, 26 Aug 2008 01:18:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/ypsilon/</guid>
+      <description>Ikarus So&amp;hellip;
+For a good long while I have been tracking the Ikarus Scheme implementation. I like it because it tries to comply with R6RS, compiles to some pretty quick code and recently added 64bit support. I like it so much that I even package it and a number of related libraries for Arch Linux.
+However, Ikarus has a single annoyance for me - it is not easy to extend it with C libraries.</description>
+    </item>
+    
+    <item>
+      <title>The danger of superfluity.</title>
+      <link>https://www.teale.de/post/tech/programming/superfluity/</link>
+      <pubDate>Thu, 14 Aug 2008 01:02:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/superfluity/</guid>
+      <description>A useful dialog There is an application that I have been working as an employee and a consultant for five years now. In the course of development I routinely run into a dialog in this application that handles errors at a global (or at least global to the GUI) level.
+This dialog is very useful, it stops the GUI bombing out totally and presents the user with the sad news that something has gone wrong and allows them to report such an error.</description>
+    </item>
+    
+    <item>
+      <title>On the subject of Bill Gates retirement.</title>
+      <link>https://www.teale.de/post/tech/bill-gates-retirement/</link>
+      <pubDate>Fri, 04 Jul 2008 00:56:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/bill-gates-retirement/</guid>
+      <description>Ranting and raving? I&amp;rsquo;ve waited a long time to talk about this. I was all ready to rant and rave about the torrent of lies that the media would put out. As it turned out, however, one of the nice things over the last couple of weeks is that there have been pockets of journalists who&amp;rsquo;ve have taken the time to actually accurately portray Bill Gates career in the computer industry.</description>
+    </item>
+    
+    <item>
+      <title>TrueType fonts in GNU Emacs</title>
+      <link>https://www.teale.de/post/tech/emacs/truetype-in-emacs/</link>
+      <pubDate>Thu, 03 Jul 2008 14:32:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/emacs/truetype-in-emacs/</guid>
+      <description>Listing installed TrueType fonts in Emacs In this new fangled age of TrueType support in Emacs it&amp;rsquo;s really useful to know the names of the Monospace fonts installed on your system in the format that Emacs understands. If you are on a Linux/UNIX system running Xorg with fontconfig installed then add this function to your .emacs file
+(defun list-monospace-truetype-fonts ()  &amp;#34;Provide a list of available monospaced truetype fonts on this machine&amp;#34;  (interactive)  (set-buffer (get-buffer-create &amp;#34;Monospaced Fonts&amp;#34;))  (call-process-shell-command &amp;#34;fc-list :spacing=mono:scalable=true family | sort&amp;#34; nil t)  (setq buffer-read-only t)  (switch-to-buffer-other-window (current-buffer))) You can set these fonts in a number of ways, currently I am getting the most joy using this form:</description>
+    </item>
+    
+    <item>
+      <title>Things that happened yesterday</title>
+      <link>https://www.teale.de/post/life/germany/things-that-happened-yesterday/</link>
+      <pubDate>Wed, 02 Jul 2008 01:13:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/life/germany/things-that-happened-yesterday/</guid>
+      <description>Tech content? Hmmm I am aware that I should put more technical content here, trouble is I don&amp;rsquo;t have much to say at the moment. Work is dragging on with the same old problems with different hardware. Outside work I am actively working on something (smallish) using Erlang to get my skills in that area up to scratch before starting something else (still smallish, but bigger).
+Schmap In the mean time here are a couple of things that happened yesterday.</description>
+    </item>
+    
+    <item>
+      <title>A bugs life!</title>
+      <link>https://www.teale.de/post/life/germany/a-bugs-life/</link>
+      <pubDate>Tue, 24 Jun 2008 09:04:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/life/germany/a-bugs-life/</guid>
+      <description>It starts with the Aphids. When we put our plants on the balcony this year those dastardly greenfly hit them with a vengance.
+We tried a natural remedy, based on soaked nettles.. but without success we were left with no other option but to pray for ladybird or hover fly lavae. Just when we thought we would never get any luck we spotted the first ladybird lavae. They&amp;rsquo;re ugly little critters but with plenty of aphids to munch on they soon grew big and strong.</description>
+    </item>
+    
+    <item>
+      <title>Geoff embraces his new life</title>
+      <link>https://www.teale.de/post/life/germany/geoff-embraces-his-new-life/</link>
+      <pubDate>Mon, 23 Jun 2008 14:13:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/life/germany/geoff-embraces-his-new-life/</guid>
+      <description>Nic seems to specialise in taking shots of me in compromising positions. Here I am at the local Biergarten (Lochham) , drinking König Lüdwig dunkels bier (my favourite German beer) and supporting Germany in the match against Portugal.
+For some reason it looks like my ear was bleeding, it wasn&amp;rsquo;t.
+Role on Turkey.. probably not one to be in the center of München for given the reaction of the Turkish population here following their victory the following night.</description>
+    </item>
+    
+    <item>
+      <title>Science is interesting</title>
+      <link>https://www.teale.de/post/science-is-interesting/</link>
+      <pubDate>Mon, 26 May 2008 23:01:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/science-is-interesting/</guid>
+      <description>Science is interesting.
+Now the above just made my morning. Thank you YouTube.</description>
+    </item>
+    
+    <item>
+      <title>OpenVPN and Solaris</title>
+      <link>https://www.teale.de/post/tech/opensolaris/openvpn-and-solaris/</link>
+      <pubDate>Fri, 16 May 2008 23:07:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/opensolaris/openvpn-and-solaris/</guid>
+      <description>Solaris Joy A little more solaris joy. Mainly as a note for myself here is how to setup an OpenVPN client on OpenSolaris 2008.05:
+Steps Add package repositories Add Blastwave and SunFreeWare IPS repositories to the Image Packaging System:
+-bash-2.05b# pkg set-authority -O http://pkg.sunfreeware.com:9000/ Companion -bash-2.05b# pkg set-authority -O http://blastwave.network.com:10000/ Blastwave -bash-2.05b# pkg refresh Install and setup the TUN device -bash-2.05b# pkg install IPStun -bash-2.05b# add_drv tun Install OpenVPN -bash-2.05b# pkg install IPSopenvpn &amp;hellip; and now you&amp;rsquo;re ready to put your openvpn.</description>
+    </item>
+    
+    <item>
+      <title>Brandz spanking new</title>
+      <link>https://www.teale.de/post/tech/opensolaris/brandz-spanking-new/</link>
+      <pubDate>Fri, 16 May 2008 21:42:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/opensolaris/brandz-spanking-new/</guid>
+      <description>Into the Solaris So, long time no Solaris talk.
+I&amp;rsquo;ve not been sleeping well this last couple of weeks (ironically this seems to have a lot to do with exhausting myself during my recent trip to England), but that inevitably leads to lots of mucking around with computers in the wee hours of the morning.
+The need for containers So OpenSolaris 2008.05 is on my laptop right now, and it&amp;rsquo;s a bit of surprise to find it there as I am trying to hack on some code that is destined to run on Linux.</description>
+    </item>
+    
+    <item>
+      <title>Story of stuff</title>
+      <link>https://www.teale.de/post/sustainability/story-of-stuff/</link>
+      <pubDate>Wed, 16 Apr 2008 03:50:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/sustainability/story-of-stuff/</guid>
+      <description>So firstly, please, please take the time to go and watch:
+http://www.storyofstuff.com
+.. some of it everyone knows, but it&amp;rsquo;s still worth understanding all of it.
+Once that&amp;rsquo;s given you the picture you need to get an idea of how it&amp;rsquo;s going to get fixed. Here&amp;rsquo;s a good source where you&amp;rsquo;ll learn how the little fella pictured (A tardigrade, or &amp;ldquo;little water bear&amp;rdquo;) is helping prevent killer diseases in Africa without using up the earths resources (amongst other things).</description>
+    </item>
+    
+    <item>
+      <title>dude</title>
+      <link>https://www.teale.de/post/life/germany/dude/</link>
+      <pubDate>Sun, 13 Apr 2008 12:11:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/life/germany/dude/</guid>
+      <description>So, this weekend we found ourselves in the Thereisen fair ground looking for a new lens (long story - we ended up buying a dining table instead of a lens, such is life!). Whilst in this area of Munich, where Oktoberfest takes place, we got to see the young and trendy types and I realised that I was not as &amp;ldquo;down&amp;rdquo; with the young people as I imagined (I mean, can you even imagine me not being cool?</description>
+    </item>
+    
+    <item>
+      <title>Guest appearance</title>
+      <link>https://www.teale.de/post/life/germany/guest-appearance/</link>
+      <pubDate>Sat, 05 Apr 2008 05:51:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/life/germany/guest-appearance/</guid>
+      <description>I made a guest appearance in Nic&amp;rsquo;s day-shot the other day. We were sitting having drinks on our balcony for the first time.
+Very nice. I was actually pulling this expression on purpose but I do look like I&amp;rsquo;ve got something way too hot in that mug :-)</description>
+    </item>
+    
+    <item>
+      <title>2⁵-1</title>
+      <link>https://www.teale.de/post/life/two-to-the-five-minus-one/</link>
+      <pubDate>Fri, 22 Feb 2008 08:16:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/life/two-to-the-five-minus-one/</guid>
+      <description>Birthday It was my birthday two days ago. At this age they tend to go with less of a bang. I think this pretty much sums it up:
+http://www.dieselsweeties.com/archive/1955
+Nic&amp;rsquo;s contribution Thank quantum theory (in the absence of God) then for my wonderful girlfriend who tried to make my day more interesting from 700 miles away by setting me this little puzzle:
+http://www.flickr.com/photos/tanzbar/sets/72157603945426840/
+&amp;hellip; and in doing that proving herself once again to be a very inventive photographer :-)</description>
+    </item>
+    
+    <item>
+      <title>Guten Morgen 2008</title>
+      <link>https://www.teale.de/post/life/germany/guten-morgen-2008/</link>
+      <pubDate>Tue, 01 Jan 2008 15:17:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/life/germany/guten-morgen-2008/</guid>
+      <description>A new year So&amp;hellip; a new year.. the 30th new year of my life.
+A new location A big year for me. Firstly I am now just two months away from moving to Munich with my girlfriend Nicole and I&amp;rsquo;m both terrified and excited at the same time. I&amp;rsquo;m not worried about moving to Germany - strangely I just &amp;ldquo;know&amp;rdquo; that this will be OK - I&amp;rsquo;m worried about the future.</description>
+    </item>
+    
+    <item>
+      <title>A surprise</title>
+      <link>https://www.teale.de/post/life/a-surprise/</link>
+      <pubDate>Sun, 23 Dec 2007 08:33:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/post/life/a-surprise/</guid>
+      <description>Flickr stats Playing around on my flickr account today I found about flickr stats. Now these stats to turn out to be mostly quite lame and predictable, but the one that caught my eye was the referal sources. In amongst a large number of hits from flickr itself and the main search engines there was a surprising 48 hits direct from realadultsex.com (Hey this link is NSFW - stupid!)
+Bad license assumptions .</description>
+    </item>
+    
+    <item>
+      <title>Ikarus ascends</title>
+      <link>https://www.teale.de/post/tech/programming/ikarus-ascends/</link>
+      <pubDate>Mon, 17 Dec 2007 14:25:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/ikarus-ascends/</guid>
+      <description>If you follow scheme or lisp news in even a passing fashion you can&amp;rsquo;t have failed to notice the arrival of Ikarus Scheme, the nifty incremental, native scheme code compiler. It&amp;rsquo;s an lovely new version of scheme based around R6RS. That means it supports a nice clean library system (standardised!) and scripting in the manner of Perl, Python and Ruby.
+Though it lacks the maturity and library base you&amp;rsquo;d find in chicken or PLT, it&amp;rsquo;s still a very attractive proposition, and the quality of the product thus far, combined with the nascent community feel around it has certainly got my spider sense tingling.</description>
+    </item>
+    
+    <item>
+      <title>Auf Deutsch</title>
+      <link>https://www.teale.de/post/life/germany/auf-deutsch/</link>
+      <pubDate>Sun, 25 Nov 2007 11:32:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/post/life/germany/auf-deutsch/</guid>
+      <description>A little Danish elefant embraces his future in Germany.
+I guess everyone knows now that Nic and I are moving to Munich next year.</description>
+    </item>
+    
+    <item>
+      <title>Schokolade</title>
+      <link>https://www.teale.de/post/life/windsor/</link>
+      <pubDate>Mon, 12 Nov 2007 15:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/post/life/windsor/</guid>
+      <description>Nic and I went to Windsor on Sunday on a whim. I took Nic to Carluccio&amp;rsquo;s for the first time. She was very pleased with the ciocolatte Fiorentina - it&amp;rsquo;s nice that little things make her so happy. :-)
+We also wandered round the castle for a bit and took at quick trip to the shops to buy my mums birthday present.</description>
+    </item>
+    
+    <item>
+      <title>Printing on an HP OfficeJet 6310 from Solaris</title>
+      <link>https://www.teale.de/post/tech/opensolaris/printing/</link>
+      <pubDate>Tue, 28 Aug 2007 07:21:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/opensolaris/printing/</guid>
+      <description>I thought this would be hard but essentially it was very easy - I guess and seemed to get it right first time.
+You don&amp;rsquo;t need to install CUPS as the SUNWhpijs package already supports Sun&amp;rsquo;s own print system. Simply run:
+/usr/sadm/admin/bin/printmgr &amp;hellip; as root, choose PRINTER-&amp;gt;NEW ATTACHED PRINTER from the menu and then add the printer. I found it to be attached to /dev/usb/printer0 and I had to claim it was an OfficeJet 6110, but essentially everything worked perfectly and seconds later I was printing in colour on A4 paper.</description>
+    </item>
+    
+    <item>
+      <title>Excellent beer</title>
+      <link>https://www.teale.de/post/life/excellent-beer/</link>
+      <pubDate>Tue, 21 Aug 2007 14:34:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/life/excellent-beer/</guid>
+      <description>Following on from my cider related shenanigans, I&amp;rsquo;ve just found a beer I haven&amp;rsquo;t had before that&amp;rsquo;s really improved my evening.
+Summer Lightning by the Hopback Brewery. You can get it in Waitrose. It&amp;rsquo;s a nice light flavour with an excellent roundness. Perfect for the glourious summer we&amp;rsquo;re not having here in the UK.
+See http://www.hopback.co.uk for details.</description>
+    </item>
+    
+    <item>
+      <title>Flock...</title>
+      <link>https://www.teale.de/post/tech/flock/</link>
+      <pubDate>Sat, 04 Aug 2007 15:00:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/flock/</guid>
+      <description>Flock So I&amp;rsquo;m trying flock out again.
+It&amp;rsquo;s been a while since I last looked at it. All I can say is it&amp;rsquo;s improved massively. It&amp;rsquo;s actually just like Firefox with lots of lovelly extra interactions with my favourite web sites. So far so impressed.
+Cider I haven&amp;rsquo;t drunk cider since university, but at the Walkabout bar in central Birmingham I was introducer to Kopperburg, Swedish cider (thank you GUADEC!) which was actually really nice.</description>
+    </item>
+    
+    <item>
+      <title>It makes me mad!</title>
+      <link>https://www.teale.de/post/tech/legal/</link>
+      <pubDate>Tue, 26 Jun 2007 14:25:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/legal/</guid>
+      <description>If there&amp;rsquo;s one thing in this world that makes me mad (and there isn&amp;rsquo;t, there&amp;rsquo;s loads of things) it&amp;rsquo;s the portions of the Free/Libre/Open Source Software community who assume that anything to do with the law is inherently evil.
+Every time I see this is riles me - from the anti-GFDL people in the Debian community, through the &amp;ldquo;me too&amp;rdquo; boys who decry the GPL (and especially the GPL3) as being &amp;ldquo;less free&amp;rdquo; than BSD licenses without understanding the effect of either, right down to those whom, even with the best of intentions, make statements like this.</description>
+    </item>
+    
+    <item>
+      <title>ZFS... again</title>
+      <link>https://www.teale.de/post/tech/zfs/zfs-again/</link>
+      <pubDate>Wed, 13 Jun 2007 16:57:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/zfs/zfs-again/</guid>
+      <description>I continue to be totally blown away with ZFS. This post covers a lot of the reasons why. Every time I explore a feature it&amp;rsquo;s better than I was expecting. The fact that you can send incremental snapshots (essentially the binary different between two points in time) is exciting me currently. There must be the basis of so many applications there - distributed version control and package management are just two ideas that spring to mind.</description>
+    </item>
+    
+    <item>
+      <title>Anaïs Mitchell house concert, Turners Hill</title>
+      <link>https://www.teale.de/post/life/music/anais-mitchell-house-concert/</link>
+      <pubDate>Wed, 13 Jun 2007 14:51:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/life/music/anais-mitchell-house-concert/</guid>
+      <description>Wow. This is turning out to be a good weekend. I&amp;rsquo;ve just seen the best concert I&amp;rsquo;ve seen in quite some while and tomorrow I&amp;rsquo;m flying to Lisbon for a weeks holiday.
+House concerts are always so intimate that they can make anyone with anything reasonably intelligent to sing about sound like Joni, Dar or Ani. Anaïs is something else though she writes songs that are both beautiful and cut to the heart of the great wrongness of the western world right now.</description>
+    </item>
+    
+    <item>
+      <title>Project Indiana Wishlist</title>
+      <link>https://www.teale.de/post/tech/opensolaris/indiana-wishlist/</link>
+      <pubDate>Sat, 19 May 2007 15:34:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/opensolaris/indiana-wishlist/</guid>
+      <description>OK, so many, many people will be saying many things about project Indiana before we ever see anything concrete, and then many more people will inevitably form two camps - the &amp;ldquo;Indianaphiles&amp;rdquo; and the &amp;ldquo;Indianaphobes&amp;rdquo;.
+All of that is inevitable and I guess we should just enjoy the ride. However, given the scope for Indiana thus far expressed is &amp;ldquo;Make a Sun branded Solaris distribution that&amp;rsquo;s a lot more like Linux&amp;rdquo;, and that the top man is Ian Murdoch, I have exactly one wish for this project.</description>
+    </item>
+    
+    <item>
+      <title>Intel HDA working under OpenSolaris</title>
+      <link>https://www.teale.de/post/tech/opensolaris/intel-hda-opensolaris/</link>
+      <pubDate>Sun, 06 May 2007 12:26:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/opensolaris/intel-hda-opensolaris/</guid>
+      <description>Another minor victory in my quest to get more familiar with OpenSolaris. I&amp;rsquo;ve upgraded to Nexenta unstable, and I noticed a package called sunwaudiohd being installed. That looked like a promising solution to the lack of audio on my OpenSolaris machine - the Intel HDA soundcard has never worked under any version I&amp;rsquo;ve used.
+Sadly, the mere presence of this driver didn&amp;rsquo;t seem to fix things (it&amp;rsquo;s never that simple). A little research confirmed that it was the right driver, but that this bug had been discovered.</description>
+    </item>
+    
+    <item>
+      <title>Making ZFS work on removable media</title>
+      <link>https://www.teale.de/post/tech/zfs/zfs-on-removable-media/</link>
+      <pubDate>Tue, 01 May 2007 17:44:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/zfs/zfs-on-removable-media/</guid>
+      <description>I&amp;rsquo;ve been playing around with ZFS for quite a while now and I&amp;rsquo;m very impressed. Everything that&amp;rsquo;s claimed of it holds up under my limited investigation. I&amp;rsquo;ve been working with both the OpenSolaris native version (thank you Nexenta!) and the ZFS-FUSE implementation for Linux.
+The one thing that proved hard to do was to build a ZFS pool on my USB2 hard drive and move that pool between machines. For a couple of days I struggled in vane to see why I couldn&amp;rsquo;t ZFS export from my linux box and ZFS import on my OpenSolaris box (or visa versa).</description>
     </item>
     
   </channel>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>On Clojure (part 6)</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Playfair Display', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: teal;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://www.teale.de/css/main.css">
+
+
+ <link rel="stylesheet" href="https://www.teale.de/css/tealeg.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair%20Display">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scheme.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.96.0" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">On Clojure (part 6)</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/reference/">Reference</a></li>
+                            
+                        </ul>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>On Clojure (part 6)</h2>
+        <h5>Sun Nov 30 2008 03:00:00 CET</h5>
+        
+<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
+
+<a href="https://www.teale.de/tags/lisp"><kbd class="item-tag">lisp</kbd></a>
+
+<a href="https://www.teale.de/tags/aot"><kbd class="item-tag">aot</kbd></a>
+
+<a href="https://www.teale.de/tags/ant"><kbd class="item-tag">ant</kbd></a>
+
+<a href="https://www.teale.de/tags/lancet"><kbd class="item-tag">lancet</kbd></a>
+
+<a href="https://www.teale.de/tags/java"><kbd class="item-tag">java</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content"><h2 id="aot-problem-solved">AOT problem solved</h2>
+<p>Thanks to the swift responses of the Clojure google group I have got past my little problem. It was, of course, deceptively simple, but not clear to someone who doesn&rsquo;t do Java programming much.</p>
+<p>The problem was basically that whatever I did I could not get Clojure to recognise that the source files existed in the classpath.</p>
+<p>When you invoke java with the <code>-jar</code> command line option it completely ignores the classpath (both the environment variable, or the
+<code>-cp</code> argument.</p>
+<p>So, when compiling my code I simply switch this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    java -cp ./classes:./src -jar <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>/src/clojure/clojure.jar ./compile.clj
+</span></span></code></pre></div><p>.. to this &hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    java -cp ./classes:./src:<span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>/src/clojure/clojure/jar clojure.lang.Script ./compile.clj
+</span></span></code></pre></div><p>For the record the contents of <code>compile.clj</code> are as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-clojure" data-lang="clojure"><span style="display:flex;"><span>    (binding [*compile-path* <span style="color:#e6db74">&#34;/home/gteale/src/aot_test/classes&#34;</span>]
+</span></span><span style="display:flex;"><span>             (<span style="color:#a6e22e">compile</span> <span style="color:#e6db74">&#39;de.teale.test</span>))
+</span></span></code></pre></div><p>I plan to replace that with either ant or lancet shortly.</p>
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/frontend/html5-and-all-that/">HTML5 and all that</a></h4>
+    <h5>Sun Jan 10 2010 00:31:00 CET</h5>
+    
+<a href="https://www.teale.de/tags/frontend"><kbd class="item-tag">frontend</kbd></a>
+
+<a href="https://www.teale.de/tags/html"><kbd class="item-tag">html</kbd></a>
+
+<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
+
+<a href="https://www.teale.de/tags/xml"><kbd class="item-tag">xml</kbd></a>
+
+<a href="https://www.teale.de/tags/flash"><kbd class="item-tag">flash</kbd></a>
+
+<a href="https://www.teale.de/tags/google_gears"><kbd class="item-tag">google_gears</kbd></a>
+
+<a href="https://www.teale.de/tags/emacs"><kbd class="item-tag">emacs</kbd></a>
+
+<a href="https://www.teale.de/tags/nxml"><kbd class="item-tag">nxml</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/programming/on-clojure-7/">On Clojure (part 7)</a></h4>
+    <h5>Tue Jan 13 2009 13:43:00 CET</h5>
+    
+<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
+
+<a href="https://www.teale.de/tags/lisp"><kbd class="item-tag">lisp</kbd></a>
+
+<a href="https://www.teale.de/tags/apple"><kbd class="item-tag">apple</kbd></a>
+
+<a href="https://www.teale.de/tags/macosx"><kbd class="item-tag">macosx</kbd></a>
+
+<a href="https://www.teale.de/tags/core_data"><kbd class="item-tag">core_data</kbd></a>
+
+<a href="https://www.teale.de/tags/nicole"><kbd class="item-tag">nicole</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/programming/on-clojure-5/">On Clojure (part 5)</a></h4>
+    <h5>Sun Nov 30 2008 00:52:00 CET</h5>
+    
+<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
+
+<a href="https://www.teale.de/tags/lisp"><kbd class="item-tag">lisp</kbd></a>
+
+<a href="https://www.teale.de/tags/aot"><kbd class="item-tag">aot</kbd></a>
+
+<a href="https://www.teale.de/tags/recursion"><kbd class="item-tag">recursion</kbd></a>
+
+
+
+</div>
+ 
+    
+
+    
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">Copyright © Geoffrey J. Teale. All rights reserved. Powered by <a href='https://gohugo.io'>Hugo</a> and <a href='https://github.com/calintat/minimal'>Minimal</a>.</p>
+        </footer>
+
+        
+
+        
+    </body>
+
+</html>
+

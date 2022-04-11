@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>photography on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/photography/</link>
+    <description>Recent content in photography on The ol&#39; tealeg ruminates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 02 Jul 2008 01:13:00 +0200</lastBuildDate><atom:link href="https://www.teale.de/tags/photography/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Things that happened yesterday</title>
+      <link>https://www.teale.de/post/life/germany/things-that-happened-yesterday/</link>
+      <pubDate>Wed, 02 Jul 2008 01:13:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/life/germany/things-that-happened-yesterday/</guid>
+      <description>Tech content? Hmmm I am aware that I should put more technical content here, trouble is I don&amp;rsquo;t have much to say at the moment. Work is dragging on with the same old problems with different hardware. Outside work I am actively working on something (smallish) using Erlang to get my skills in that area up to scratch before starting something else (still smallish, but bigger).
+Schmap In the mean time here are a couple of things that happened yesterday.</description>
+    </item>
+    
+  </channel>
+</rss>

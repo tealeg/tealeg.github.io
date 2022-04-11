@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>slots on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/slots/</link>
+    <description>Recent content in slots on The ol&#39; tealeg ruminates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 09 Nov 2008 11:29:00 +0100</lastBuildDate><atom:link href="https://www.teale.de/tags/slots/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Clojure (part 3)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-3/</link>
+      <pubDate>Sun, 09 Nov 2008 11:29:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-3/</guid>
+      <description>QT Designer with Clojure So, as promised, here&amp;rsquo;s a few notes on how I am using Qt Designer with Clojure. Some important things to remember:
+ You must use Qt Designer with the QtJambi plugins installed. The easiest way to do this is to run designer.sh (Linux / UNIX / Mac OS X) or designer.bat (Windows) from the distribution folder that QtJambi came in. If you&amp;rsquo;ve got QtJambi installed as a package under Linux then you may need to check that the QtJambi plugins are correctly installed , they weren&amp;rsquo;t in my case.</description>
+    </item>
+    
+  </channel>
+</rss>

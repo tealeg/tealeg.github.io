@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>clojure on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/clojure/</link>
+    <description>Recent content in clojure on The ol&#39; tealeg ruminates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 10 Jan 2010 00:31:00 +0100</lastBuildDate><atom:link href="https://www.teale.de/tags/clojure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTML5 and all that</title>
+      <link>https://www.teale.de/post/tech/frontend/html5-and-all-that/</link>
+      <pubDate>Sun, 10 Jan 2010 00:31:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/frontend/html5-and-all-that/</guid>
+      <description>Clojure So..
+Firstly a quick update re: clojure. I&amp;rsquo;m still using it, productively and occasionally frustraitedly. Most frustration comes from my lack of available time and the relative newness of the language. Now Clojure is 2 years old there are often libraries are available to do things in a way idiomatic to Clojure rather than just using Java libraries directly, however there&amp;rsquo;s no a great deal of documentation of examples for these libraries.</description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 7)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-7/</link>
+      <pubDate>Tue, 13 Jan 2009 13:43:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-7/</guid>
+      <description>Some good Clojure news, some bad Clojure news So&amp;hellip; first the bad news.
+I&amp;rsquo;ve had to drop the Qt port of my little Clojure recruitment database. I was just hitting too many problems using Qt-Jambi and it was taking too long. The client needed a working database ASAP and I wasn&amp;rsquo;t gonna get there. At the same time I also learned to use Apple&amp;rsquo;s Core Data on Mac Os X 10.</description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 6)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-6/</link>
+      <pubDate>Sun, 30 Nov 2008 03:00:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-6/</guid>
+      <description>AOT problem solved Thanks to the swift responses of the Clojure google group I have got past my little problem. It was, of course, deceptively simple, but not clear to someone who doesn&amp;rsquo;t do Java programming much.
+The problem was basically that whatever I did I could not get Clojure to recognise that the source files existed in the classpath.
+When you invoke java with the -jar command line option it completely ignores the classpath (both the environment variable, or the -cp argument.</description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 5)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-5/</link>
+      <pubDate>Sun, 30 Nov 2008 00:52:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-5/</guid>
+      <description>Caught on a Clojure roller-coaster I was hoping to make some decent progress this weekend with my Clojure code. The plan was to port it to the new AOT model of compilation.
+However, my efforts have been frustrated by me not being able to get AOT working. I have posted my problem to the group, so hopefully there will be some solution soon.
+Clojure is developing so rapidly it&amp;rsquo;s hard to keep up, I think that&amp;rsquo;s how I got into this mess with AOT.</description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 4)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-4/</link>
+      <pubDate>Thu, 27 Nov 2008 00:22:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-4/</guid>
+      <description>AOT is cool, but it breaks some of what I&amp;rsquo;ve already talked about Clojure is a young language, and as such it&amp;rsquo;s developing fast. It&amp;rsquo;s an exhilarating ride to be on, but sometime it means things I&amp;rsquo;ve written change.
+So, when reading my previous posts, please note that the latest revisions to Clojure include the provision of Ahead-Of-Time (AOT) compilation. This will break the compilation mechanisms I used in some of the content below.</description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 3)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-3/</link>
+      <pubDate>Sun, 09 Nov 2008 11:29:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-3/</guid>
+      <description>QT Designer with Clojure So, as promised, here&amp;rsquo;s a few notes on how I am using Qt Designer with Clojure. Some important things to remember:
+ You must use Qt Designer with the QtJambi plugins installed. The easiest way to do this is to run designer.sh (Linux / UNIX / Mac OS X) or designer.bat (Windows) from the distribution folder that QtJambi came in. If you&amp;rsquo;ve got QtJambi installed as a package under Linux then you may need to check that the QtJambi plugins are correctly installed , they weren&amp;rsquo;t in my case.</description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 2)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-2/</link>
+      <pubDate>Sat, 08 Nov 2008 06:54:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-2/</guid>
+      <description>Distributing QtJambi with Clojure. How to bundle up Clojure programs for distribution One of the questions I&amp;rsquo;ve seen coming up a few times is how to distribute clojure programs. The obvious answer is to build executable JAR files.
+A while ago I produced a simple database application for my girlfriends recruitment business, NRecruit. I developed this using Clojure on my Arch Linux based laptop, and deployed to her MacBook running OS X Leopard.</description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 1)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-1/</link>
+      <pubDate>Sat, 08 Nov 2008 06:31:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-1/</guid>
+      <description>After many a dalliance with R6RS compliant(ish) Scheme implementations I have found myself inevitably drawn towards as new Lisp dialect instead. While I&amp;rsquo;m pleased to see Ikarus maturing to the state where it really is a very usable it&amp;rsquo;s not what I&amp;rsquo;ve been using to get stuff done. No, instead, I (like everyone else it seems) have fallen for Clojure.
+I won&amp;rsquo;t harp on about Clojure - you can read about it everywhere, instead I&amp;rsquo;ll just make some practical notes in the following posts.</description>
+    </item>
+    
+  </channel>
+</rss>

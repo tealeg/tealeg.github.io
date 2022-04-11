@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Enabling H.264 playback in Firefox on Intel&#39;s Clearlinux</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Playfair Display', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: teal;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://www.teale.de/css/main.css">
+
+
+ <link rel="stylesheet" href="https://www.teale.de/css/tealeg.css"> 
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair%20Display">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scheme.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.96.0" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Enabling H.264 playback in Firefox on Intel&#39;s Clearlinux</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/reference/">Reference</a></li>
+                            
+                        </ul>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>Enabling H.264 playback in Firefox on Intel&#39;s Clearlinux</h2>
+        <h5>Wed May 15 2019 15:41:30 CEST</h5>
+        
+<a href="https://www.teale.de/tags/clearlinux"><kbd class="item-tag">clearlinux</kbd></a>
+
+<a href="https://www.teale.de/tags/h.264"><kbd class="item-tag">h.264</kbd></a>
+
+<a href="https://www.teale.de/tags/linux"><kbd class="item-tag">linux</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content"><p>In common with most Linux distros, Intel&rsquo;s ClearLinux doesn&rsquo;t ship H.264 decoding by default.  Given the novel nature of ClearLinux there isn&rsquo;t a nice off the shelf solution to this yet, so we have to use a workaround.  I&rsquo;ll try and find a better way to achieve this, but for now this will get H.264 video working in YouTube / Twitter etc, for now:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>wget http://ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2
+</span></span><span style="display:flex;"><span>tar xf ffmpeg-snapshot.tar.tz2
+</span></span><span style="display:flex;"><span>cd ffmpeg-snapshot
+</span></span><span style="display:flex;"><span>./configure --prefix<span style="color:#f92672">=</span>/usr/local --enable-shared
+</span></span><span style="display:flex;"><span>make
+</span></span><span style="display:flex;"><span>sudo make install
+</span></span><span style="display:flex;"><span>sudo sh -c <span style="color:#960050;background-color:#1e0010">&#39;</span>echo /usr/local/lib &gt;&gt; /etc/ld.so.conf
+</span></span><span style="display:flex;"><span>sudo ldconfig
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;export LD_LIBRARY_PATH=/usr/local/lib&#34;</span> &gt;&gt; <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>/.config/firefox.conf
+</span></span></code></pre></div></div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/clearlinux/system-updates-with-mixin/">System Updates With Mixin</a></h4>
+    <h5>Wed May 15 2019 16:25:21 CEST</h5>
+    
+<a href="https://www.teale.de/tags/clearlinux"><kbd class="item-tag">clearlinux</kbd></a>
+
+<a href="https://www.teale.de/tags/mixin"><kbd class="item-tag">mixin</kbd></a>
+
+<a href="https://www.teale.de/tags/linux"><kbd class="item-tag">linux</kbd></a>
+
+<a href="https://www.teale.de/tags/package-management"><kbd class="item-tag">package-management</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/emacs/truetype-in-emacs/">TrueType fonts in GNU Emacs</a></h4>
+    <h5>Thu Jul 3 2008 14:32:00 CEST</h5>
+    
+<a href="https://www.teale.de/tags/emacs"><kbd class="item-tag">emacs</kbd></a>
+
+<a href="https://www.teale.de/tags/fonts"><kbd class="item-tag">fonts</kbd></a>
+
+<a href="https://www.teale.de/tags/truetype"><kbd class="item-tag">truetype</kbd></a>
+
+<a href="https://www.teale.de/tags/linux"><kbd class="item-tag">linux</kbd></a>
+
+<a href="https://www.teale.de/tags/unix"><kbd class="item-tag">unix</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/tech/programming/ikarus-ascends/">Ikarus ascends</a></h4>
+    <h5>Mon Dec 17 2007 14:25:00 UTC</h5>
+    
+<a href="https://www.teale.de/tags/scheme"><kbd class="item-tag">scheme</kbd></a>
+
+<a href="https://www.teale.de/tags/programming"><kbd class="item-tag">programming</kbd></a>
+
+<a href="https://www.teale.de/tags/r6rs"><kbd class="item-tag">r6rs</kbd></a>
+
+<a href="https://www.teale.de/tags/ikarus"><kbd class="item-tag">ikarus</kbd></a>
+
+<a href="https://www.teale.de/tags/chicken"><kbd class="item-tag">chicken</kbd></a>
+
+<a href="https://www.teale.de/tags/racket"><kbd class="item-tag">racket</kbd></a>
+
+<a href="https://www.teale.de/tags/arch_linux"><kbd class="item-tag">arch_linux</kbd></a>
+
+<a href="https://www.teale.de/tags/linux"><kbd class="item-tag">linux</kbd></a>
+
+
+
+</div>
+ 
+    
+
+    
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">Copyright © Geoffrey J. Teale. All rights reserved. Powered by <a href='https://gohugo.io'>Hugo</a> and <a href='https://github.com/calintat/minimal'>Minimal</a>.</p>
+        </footer>
+
+        
+
+        
+    </body>
+
+</html>
+

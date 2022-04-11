@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>networking on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/networking/</link>
+    <description>Recent content in networking on The ol&#39; tealeg ruminates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 16 May 2008 23:07:00 +0200</lastBuildDate><atom:link href="https://www.teale.de/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenVPN and Solaris</title>
+      <link>https://www.teale.de/post/tech/opensolaris/openvpn-and-solaris/</link>
+      <pubDate>Fri, 16 May 2008 23:07:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/opensolaris/openvpn-and-solaris/</guid>
+      <description>Solaris Joy A little more solaris joy. Mainly as a note for myself here is how to setup an OpenVPN client on OpenSolaris 2008.05:
+Steps Add package repositories Add Blastwave and SunFreeWare IPS repositories to the Image Packaging System:
+-bash-2.05b# pkg set-authority -O http://pkg.sunfreeware.com:9000/ Companion -bash-2.05b# pkg set-authority -O http://blastwave.network.com:10000/ Blastwave -bash-2.05b# pkg refresh Install and setup the TUN device -bash-2.05b# pkg install IPStun -bash-2.05b# add_drv tun Install OpenVPN -bash-2.05b# pkg install IPSopenvpn &amp;hellip; and now you&amp;rsquo;re ready to put your openvpn.</description>
+    </item>
+    
+    <item>
+      <title>Brandz spanking new</title>
+      <link>https://www.teale.de/post/tech/opensolaris/brandz-spanking-new/</link>
+      <pubDate>Fri, 16 May 2008 21:42:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/opensolaris/brandz-spanking-new/</guid>
+      <description>Into the Solaris So, long time no Solaris talk.
+I&amp;rsquo;ve not been sleeping well this last couple of weeks (ironically this seems to have a lot to do with exhausting myself during my recent trip to England), but that inevitably leads to lots of mucking around with computers in the wee hours of the morning.
+The need for containers So OpenSolaris 2008.05 is on my laptop right now, and it&amp;rsquo;s a bit of surprise to find it there as I am trying to hack on some code that is destined to run on Linux.</description>
+    </item>
+    
+  </channel>
+</rss>

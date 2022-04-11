@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sound on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/sound/</link>
+    <description>Recent content in sound on The ol&#39; tealeg ruminates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 06 May 2007 12:26:00 +0100</lastBuildDate><atom:link href="https://www.teale.de/tags/sound/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intel HDA working under OpenSolaris</title>
+      <link>https://www.teale.de/post/tech/opensolaris/intel-hda-opensolaris/</link>
+      <pubDate>Sun, 06 May 2007 12:26:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/opensolaris/intel-hda-opensolaris/</guid>
+      <description>Another minor victory in my quest to get more familiar with OpenSolaris. I&amp;rsquo;ve upgraded to Nexenta unstable, and I noticed a package called sunwaudiohd being installed. That looked like a promising solution to the lack of audio on my OpenSolaris machine - the Intel HDA soundcard has never worked under any version I&amp;rsquo;ve used.
+Sadly, the mere presence of this driver didn&amp;rsquo;t seem to fix things (it&amp;rsquo;s never that simple). A little research confirmed that it was the right driver, but that this bug had been discovered.</description>
+    </item>
+    
+  </channel>
+</rss>

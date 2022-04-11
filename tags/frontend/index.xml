@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>frontend on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/frontend/</link>
+    <description>Recent content in frontend on The ol&#39; tealeg ruminates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 10 Jan 2010 00:31:00 +0100</lastBuildDate><atom:link href="https://www.teale.de/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTML5 and all that</title>
+      <link>https://www.teale.de/post/tech/frontend/html5-and-all-that/</link>
+      <pubDate>Sun, 10 Jan 2010 00:31:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/frontend/html5-and-all-that/</guid>
+      <description>Clojure So..
+Firstly a quick update re: clojure. I&amp;rsquo;m still using it, productively and occasionally frustraitedly. Most frustration comes from my lack of available time and the relative newness of the language. Now Clojure is 2 years old there are often libraries are available to do things in a way idiomatic to Clojure rather than just using Java libraries directly, however there&amp;rsquo;s no a great deal of documentation of examples for these libraries.</description>
+    </item>
+    
+  </channel>
+</rss>

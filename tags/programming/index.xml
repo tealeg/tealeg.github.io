@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programming on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/programming/</link>
+    <description>Recent content in programming on The ol&#39; tealeg ruminates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 17 Dec 2007 14:25:00 +0000</lastBuildDate><atom:link href="https://www.teale.de/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ikarus ascends</title>
+      <link>https://www.teale.de/post/tech/programming/ikarus-ascends/</link>
+      <pubDate>Mon, 17 Dec 2007 14:25:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/ikarus-ascends/</guid>
+      <description>If you follow scheme or lisp news in even a passing fashion you can&amp;rsquo;t have failed to notice the arrival of Ikarus Scheme, the nifty incremental, native scheme code compiler. It&amp;rsquo;s an lovely new version of scheme based around R6RS. That means it supports a nice clean library system (standardised!) and scripting in the manner of Perl, Python and Ruby.
+Though it lacks the maturity and library base you&amp;rsquo;d find in chicken or PLT, it&amp;rsquo;s still a very attractive proposition, and the quality of the product thus far, combined with the nascent community feel around it has certainly got my spider sense tingling.</description>
+    </item>
+    
+  </channel>
+</rss>

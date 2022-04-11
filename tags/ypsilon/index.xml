@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ypsilon on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/ypsilon/</link>
+    <description>Recent content in ypsilon on The ol&#39; tealeg ruminates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 26 Aug 2008 01:18:00 +0200</lastBuildDate><atom:link href="https://www.teale.de/tags/ypsilon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What&#39;s next? Ypsilon</title>
+      <link>https://www.teale.de/post/tech/programming/ypsilon/</link>
+      <pubDate>Tue, 26 Aug 2008 01:18:00 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/ypsilon/</guid>
+      <description>Ikarus So&amp;hellip;
+For a good long while I have been tracking the Ikarus Scheme implementation. I like it because it tries to comply with R6RS, compiles to some pretty quick code and recently added 64bit support. I like it so much that I even package it and a number of related libraries for Arch Linux.
+However, Ikarus has a single annoyance for me - it is not easy to extend it with C libraries.</description>
+    </item>
+    
+  </channel>
+</rss>

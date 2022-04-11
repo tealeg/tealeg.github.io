@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java on The ol&#39; tealeg ruminates</title>
+    <link>https://www.teale.de/tags/java/</link>
+    <description>Recent content in java on The ol&#39; tealeg ruminates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 30 Nov 2008 03:00:00 +0100</lastBuildDate><atom:link href="https://www.teale.de/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Clojure (part 6)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-6/</link>
+      <pubDate>Sun, 30 Nov 2008 03:00:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-6/</guid>
+      <description>AOT problem solved Thanks to the swift responses of the Clojure google group I have got past my little problem. It was, of course, deceptively simple, but not clear to someone who doesn&amp;rsquo;t do Java programming much.
+The problem was basically that whatever I did I could not get Clojure to recognise that the source files existed in the classpath.
+When you invoke java with the -jar command line option it completely ignores the classpath (both the environment variable, or the -cp argument.</description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 3)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-3/</link>
+      <pubDate>Sun, 09 Nov 2008 11:29:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-3/</guid>
+      <description>QT Designer with Clojure So, as promised, here&amp;rsquo;s a few notes on how I am using Qt Designer with Clojure. Some important things to remember:
+ You must use Qt Designer with the QtJambi plugins installed. The easiest way to do this is to run designer.sh (Linux / UNIX / Mac OS X) or designer.bat (Windows) from the distribution folder that QtJambi came in. If you&amp;rsquo;ve got QtJambi installed as a package under Linux then you may need to check that the QtJambi plugins are correctly installed , they weren&amp;rsquo;t in my case.</description>
+    </item>
+    
+    <item>
+      <title>On Clojure (part 2)</title>
+      <link>https://www.teale.de/post/tech/programming/on-clojure-2/</link>
+      <pubDate>Sat, 08 Nov 2008 06:54:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/programming/on-clojure-2/</guid>
+      <description>Distributing QtJambi with Clojure. How to bundle up Clojure programs for distribution One of the questions I&amp;rsquo;ve seen coming up a few times is how to distribute clojure programs. The obvious answer is to build executable JAR files.
+A while ago I produced a simple database application for my girlfriends recruitment business, NRecruit. I developed this using Clojure on my Arch Linux based laptop, and deployed to her MacBook running OS X Leopard.</description>
+    </item>
+    
+    <item>
+      <title>Guten Morgen 2008</title>
+      <link>https://www.teale.de/post/life/germany/guten-morgen-2008/</link>
+      <pubDate>Tue, 01 Jan 2008 15:17:00 +0100</pubDate>
+      
+      <guid>https://www.teale.de/post/life/germany/guten-morgen-2008/</guid>
+      <description>A new year So&amp;hellip; a new year.. the 30th new year of my life.
+A new location A big year for me. Firstly I am now just two months away from moving to Munich with my girlfriend Nicole and I&amp;rsquo;m both terrified and excited at the same time. I&amp;rsquo;m not worried about moving to Germany - strangely I just &amp;ldquo;know&amp;rdquo; that this will be OK - I&amp;rsquo;m worried about the future.</description>
+    </item>
+    
+  </channel>
+</rss>
