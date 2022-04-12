@@ -1,3 +1,8 @@
+
+div.content {
+    text-align: start;
+}
+
 .tag-cloud-tags div {
     display: inline-block;
     padding: 6px;
