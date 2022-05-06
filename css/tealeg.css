@@ -110,3 +110,6 @@ code {
 div.pages {
     font-size: 24pt;
 }
+ul.nav {
+      margin-bottom: 0px !important;
+}
