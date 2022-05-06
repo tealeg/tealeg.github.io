@@ -20,24 +20,29 @@ strong  {
 
 div.intro h1 {
   font-size: 15vh !important;
+  color: #555;
 }
 
 h1 {
   font-size: 24pt !important;
   margin-bottom: 24px !important;
+    color: #555;
 }
 
 h2 {
   font-size: 20pt !important;
   margin-bottom: 20px !important;
+    color: #555;
 }
 
 h3 {
   font-size: 18pt !important;
+    color: #555;
 }
 
 h4 {
   font-size: 14pt !important;
+    color: #555;
 }
 
 
