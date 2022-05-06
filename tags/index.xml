@@ -1,12 +1,111 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on The ol&#39; tealeg ruminates</title>
+    <title>Tags on Also sprach tealeg...</title>
     <link>https://www.teale.de/tags/</link>
-    <description>Recent content in Tags on The ol&#39; tealeg ruminates</description>
+    <description>Recent content in Tags on Also sprach tealeg...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 08 Apr 2022 12:49:00 +0200</lastBuildDate><atom:link href="https://www.teale.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.teale.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cmmi</title>
+      <link>https://www.teale.de/tags/cmmi/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/cmmi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>developer_experience</title>
+      <link>https://www.teale.de/tags/developer_experience/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/developer_experience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devx</title>
+      <link>https://www.teale.de/tags/devx/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/devx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dx</title>
+      <link>https://www.teale.de/tags/dx/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/dx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kpi</title>
+      <link>https://www.teale.de/tags/kpi/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/kpi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>maturity</title>
+      <link>https://www.teale.de/tags/maturity/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/maturity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>metrics</title>
+      <link>https://www.teale.de/tags/metrics/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/metrics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>okr</title>
+      <link>https://www.teale.de/tags/okr/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/okr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>process</title>
+      <link>https://www.teale.de/tags/process/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/process/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>qa</title>
+      <link>https://www.teale.de/tags/qa/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/qa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>quality</title>
+      <link>https://www.teale.de/tags/quality/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/tags/quality/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>book</title>
       <link>https://www.teale.de/tags/book/</link>
@@ -22,33 +121,6 @@
       <pubDate>Fri, 08 Apr 2022 12:49:00 +0200</pubDate>
       
       <guid>https://www.teale.de/tags/canonical/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>developer_experience</title>
-      <link>https://www.teale.de/tags/developer_experience/</link>
-      <pubDate>Fri, 08 Apr 2022 12:49:00 +0200</pubDate>
-      
-      <guid>https://www.teale.de/tags/developer_experience/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>devx</title>
-      <link>https://www.teale.de/tags/devx/</link>
-      <pubDate>Fri, 08 Apr 2022 12:49:00 +0200</pubDate>
-      
-      <guid>https://www.teale.de/tags/devx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dx</title>
-      <link>https://www.teale.de/tags/dx/</link>
-      <pubDate>Fri, 08 Apr 2022 12:49:00 +0200</pubDate>
-      
-      <guid>https://www.teale.de/tags/dx/</guid>
       <description></description>
     </item>
     

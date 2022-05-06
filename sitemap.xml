@@ -2,19 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.teale.de/</loc>
+    <lastmod>2022-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.teale.de/tags/cmmi/</loc>
+    <lastmod>2022-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.teale.de/tags/developer_experience/</loc>
+    <lastmod>2022-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.teale.de/tags/devx/</loc>
+    <lastmod>2022-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.teale.de/tags/dx/</loc>
+    <lastmod>2022-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.teale.de/tags/kpi/</loc>
+    <lastmod>2022-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.teale.de/tags/maturity/</loc>
+    <lastmod>2022-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.teale.de/post/devx/a-tool-for-devx-kpis-2/</loc>
+    <lastmod>2022-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.teale.de/tags/metrics/</loc>
+    <lastmod>2022-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.teale.de/tags/okr/</loc>
+    <lastmod>2022-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.teale.de/post/</loc>
+    <lastmod>2022-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.teale.de/tags/</loc>
+    <lastmod>2022-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.teale.de/post/devx/devx-is-a-quality-process/</loc>
+    <lastmod>2022-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.teale.de/post/devx/a-tool-for-devx-kpis-1/</loc>
+    <lastmod>2022-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.teale.de/tags/process/</loc>
+    <lastmod>2022-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.teale.de/tags/qa/</loc>
+    <lastmod>2022-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.teale.de/tags/quality/</loc>
+    <lastmod>2022-05-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.teale.de/tags/book/</loc>
     <lastmod>2022-04-08T12:49:00+02:00</lastmod>
   </url><url>
     <loc>https://www.teale.de/tags/canonical/</loc>
-    <lastmod>2022-04-08T12:49:00+02:00</lastmod>
-  </url><url>
-    <loc>https://www.teale.de/tags/developer_experience/</loc>
-    <lastmod>2022-04-08T12:49:00+02:00</lastmod>
-  </url><url>
-    <loc>https://www.teale.de/tags/devx/</loc>
-    <lastmod>2022-04-08T12:49:00+02:00</lastmod>
-  </url><url>
-    <loc>https://www.teale.de/tags/dx/</loc>
     <lastmod>2022-04-08T12:49:00+02:00</lastmod>
   </url><url>
     <loc>https://www.teale.de/tags/go/</loc>
@@ -33,15 +75,6 @@
     <lastmod>2022-04-08T12:49:00+02:00</lastmod>
   </url><url>
     <loc>https://www.teale.de/tags/meta/</loc>
-    <lastmod>2022-04-08T12:49:00+02:00</lastmod>
-  </url><url>
-    <loc>https://www.teale.de/post/</loc>
-    <lastmod>2022-04-08T12:49:00+02:00</lastmod>
-  </url><url>
-    <loc>https://www.teale.de/tags/</loc>
-    <lastmod>2022-04-08T12:49:00+02:00</lastmod>
-  </url><url>
-    <loc>https://www.teale.de/</loc>
     <lastmod>2022-04-08T12:49:00+02:00</lastmod>
   </url><url>
     <loc>https://www.teale.de/tags/update/</loc>

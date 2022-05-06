@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>quality on Also sprach tealeg...</title>
+    <link>https://www.teale.de/tags/quality/</link>
+    <description>Recent content in quality on Also sprach tealeg...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 05 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.teale.de/tags/quality/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DevX is a Quality Process</title>
+      <link>https://www.teale.de/post/devx/devx-is-a-quality-process/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/post/devx/devx-is-a-quality-process/</guid>
+      <description>DevX is not just about what we create   For all the good that a Developer eXperience team can do, by creating documentation, improving APIs, building tools and libraries, and fostering community, this will only every constitute the part of the total developer experience. The foundation stones of a good developer experience are actually in the hands of the core product teams.
+ Delivering a quality product, that does what it should, and does it reliably is the bedrock on which any developer&amp;#39;s eXperience is based.</description>
+    </item>
+    
+  </channel>
+</rss>

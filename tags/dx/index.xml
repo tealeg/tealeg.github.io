@@ -1,12 +1,44 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>dx on The ol&#39; tealeg ruminates</title>
+    <title>dx on Also sprach tealeg...</title>
     <link>https://www.teale.de/tags/dx/</link>
-    <description>Recent content in dx on The ol&#39; tealeg ruminates</description>
+    <description>Recent content in dx on Also sprach tealeg...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 08 Apr 2022 12:49:00 +0200</lastBuildDate><atom:link href="https://www.teale.de/tags/dx/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.teale.de/tags/dx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Maturity Matrices: A tool for DevX KPIs and OKRs (Part 2)</title>
+      <link>https://www.teale.de/post/devx/a-tool-for-devx-kpis-2/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/post/devx/a-tool-for-devx-kpis-2/</guid>
+      <description>Building a DevX Maturity Matrix   I promised in Part I of this article that I&amp;#39;d explain how I generate the headline numbers that I report as part of the KPIs or OKRs for the Developer eXperience of a product.
+ The answer is rather simple but, at least initially, quite labourious.
+  Reminder: what a maturity matrix is.   A maturity matrix encodes a maturity level as a value (typically a positive integer) for every unique combination of product, feature, customer/developer type, and maturity type.</description>
+    </item>
+    
+    <item>
+      <title>DevX is a Quality Process</title>
+      <link>https://www.teale.de/post/devx/devx-is-a-quality-process/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/post/devx/devx-is-a-quality-process/</guid>
+      <description>DevX is not just about what we create   For all the good that a Developer eXperience team can do, by creating documentation, improving APIs, building tools and libraries, and fostering community, this will only every constitute the part of the total developer experience. The foundation stones of a good developer experience are actually in the hands of the core product teams.
+ Delivering a quality product, that does what it should, and does it reliably is the bedrock on which any developer&amp;#39;s eXperience is based.</description>
+    </item>
+    
+    <item>
+      <title>Maturity Matrices: A tool for DevX KPIs and OKRs (Part 1)</title>
+      <link>https://www.teale.de/post/devx/a-tool-for-devx-kpis-1/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.teale.de/post/devx/a-tool-for-devx-kpis-1/</guid>
+      <description>Introduction   This blog post will introduce the Maturity Matrix I have been developing to help report on the state of Developer eXperience for a given product.
+ In this first part, I&amp;#39;ll explain why I think it&amp;#39;s needed, what I report from it, and what those reports mean. In Part II I&amp;#39;ll explain how I produce these numbers.
+  KPIs and OKRs for DevX are hard   Knowing how to describe goals and measure performance against those goals is a challenge for every DevX team.</description>
+    </item>
+    
     <item>
       <title>Why the long pause?</title>
       <link>https://www.teale.de/post/life/why-the-long-pauses/</link>
