@@ -49,6 +49,16 @@
     </item>
     
     <item>
+      <title>Software Engineers Don&#39;t Scale</title>
+      <link>https://www.teale.de/post/tech/software-engineers-dont-scale/</link>
+      <pubDate>Thu, 04 Jul 2019 15:57:18 +0200</pubDate>
+      
+      <guid>https://www.teale.de/post/tech/software-engineers-dont-scale/</guid>
+      <description>Software Engineers don&amp;rsquo;t scale &amp;hellip; or how I learned to stop worrying and love commenting my code. NOTE: I originally published this on the Inside Heetch blog
+This article, by Mathew Skelton and Manuel Pais, reminds me that, for everything that’s been made simpler in this era of cloud computing and micro-services, we’ve paid a price in terms of cognitive load. We simply need to keep more context in mind when making or evaluating any change to our code.</description>
+    </item>
+    
+    <item>
       <title>Developer Care</title>
       <link>https://www.teale.de/post/tech/developer-care/</link>
       <pubDate>Wed, 15 May 2019 15:57:18 +0200</pubDate>
