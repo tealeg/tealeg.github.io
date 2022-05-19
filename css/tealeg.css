@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,700;1,300;1,700&family=IBM+Plex+Sans:ital,wght@0,200;0,700;1,200;1,700&family=IBM+Plex+Serif:ital,wght@0,200;0,700;1,200;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,800;1,300;1,800&family=IBM+Plex+Sans:ital,wght@0,300;0,800;1,300;1,800&family=IBM+Plex+Serif:ital,wght@0,300;0,800;1,300;1,800&display=swap');
 
 div.content {
      text-align: start;
@@ -15,7 +15,7 @@ p, ul, ol {
 
 strong  {
   color: #555;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 div.intro h1 {
