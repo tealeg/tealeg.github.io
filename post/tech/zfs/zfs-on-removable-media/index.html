@@ -130,7 +130,7 @@
     </div>
 
     <div align="start" class="content"><p>I&rsquo;ve been playing around with ZFS for quite a while now and I&rsquo;m very impressed. Everything that&rsquo;s claimed of it holds up under my limited investigation. I&rsquo;ve been working with both the OpenSolaris native version (thank you Nexenta!) and the ZFS-FUSE implementation for Linux.</p>
-<p>The one thing that proved hard to do was to build a ZFS pool on my USB2 hard drive and move that pool between machines. For a couple of days I struggled in vane to see why I couldn&rsquo;t ZFS export from my linux box and ZFS import on my OpenSolaris box (or visa versa).</p>
+<p>The one thing that proved hard to do was to build a ZFS pool on my USB2 hard drive and move that pool between machines. For a couple of days I struggled in vain to see why I couldn&rsquo;t ZFS export from my linux box and ZFS import on my OpenSolaris box (or visa versa).</p>
 <p>It turns out the answer is simple: ZFS-FUSE doesn&rsquo;t recognise that Linux doesn&rsquo;t use /dev/dsk (it even goes so far as to error because of this for some commands). The solution is to tell zpool that you want it to look elsewhere by adding the -d option to each zpool import/export command, eg.:</p>
 <p>$ zpool import -d /dev mypool</p>
 <p>&hellip; suddenly it all works beautifully. Now if only there were better docs for ZFS-FUSE! After all my struggling I word this out based on a comment against someone elses blog entry.</p>

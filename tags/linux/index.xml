@@ -64,7 +64,7 @@ All of that is inevitable and I guess we should just enjoy the ride. However, gi
       
       <guid>https://www.teale.de/post/tech/zfs/zfs-on-removable-media/</guid>
       <description>I&amp;rsquo;ve been playing around with ZFS for quite a while now and I&amp;rsquo;m very impressed. Everything that&amp;rsquo;s claimed of it holds up under my limited investigation. I&amp;rsquo;ve been working with both the OpenSolaris native version (thank you Nexenta!) and the ZFS-FUSE implementation for Linux.
-The one thing that proved hard to do was to build a ZFS pool on my USB2 hard drive and move that pool between machines. For a couple of days I struggled in vane to see why I couldn&amp;rsquo;t ZFS export from my linux box and ZFS import on my OpenSolaris box (or visa versa).</description>
+The one thing that proved hard to do was to build a ZFS pool on my USB2 hard drive and move that pool between machines. For a couple of days I struggled in vain to see why I couldn&amp;rsquo;t ZFS export from my linux box and ZFS import on my OpenSolaris box (or visa versa).</description>
     </item>
     
   </channel>
