@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Also sprach tealeg...</title>
     <link>https://www.teale.de/</link>
@@ -13,9 +13,9 @@
       <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://www.teale.de/post/devx/a-tool-for-devx-kpis-2/</guid>
-      <description>Building a DevX Maturity Matrix   I promised in Part I of this article that I&amp;#39;d explain how I generate the headline numbers that I report as part of the KPIs or OKRs for the Developer eXperience of a product.
- The answer is rather simple but, at least initially, quite labourious.
-  Reminder: what a maturity matrix is.   A maturity matrix encodes a maturity level as a value (typically a positive integer) for every unique combination of product, feature, customer/developer type, and maturity type.</description>
+      <description>Building a DevX Maturity Matrix I promised in Part I of this article that I&amp;#39;d explain how I generate the headline numbers that I report as part of the KPIs or OKRs for the Developer eXperience of a product.
+The answer is rather simple but, at least initially, quite labourious.
+Reminder: what a maturity matrix is. A maturity matrix encodes a maturity level as a value (typically a positive integer) for every unique combination of product, feature, customer/developer type, and maturity type.</description>
     </item>
     
     <item>
@@ -24,8 +24,8 @@
       <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://www.teale.de/post/devx/devx-is-a-quality-process/</guid>
-      <description>DevX is not just about what we create   For all the good that a Developer eXperience team can do, by creating documentation, improving APIs, building tools and libraries, and fostering community, this will only ever constitute part of the total developer experience. The foundation stones of a good developer experience are actually in the hands of the core product teams.
- Delivering a quality product, which does what it should, and does it reliably, is the bedrock on which any developer&amp;#39;s eXperience is based.</description>
+      <description>DevX is not just about what we create For all the good that a Developer eXperience team can do, by creating documentation, improving APIs, building tools and libraries, and fostering community, this will only ever constitute part of the total developer experience. The foundation stones of a good developer experience are actually in the hands of the core product teams.
+Delivering a quality product, which does what it should, and does it reliably, is the bedrock on which any developer&amp;#39;s eXperience is based.</description>
     </item>
     
     <item>
@@ -34,9 +34,9 @@
       <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://www.teale.de/post/devx/a-tool-for-devx-kpis-1/</guid>
-      <description>Introduction   This blog post will introduce the Maturity Matrix I have been developing to help report on the state of Developer eXperience for a given product.
- In this first part, I&amp;#39;ll explain why I think it&amp;#39;s needed, what I report from it, and what those reports mean. In Part II I&amp;#39;ll explain how I produce these numbers.
-  KPIs and OKRs for DevX are hard   Knowing how to describe goals and measure performance against those goals is a challenge for every DevX team.</description>
+      <description>Introduction This blog post will introduce the Maturity Matrix I have been developing to help report on the state of Developer eXperience for a given product.
+In this first part, I&amp;#39;ll explain why I think it&amp;#39;s needed, what I report from it, and what those reports mean. In Part II I&amp;#39;ll explain how I produce these numbers.
+KPIs and OKRs for DevX are hard Knowing how to describe goals and measure performance against those goals is a challenge for every DevX team.</description>
     </item>
     
     <item>
@@ -64,8 +64,8 @@ This article, by Mathew Skelton and Manuel Pais, reminds me that, for everything
       <pubDate>Thu, 16 May 2019 11:54:48 +0200</pubDate>
       
       <guid>https://www.teale.de/reference/previous-employers/</guid>
-      <description>Prior to my current role at Talanx (HDI Systems AG), I have worked in a number of companies, in varied roles, and worked breifly as freelance consultant. My previous employers were:
- Heetch &amp;ndash; Staff Engineer and Lead for Developer Care Avocet &amp;ndash; Backend Software Engineer Canonical &amp;ndash; Software Engineer, Cloud Dev-Ops (Landscape and OpenSack Autopilot) Elsevier Germany &amp;ndash; Technical Product Manager / Architect Cmed Technology &amp;ndash; Director of Technical Development Thomson Reuters &amp;ndash; Technical Consultant Rentokil Initial &amp;ndash; Application Programmer  Along the way I&amp;rsquo;ve also earned money as a photographer, guitarist, at Sainsbury&amp;rsquo;s in Canterbury, and in Dungness B nuclear powerstation.</description>
+      <description>Prior to my current role as Head of Engineering (Developer Experience) at Upvest, I have worked in a number of companies, in varied roles, and worked breifly as freelance consultant. My previous employers were:
+Talanx (HDI Systems AG) - Developer eXperience Engineer (Cloud Competence Centre) Heetch &amp;ndash; Staff Engineer and Lead for Developer Care Avocet &amp;ndash; Backend Software Engineer Canonical &amp;ndash; Software Engineer, Cloud Dev-Ops (Landscape and OpenSack Autopilot) Elsevier Germany &amp;ndash; Technical Product Manager / Architect Cmed Technology &amp;ndash; Director of Technical Development Thomson Reuters &amp;ndash; Technical Consultant Rentokil Initial &amp;ndash; Application Programmer Along the way I&amp;rsquo;ve also earned money as a photographer, guitarist, at Sainsbury&amp;rsquo;s in Canterbury, and in Dungeness B nuclear power station.</description>
     </item>
     
     <item>
@@ -75,8 +75,8 @@ This article, by Mathew Skelton and Manuel Pais, reminds me that, for everything
       
       <guid>https://www.teale.de/reference/tech/languages-and-platforms/</guid>
       <description>This page exists mainly to satisfy some deep psychological desire to express everything as lists (I blame LISP).
- Languages During my life I&amp;rsquo;ve developed in a large number of programming languages. I&amp;rsquo;ll attempt to summarise here:
-Programming Languages  AMOS 1990-1995 Hobby   AmigaBASIC 1989-1995 Hobby   BBC BASIC 1983-1988 Academic   C++ 1989-2001 Academic + Commercial   C 1989-Current Academic / Commercial   Clojure 2007-2011 Commercial / Research   Common Lisp 1997-2010 Academic / Research   Cue 2020-Current Commercial   Erlang 2008-2011 Commercial / Research   Go 2009-Current Commercial / Research   IBM JCL 1998-2000 Commercial   IBM RPG 1998-2000 Commercial   Java 1999-2008 Commercial   Javascript / ECMAScript 1995-Current Academic / Commercial   Microsoft Visual BASIC 4,5 and 6 1998-2000 Commercial   Motorola 68000 Assembly 1989-1995 Hobby   PHP 2011 Commercial   Progress 4GL 1999-2000 Commercial   Prolog 1998 Academic   Python 1999-Current Commercial / Research   Racket 2010-Current Research   Ruby 2000-2003 Commercial   Scheme 1997-Current Academic / Research   Sinclair BASIC 1983-1989 Hobby   Sun UltraSparc Assembly 2000-2008 Hobby   x86_64 Assembly 2008-Current Hobby   XSLT 1999-2017 Commercial   Operating Systems I&amp;rsquo;ve developed software for a range of operating systems:</description>
+Languages During my life I&amp;rsquo;ve developed in a large number of programming languages. I&amp;rsquo;ll attempt to summarise here:
+Programming Languages AMOS 1990-1995 Hobby AmigaBASIC 1989-1995 Hobby BBC BASIC 1983-1988 Academic C++ 1989-2001 Academic + Commercial C 1989-Current Academic / Commercial Clojure 2007-2011 Commercial / Research Common Lisp 1997-2010 Academic / Research Cue 2020-Current Commercial Erlang 2008-2011 Commercial / Research Go 2009-Current Commercial / Research IBM JCL 1998-2000 Commercial IBM RPG 1998-2000 Commercial Java 1999-2008 Commercial Javascript / ECMAScript 1995-Current Academic / Commercial Microsoft Visual BASIC 4,5 and 6 1998-2000 Commercial Motorola 68000 Assembly 1989-1995 Hobby PHP 2011 Commercial Progress 4GL 1999-2000 Commercial Prolog 1998 Academic Python 1999-Current Commercial / Research Racket 2010-Current Research Ruby 2000-2003 Commercial Scheme 1997-Current Academic / Research Sinclair BASIC 1983-1989 Hobby Sun UltraSparc Assembly 2000-2008 Hobby x86_64 Assembly 2008-Current Hobby XSLT 1999-2017 Commercial Operating Systems I&amp;rsquo;ve developed software for a range of operating systems:</description>
     </item>
     
     <item>
@@ -266,7 +266,7 @@ So, when reading my previous posts, please note that the latest revisions to Clo
       
       <guid>https://www.teale.de/post/tech/programming/on-clojure-3/</guid>
       <description>QT Designer with Clojure So, as promised, here&amp;rsquo;s a few notes on how I am using Qt Designer with Clojure. Some important things to remember:
- You must use Qt Designer with the QtJambi plugins installed. The easiest way to do this is to run designer.sh (Linux / UNIX / Mac OS X) or designer.bat (Windows) from the distribution folder that QtJambi came in. If you&amp;rsquo;ve got QtJambi installed as a package under Linux then you may need to check that the QtJambi plugins are correctly installed , they weren&amp;rsquo;t in my case.</description>
+You must use Qt Designer with the QtJambi plugins installed. The easiest way to do this is to run designer.sh (Linux / UNIX / Mac OS X) or designer.bat (Windows) from the distribution folder that QtJambi came in. If you&amp;rsquo;ve got QtJambi installed as a package under Linux then you may need to check that the QtJambi plugins are correctly installed , they weren&amp;rsquo;t in my case.</description>
     </item>
     
     <item>
@@ -326,7 +326,7 @@ This dialog is very useful, it stops the GUI bombing out totally and presents th
       
       <guid>https://www.teale.de/post/tech/emacs/truetype-in-emacs/</guid>
       <description>Listing installed TrueType fonts in Emacs In this new fangled age of TrueType support in Emacs it&amp;rsquo;s really useful to know the names of the Monospace fonts installed on your system in the format that Emacs understands. If you are on a Linux/UNIX system running Xorg with fontconfig installed then add this function to your .emacs file
-(defun list-monospace-truetype-fonts ()  &amp;#34;Provide a list of available monospaced truetype fonts on this machine&amp;#34;  (interactive)  (set-buffer (get-buffer-create &amp;#34;Monospaced Fonts&amp;#34;))  (call-process-shell-command &amp;#34;fc-list :spacing=mono:scalable=true family | sort&amp;#34; nil t)  (setq buffer-read-only t)  (switch-to-buffer-other-window (current-buffer))) You can set these fonts in a number of ways, currently I am getting the most joy using this form:</description>
+(defun list-monospace-truetype-fonts () &amp;#34;Provide a list of available monospaced truetype fonts on this machine&amp;#34; (interactive) (set-buffer (get-buffer-create &amp;#34;Monospaced Fonts&amp;#34;)) (call-process-shell-command &amp;#34;fc-list :spacing=mono:scalable=true family | sort&amp;#34; nil t) (setq buffer-read-only t) (switch-to-buffer-other-window (current-buffer))) You can set these fonts in a number of ways, currently I am getting the most joy using this form:</description>
     </item>
     
     <item>

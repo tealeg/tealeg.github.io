@@ -1,350 +1,321 @@
 <!DOCTYPE html>
-<html lang="en-gb">
-    <head>
-        
+<html lang="en" dir="auto">
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>lisp</title>
-        
-        <style>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>lisp | Also sprach tealeg...</title>
+<meta name="keywords" content="">
+<meta name="description" content="&lt;a href=&#39;/about/&#39;&gt;Geoffrey J. Teale&lt;/a&gt;&#39;s collection of &lt;a href=&#39;/post/&#39;&gt;thoughts.&lt;/a&gt;">
+<meta name="author" content="Geoffrey J. Teale">
+<link rel="canonical" href="https://www.teale.de/tags/lisp/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://www.teale.de/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.teale.de/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.teale.de/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.teale.de/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.teale.de/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://www.teale.de/tags/lisp/index.xml">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-    html body {
-        font-family: 'IBM Plex Serif', sans-serif;
-        background-color: white;
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="lisp" />
+<meta property="og:description" content="&lt;a href=&#39;/about/&#39;&gt;Geoffrey J. Teale&lt;/a&gt;&#39;s collection of &lt;a href=&#39;/post/&#39;&gt;thoughts.&lt;/a&gt;" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.teale.de/tags/lisp/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="lisp"/>
+<meta name="twitter:description" content="&lt;a href=&#39;/about/&#39;&gt;Geoffrey J. Teale&lt;/a&gt;&#39;s collection of &lt;a href=&#39;/post/&#39;&gt;thoughts.&lt;/a&gt;"/>
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
     }
 
-    :root {
-        --accent: teal;
-        --border-width:  5px ;
-    }
+</script>
 
-</style>
-
-
-<link rel="stylesheet" href="https://www.teale.de/css/main.css">
-
-
- <link rel="stylesheet" href="https://www.teale.de/css/tealeg.css"> 
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM%20Plex%20Serif">
-
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
- 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scheme.min.js"></script>
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.97.3" />
-        
-            <link href="/tags/lisp/index.xml" rel="alternate" type="application/rss&#43;xml" title="Also sprach tealeg..." />
-            <link href="/tags/lisp/index.xml" rel="feed" type="application/rss&#43;xml" title="Also sprach tealeg..." />
-        
-
-        
-
-        
-            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        
-
-        
-
-    </head>
-
-    <body>
-        
-
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">lisp</a>
-                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse">
-                    
-                        <ul class="nav navbar-nav">
-                            
-                                <li><a href="/">Home</a></li>
-                            
-                                <li><a href="/about/">About</a></li>
-                            
-                                <li><a href="/post/">Posts</a></li>
-                            
-                                <li><a href="/reference/">Reference</a></li>
-                            
-                                <li><a href="/tags/">Tags</a></li>
-                            
-                        </ul>
-                    
-                    
-                </div>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.teale.de/" accesskey="h" title="Also sprach tealeg... (Alt + H)">Also sprach tealeg...</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
             </div>
-        </nav>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://www.teale.de/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/post/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/reference/" title="Reference">
+                    <span>Reference</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    lisp
+  </h1>
+</header>
 
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>On Clojure (part 7)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Some good Clojure news, some bad Clojure news So… first the bad news.
+I’ve had to drop the Qt port of my little Clojure recruitment database. I was just hitting too many problems using Qt-Jambi and it was taking too long. The client needed a working database ASAP and I wasn’t gonna get there. At the same time I also learned to use Apple’s Core Data on Mac Os X 10....</p>
+  </div>
+  <footer class="entry-footer"><span title='2009-01-13 13:43:00 +0100 CET'>Tue Jan 13 2009</span>&nbsp;·&nbsp;Geoffrey J. Teale</footer>
+  <a class="entry-link" aria-label="post link to On Clojure (part 7)" href="https://www.teale.de/post/tech/programming/on-clojure-7/"></a>
+</article>
 
-<main>
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>On Clojure (part 6)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>AOT problem solved Thanks to the swift responses of the Clojure google group I have got past my little problem. It was, of course, deceptively simple, but not clear to someone who doesn’t do Java programming much.
+The problem was basically that whatever I did I could not get Clojure to recognise that the source files existed in the classpath.
+When you invoke java with the -jar command line option it completely ignores the classpath (both the environment variable, or the -cp argument....</p>
+  </div>
+  <footer class="entry-footer"><span title='2008-11-30 03:00:00 +0100 CET'>Sun Nov 30 2008</span>&nbsp;·&nbsp;Geoffrey J. Teale</footer>
+  <a class="entry-link" aria-label="post link to On Clojure (part 6)" href="https://www.teale.de/post/tech/programming/on-clojure-6/"></a>
+</article>
 
-    <h2>lisp</h2>
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>On Clojure (part 5)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Caught on a Clojure roller-coaster I was hoping to make some decent progress this weekend with my Clojure code. The plan was to port it to the new AOT model of compilation.
+However, my efforts have been frustrated by me not being able to get AOT working. I have posted my problem to the group, so hopefully there will be some solution soon.
+Clojure is developing so rapidly it’s hard to keep up, I think that’s how I got into this mess with AOT....</p>
+  </div>
+  <footer class="entry-footer"><span title='2008-11-30 00:52:00 +0100 CET'>Sun Nov 30 2008</span>&nbsp;·&nbsp;Geoffrey J. Teale</footer>
+  <a class="entry-link" aria-label="post link to On Clojure (part 5)" href="https://www.teale.de/post/tech/programming/on-clojure-5/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>On Clojure (part 4)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>AOT is cool, but it breaks some of what I’ve already talked about Clojure is a young language, and as such it’s developing fast. It’s an exhilarating ride to be on, but sometime it means things I’ve written change.
+So, when reading my previous posts, please note that the latest revisions to Clojure include the provision of Ahead-Of-Time (AOT) compilation. This will break the compilation mechanisms I used in some of the content below....</p>
+  </div>
+  <footer class="entry-footer"><span title='2008-11-27 00:22:00 +0100 CET'>Thu Nov 27 2008</span>&nbsp;·&nbsp;Geoffrey J. Teale</footer>
+  <a class="entry-link" aria-label="post link to On Clojure (part 4)" href="https://www.teale.de/post/tech/programming/on-clojure-4/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>On Clojure (part 3)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>QT Designer with Clojure So, as promised, here’s a few notes on how I am using Qt Designer with Clojure. Some important things to remember:
+You must use Qt Designer with the QtJambi plugins installed. The easiest way to do this is to run designer.sh (Linux / UNIX / Mac OS X) or designer.bat (Windows) from the distribution folder that QtJambi came in. If you’ve got QtJambi installed as a package under Linux then you may need to check that the QtJambi plugins are correctly installed , they weren’t in my case....</p>
+  </div>
+  <footer class="entry-footer"><span title='2008-11-09 11:29:00 +0100 CET'>Sun Nov 9 2008</span>&nbsp;·&nbsp;Geoffrey J. Teale</footer>
+  <a class="entry-link" aria-label="post link to On Clojure (part 3)" href="https://www.teale.de/post/tech/programming/on-clojure-3/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>On Clojure (part 2)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Distributing QtJambi with Clojure. How to bundle up Clojure programs for distribution One of the questions I’ve seen coming up a few times is how to distribute clojure programs. The obvious answer is to build executable JAR files.
+A while ago I produced a simple database application for my girlfriends recruitment business, NRecruit. I developed this using Clojure on my Arch Linux based laptop, and deployed to her MacBook running OS X Leopard....</p>
+  </div>
+  <footer class="entry-footer"><span title='2008-11-08 06:54:00 +0100 CET'>Sat Nov 8 2008</span>&nbsp;·&nbsp;Geoffrey J. Teale</footer>
+  <a class="entry-link" aria-label="post link to On Clojure (part 2)" href="https://www.teale.de/post/tech/programming/on-clojure-2/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>On Clojure (part 1)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>After many a dalliance with R6RS compliant(ish) Scheme implementations I have found myself inevitably drawn towards as new Lisp dialect instead. While I’m pleased to see Ikarus maturing to the state where it really is a very usable it’s not what I’ve been using to get stuff done. No, instead, I (like everyone else it seems) have fallen for Clojure.
+I won’t harp on about Clojure - you can read about it everywhere, instead I’ll just make some practical notes in the following posts....</p>
+  </div>
+  <footer class="entry-footer"><span title='2008-11-08 06:31:00 +0100 CET'>Sat Nov 8 2008</span>&nbsp;·&nbsp;Geoffrey J. Teale</footer>
+  <a class="entry-link" aria-label="post link to On Clojure (part 1)" href="https://www.teale.de/post/tech/programming/on-clojure-1/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Guten Morgen 2008
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>A new year So… a new year.. the 30th new year of my life.
+A new location A big year for me. Firstly I am now just two months away from moving to Munich with my girlfriend Nicole and I’m both terrified and excited at the same time. I’m not worried about moving to Germany - strangely I just “know” that this will be OK - I’m worried about the future....</p>
+  </div>
+  <footer class="entry-footer"><span title='2008-01-01 15:17:00 +0100 CET'>Tue Jan 1 2008</span>&nbsp;·&nbsp;Geoffrey J. Teale</footer>
+  <a class="entry-link" aria-label="post link to Guten Morgen 2008" href="https://www.teale.de/post/life/germany/guten-morgen-2008/"></a>
+</article>
+    </main>
     
-     <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/tech/programming/on-clojure-7/">On Clojure (part 7)</a></h4>
-    <h5>Tue Jan 13 2009</h5>
-    
-<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
-
-<a href="https://www.teale.de/tags/lisp"><kbd class="item-tag">lisp</kbd></a>
-
-<a href="https://www.teale.de/tags/apple"><kbd class="item-tag">apple</kbd></a>
-
-<a href="https://www.teale.de/tags/macosx"><kbd class="item-tag">macosx</kbd></a>
-
-<a href="https://www.teale.de/tags/core_data"><kbd class="item-tag">core_data</kbd></a>
-
-<a href="https://www.teale.de/tags/nicole"><kbd class="item-tag">nicole</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/tech/programming/on-clojure-6/">On Clojure (part 6)</a></h4>
-    <h5>Sun Nov 30 2008</h5>
-    
-<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
-
-<a href="https://www.teale.de/tags/lisp"><kbd class="item-tag">lisp</kbd></a>
-
-<a href="https://www.teale.de/tags/aot"><kbd class="item-tag">aot</kbd></a>
-
-<a href="https://www.teale.de/tags/ant"><kbd class="item-tag">ant</kbd></a>
-
-<a href="https://www.teale.de/tags/lancet"><kbd class="item-tag">lancet</kbd></a>
-
-<a href="https://www.teale.de/tags/java"><kbd class="item-tag">java</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/tech/programming/on-clojure-5/">On Clojure (part 5)</a></h4>
-    <h5>Sun Nov 30 2008</h5>
-    
-<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
-
-<a href="https://www.teale.de/tags/lisp"><kbd class="item-tag">lisp</kbd></a>
-
-<a href="https://www.teale.de/tags/aot"><kbd class="item-tag">aot</kbd></a>
-
-<a href="https://www.teale.de/tags/recursion"><kbd class="item-tag">recursion</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/tech/programming/on-clojure-4/">On Clojure (part 4)</a></h4>
-    <h5>Thu Nov 27 2008</h5>
-    
-<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
-
-<a href="https://www.teale.de/tags/lisp"><kbd class="item-tag">lisp</kbd></a>
-
-<a href="https://www.teale.de/tags/aot"><kbd class="item-tag">aot</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/tech/programming/on-clojure-3/">On Clojure (part 3)</a></h4>
-    <h5>Sun Nov 9 2008</h5>
-    
-<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
-
-<a href="https://www.teale.de/tags/lisp"><kbd class="item-tag">lisp</kbd></a>
-
-<a href="https://www.teale.de/tags/qt"><kbd class="item-tag">qt</kbd></a>
-
-<a href="https://www.teale.de/tags/qt_designer"><kbd class="item-tag">qt_designer</kbd></a>
-
-<a href="https://www.teale.de/tags/slots"><kbd class="item-tag">slots</kbd></a>
-
-<a href="https://www.teale.de/tags/qtjambi"><kbd class="item-tag">qtjambi</kbd></a>
-
-<a href="https://www.teale.de/tags/java"><kbd class="item-tag">java</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/tech/programming/on-clojure-2/">On Clojure (part 2)</a></h4>
-    <h5>Sat Nov 8 2008</h5>
-    
-<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
-
-<a href="https://www.teale.de/tags/lisp"><kbd class="item-tag">lisp</kbd></a>
-
-<a href="https://www.teale.de/tags/scheme"><kbd class="item-tag">scheme</kbd></a>
-
-<a href="https://www.teale.de/tags/java"><kbd class="item-tag">java</kbd></a>
-
-<a href="https://www.teale.de/tags/swing"><kbd class="item-tag">swing</kbd></a>
-
-<a href="https://www.teale.de/tags/qt"><kbd class="item-tag">qt</kbd></a>
-
-<a href="https://www.teale.de/tags/nicole"><kbd class="item-tag">nicole</kbd></a>
-
-<a href="https://www.teale.de/tags/apple"><kbd class="item-tag">apple</kbd></a>
-
-<a href="https://www.teale.de/tags/macosx"><kbd class="item-tag">macosx</kbd></a>
-
-<a href="https://www.teale.de/tags/sqlite"><kbd class="item-tag">sqlite</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/tech/programming/on-clojure-1/">On Clojure (part 1)</a></h4>
-    <h5>Sat Nov 8 2008</h5>
-    
-<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
-
-<a href="https://www.teale.de/tags/lisp"><kbd class="item-tag">lisp</kbd></a>
-
-<a href="https://www.teale.de/tags/scheme"><kbd class="item-tag">scheme</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/life/germany/guten-morgen-2008/">Guten Morgen 2008</a></h4>
-    <h5>Tue Jan 1 2008</h5>
-    
-<a href="https://www.teale.de/tags/munich"><kbd class="item-tag">munich</kbd></a>
-
-<a href="https://www.teale.de/tags/germany"><kbd class="item-tag">germany</kbd></a>
-
-<a href="https://www.teale.de/tags/java"><kbd class="item-tag">java</kbd></a>
-
-<a href="https://www.teale.de/tags/scheme"><kbd class="item-tag">scheme</kbd></a>
-
-<a href="https://www.teale.de/tags/ruby"><kbd class="item-tag">ruby</kbd></a>
-
-<a href="https://www.teale.de/tags/python"><kbd class="item-tag">python</kbd></a>
-
-<a href="https://www.teale.de/tags/lisp"><kbd class="item-tag">lisp</kbd></a>
-
-<a href="https://www.teale.de/tags/cmed"><kbd class="item-tag">cmed</kbd></a>
-
-<a href="https://www.teale.de/tags/camera"><kbd class="item-tag">camera</kbd></a>
-
-<a href="https://www.teale.de/tags/olympus"><kbd class="item-tag">olympus</kbd></a>
-
-
-
-</div>
- 
-
-</main>
-
-        <footer>
-            <p class="copyright text-muted">Copyright © Geoffrey J. Teale. All rights reserved. Powered by <a href='https://gohugo.io'>Hugo</a> and <a href='https://github.com/calintat/minimal'>Minimal</a>.</p>
-        </footer>
-
-        
-
-        
-    </body>
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://www.teale.de/">Also sprach tealeg...</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
 
 </html>
-

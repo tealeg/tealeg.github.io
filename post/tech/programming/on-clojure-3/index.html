@@ -1,144 +1,219 @@
 <!DOCTYPE html>
-<html lang="en-gb">
-    <head>
-        
+<html lang="en" dir="auto">
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>On Clojure (part 3)</title>
-        
-        <style>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>On Clojure (part 3) | Also sprach tealeg...</title>
+<meta name="keywords" content="clojure, lisp, qt, qt_designer, slots, qtjambi, java">
+<meta name="description" content="QT Designer with Clojure So, as promised, here&rsquo;s a few notes on how I am using Qt Designer with Clojure. Some important things to remember:
+You must use Qt Designer with the QtJambi plugins installed. The easiest way to do this is to run designer.sh (Linux / UNIX / Mac OS X) or designer.bat (Windows) from the distribution folder that QtJambi came in. If you&rsquo;ve got QtJambi installed as a package under Linux then you may need to check that the QtJambi plugins are correctly installed , they weren&rsquo;t in my case.">
+<meta name="author" content="Geoffrey J. Teale">
+<link rel="canonical" href="https://www.teale.de/post/tech/programming/on-clojure-3/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://www.teale.de/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.teale.de/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.teale.de/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.teale.de/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.teale.de/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-    html body {
-        font-family: 'IBM Plex Serif', sans-serif;
-        background-color: white;
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="On Clojure (part 3)" />
+<meta property="og:description" content="QT Designer with Clojure So, as promised, here&rsquo;s a few notes on how I am using Qt Designer with Clojure. Some important things to remember:
+You must use Qt Designer with the QtJambi plugins installed. The easiest way to do this is to run designer.sh (Linux / UNIX / Mac OS X) or designer.bat (Windows) from the distribution folder that QtJambi came in. If you&rsquo;ve got QtJambi installed as a package under Linux then you may need to check that the QtJambi plugins are correctly installed , they weren&rsquo;t in my case." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.teale.de/post/tech/programming/on-clojure-3/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2008-11-09T11:29:00&#43;01:00" />
+<meta property="article:modified_time" content="2008-11-09T11:29:00&#43;01:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="On Clojure (part 3)"/>
+<meta name="twitter:description" content="QT Designer with Clojure So, as promised, here&rsquo;s a few notes on how I am using Qt Designer with Clojure. Some important things to remember:
+You must use Qt Designer with the QtJambi plugins installed. The easiest way to do this is to run designer.sh (Linux / UNIX / Mac OS X) or designer.bat (Windows) from the distribution folder that QtJambi came in. If you&rsquo;ve got QtJambi installed as a package under Linux then you may need to check that the QtJambi plugins are correctly installed , they weren&rsquo;t in my case."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://www.teale.de/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "On Clojure (part 3)",
+      "item": "https://www.teale.de/post/tech/programming/on-clojure-3/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "On Clojure (part 3)",
+  "name": "On Clojure (part 3)",
+  "description": "QT Designer with Clojure So, as promised, here\u0026rsquo;s a few notes on how I am using Qt Designer with Clojure. Some important things to remember:\nYou must use Qt Designer with the QtJambi plugins installed. The easiest way to do this is to run designer.sh (Linux / UNIX / Mac OS X) or designer.bat (Windows) from the distribution folder that QtJambi came in. If you\u0026rsquo;ve got QtJambi installed as a package under Linux then you may need to check that the QtJambi plugins are correctly installed , they weren\u0026rsquo;t in my case.",
+  "keywords": [
+    "clojure", "lisp", "qt", "qt_designer", "slots", "qtjambi", "java"
+  ],
+  "articleBody": "QT Designer with Clojure So, as promised, here’s a few notes on how I am using Qt Designer with Clojure. Some important things to remember:\nYou must use Qt Designer with the QtJambi plugins installed. The easiest way to do this is to run designer.sh (Linux / UNIX / Mac OS X) or designer.bat (Windows) from the distribution folder that QtJambi came in. If you’ve got QtJambi installed as a package under Linux then you may need to check that the QtJambi plugins are correctly installed , they weren’t in my case. If you have the QtJambi plugins installed designer should be able to save .jui files instead of .ui files. Custom slots I don’t intend to tell you how to use Qt Designer, there’s a good user manual available. Once you’ve put together a UI in Designer plugging it into a clojure application is relatively simple, though there are some subtleties that took me a while to work out (along with a large chunk of time trawling #clojure logs, the wiki and various blog post - thanks to all who share their work!)\nWhat follows is the full source code for an incredibly simple app that uses a single QMainWindow with a Designer derived layout, I’ll explain some more after the code:\n(gen-and-load-class \"foo.gen.Slot\" :methods [[\"slot\" [] Void]]) (ns foo (:import (foo Ui_MainWindow)) (:import (com.trolltech.qt.gui QApplication QMainWindow)) (:import (com.trolltech.qt.core QCoreApplication)) (:import (foo.gen Slot))) (def slots (proxy [Slot] [] (slot [] (prn \"Slot Called\")))) (defn init [] (QApplication/initialize (make-array String 0))) (defn exec [] (QApplication/exec)) (defmacro qt4 [\u0026 rest] `(do (try (init) (catch RuntimeException e# (println e#))) ~@rest (exec))) (def Foo-main (fn [\u0026 args] (qt4 (let [ui_main (new Ui_MainWindow) mainWindow (new QMainWindow)] (. ui_main (setupUi mainWindow)) (let [pushButton (. ui_main pushButton)] (.. pushButton clicked (connect slots \"slot()\"))) (. mainWindow (show)))))) This code lives in the package foo, in the file Foo.clj. If you’re familiar R.P. Dillon’s guide to with making Jar’s from clojure you’ll know that Foo-main is the main function of the resulting JAR. Notice that we also import Ui_MainWindow from the same package. This is the generated Java code from the Designer file Ui_MainWindow.jui. In order to generate the java code you simply run:\njuic Ui_MainWindow.jui As I want the resulting code to live in a package, foo\", I need to manually add the following line to the top of the resulting file, Ui_MainWindow.java:\npackage foo; We also need to arrange for this .java file to be compiled before we can use it. How you use this depends on your build system, but you can choose to just compile it by hand when it changes (as this should be comparitevly rare). I guess you know how, but just for completeness:\njavac foo/Ui_MainWindow.java Now, the qt4 macro I’ve defined there is directly lifted from Brian Carper’s blog posting on using Qt4 in Clojure, and again I won’t go into that here. Instead lets look at Foo-main. Note that we create instances of both the Ui_MainWindow class from the generated java code and the QMainWindow class. We call the setupUI method of the Ui_MainWindow class with the QMainWindow class as it’s argument (this essentially fills out the QMainWindow with the layout you put together in designer). Note also that I reference the pushButton widget inside the Ui_MainWindow class.\nThe remaining interesting thing about this file is that it defines a custom slot. Signals and Slots are fundemental to the way that Qt hangs together. Wiring together the prexisting signals and slots is very easy and can be done either in Designer or in code (as R.P. Dillon’s example shows). Making a custom slot turns out to be rather more difficult. I naively assumed that I could just use a proxy around the QMainWindow class and add a slot function there, but this simply doesn’t work. Instead I need to use (gen-class) to make a real class and bind a clojure function to it. For convenience I use (gen-and-load-class) - this call generates the bytecode and loads it. You have to pass it a fully qualifed class name - I’ve found it better to make it a subpackage, so I place it in foo.gen, and therefore the classname is foo.gen.Slot. I also have to give a place holder for the slot method. Confusingly enough I’ve chosen to call it slot here. We pass a vector containing a vector for each method, which in turn contains a method name, a vector of arguements and a return type. The method name will get bound to a function in the current namespace (not foo.gen, but foo) with the name -. In my example code this is contained in the proxy “slots” as the “slot” method. It’s possible to just use a normal (defn) for this mapped method, in which case the function name would be Slot-slot, I just find the proxy cleaner. Lastly you’ll see that, back in Foo-main, I connect the pushButton’s clicked signal to the custom slot, slot in the proxy, slots. I hope that’s clear!\nNow all things being equal you should be able to make your JAR and execute the code. I hope that helps someone avoid spending a lot of time trying to work this out.\nWhen I need to implement a custom signal I’ll try and write that up too. Till then, ta ta!\n",
+  "wordCount" : "886",
+  "inLanguage": "en",
+  "datePublished": "2008-11-09T11:29:00+01:00",
+  "dateModified": "2008-11-09T11:29:00+01:00",
+  "author":{
+    "@type": "Person",
+    "name": "Geoffrey J. Teale"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.teale.de/post/tech/programming/on-clojure-3/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Also sprach tealeg...",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.teale.de/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
     }
 
-    :root {
-        --accent: teal;
-        --border-width:  5px ;
-    }
+</script>
 
-</style>
-
-
-<link rel="stylesheet" href="https://www.teale.de/css/main.css">
-
-
- <link rel="stylesheet" href="https://www.teale.de/css/tealeg.css"> 
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM%20Plex%20Serif">
-
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
- 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scheme.min.js"></script>
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.97.3" />
-        
-
-        
-
-        
-            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        
-
-        
-
-    </head>
-
-    <body>
-        
-
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">On Clojure (part 3)</a>
-                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse">
-                    
-                        <ul class="nav navbar-nav">
-                            
-                                <li><a href="/">Home</a></li>
-                            
-                                <li><a href="/about/">About</a></li>
-                            
-                                <li><a href="/post/">Posts</a></li>
-                            
-                                <li><a href="/reference/">Reference</a></li>
-                            
-                                <li><a href="/tags/">Tags</a></li>
-                            
-                        </ul>
-                    
-                    
-                </div>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.teale.de/" accesskey="h" title="Also sprach tealeg... (Alt + H)">Also sprach tealeg...</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
             </div>
-        </nav>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://www.teale.de/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/post/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/reference/" title="Reference">
+                    <span>Reference</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
 
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      On Clojure (part 3)
+    </h1>
+    <div class="post-meta"><span title='2008-11-09 11:29:00 +0100 CET'>Sun Nov 9 2008</span>&nbsp;·&nbsp;Geoffrey J. Teale
 
-<main>
-
-    <div>
-        <h2>On Clojure (part 3)</h2>
-        <h5>Sun Nov 9 2008</h5>
-        
-<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
-
-<a href="https://www.teale.de/tags/lisp"><kbd class="item-tag">lisp</kbd></a>
-
-<a href="https://www.teale.de/tags/qt"><kbd class="item-tag">qt</kbd></a>
-
-<a href="https://www.teale.de/tags/qt_designer"><kbd class="item-tag">qt_designer</kbd></a>
-
-<a href="https://www.teale.de/tags/slots"><kbd class="item-tag">slots</kbd></a>
-
-<a href="https://www.teale.de/tags/qtjambi"><kbd class="item-tag">qtjambi</kbd></a>
-
-<a href="https://www.teale.de/tags/java"><kbd class="item-tag">java</kbd></a>
-
-
-    </div>
-
-    <div align="start" class="content"><h2 id="qt-designer-with-clojure">QT Designer with Clojure</h2>
+</div>
+  </header> 
+  <div class="post-content"><h2 id="qt-designer-with-clojure">QT Designer with Clojure<a hidden class="anchor" aria-hidden="true" href="#qt-designer-with-clojure">#</a></h2>
 <p>So, as promised, here&rsquo;s a few notes on how I am using Qt Designer with Clojure.
 Some important things to remember:</p>
 <ul>
 <li>You must use Qt Designer with the <a href="https://wiki.qt.io/Qt_Jambi">QtJambi</a> plugins installed. The easiest way to do this is to run designer.sh (Linux / UNIX / Mac OS X) or designer.bat (Windows) from the distribution folder that QtJambi came in. If you&rsquo;ve got QtJambi installed as a package under Linux then you may need to check that the QtJambi plugins are correctly installed , they weren&rsquo;t in my case.</li>
 <li>If you have the QtJambi plugins installed designer should be able to save <code>.jui</code> files instead of <code>.ui</code> files.</li>
 </ul>
-<h2 id="custom-slots">Custom slots</h2>
+<h2 id="custom-slots">Custom slots<a hidden class="anchor" aria-hidden="true" href="#custom-slots">#</a></h2>
 <p>I don&rsquo;t intend to tell you how to use Qt Designer, there&rsquo;s a good user manual available.
 Once you&rsquo;ve put together a UI in Designer plugging it into a clojure application is relatively simple, though there are some subtleties that took me a while to work out (along with a large chunk of time trawling #clojure logs, the wiki and various blog post - thanks to all who share their work!)</p>
 <p>What follows is the full source code for an incredibly simple app that uses a single QMainWindow with a Designer derived layout, I&rsquo;ll explain some more after the code:</p>
@@ -188,113 +263,92 @@ Once you&rsquo;ve put together a UI in Designer plugging it into a clojure appli
 <p>The remaining interesting thing about this file is that it defines a custom slot. Signals and Slots are fundemental to the way that Qt hangs together. Wiring together the prexisting signals and slots is very easy and can be done either in Designer or in code (as R.P. Dillon&rsquo;s example shows). Making a custom slot turns out to be rather more difficult. I naively assumed that I could just use a proxy around the <code>QMainWindow</code> class and add a slot function there, but this simply doesn&rsquo;t work. Instead I need to use <code>(gen-class)</code> to make a real class and bind a clojure function to it. For convenience I use <code>(gen-and-load-class)</code> - this call generates the bytecode and loads it. You have to pass it a fully qualifed class name - I&rsquo;ve found it better to make it a subpackage, so I place it in <code>foo.gen</code>, and therefore the classname is <code>foo.gen.Slot</code>. I also have to give a place holder for the slot method. Confusingly enough I&rsquo;ve chosen to call it <code>slot</code> here. We pass a vector containing a vector for each method, which in turn contains a method name, a vector of arguements and a return type. The method name will get bound to a function in the current namespace (not <code>foo.gen</code>, but <code>foo</code>) with the name <code>-</code>. In my example code this is contained in the proxy &ldquo;slots&rdquo; as the &ldquo;slot&rdquo; method. It&rsquo;s possible to just use a normal <code>(defn)</code> for this mapped method, in which case the function name would be <code>Slot-slot</code>, I just find the proxy cleaner. Lastly you&rsquo;ll see that, back in <code>Foo-main</code>, I connect the <code>pushButton</code>&rsquo;s clicked signal to the custom slot, <code>slot</code> in the proxy, <code>slots</code>. I hope that&rsquo;s clear!</p>
 <p>Now all things being equal you should be able to make your JAR and execute the code. I hope that helps someone avoid spending a lot of time trying to work this out.</p>
 <p>When I need to implement a custom signal I&rsquo;ll try and write that up too. Till then, ta ta!</p>
-</div>
 
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://www.teale.de/tags/clojure/">clojure</a></li>
+      <li><a href="https://www.teale.de/tags/lisp/">lisp</a></li>
+      <li><a href="https://www.teale.de/tags/qt/">qt</a></li>
+      <li><a href="https://www.teale.de/tags/qt_designer/">qt_designer</a></li>
+      <li><a href="https://www.teale.de/tags/slots/">slots</a></li>
+      <li><a href="https://www.teale.de/tags/qtjambi/">qtjambi</a></li>
+      <li><a href="https://www.teale.de/tags/java/">java</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
     
-    
-    
-        <h4 class="page-header">Related</h4>
-         <div class="item">
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://www.teale.de/">Also sprach tealeg...</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-    
-    
-    
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
 
-    
-    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
 
-    <h4><a href="/post/tech/frontend/html5-and-all-that/">HTML5 and all that</a></h4>
-    <h5>Sun Jan 10 2010</h5>
-    
-<a href="https://www.teale.de/tags/frontend"><kbd class="item-tag">frontend</kbd></a>
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
-<a href="https://www.teale.de/tags/html"><kbd class="item-tag">html</kbd></a>
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
-
-<a href="https://www.teale.de/tags/xml"><kbd class="item-tag">xml</kbd></a>
-
-<a href="https://www.teale.de/tags/flash"><kbd class="item-tag">flash</kbd></a>
-
-<a href="https://www.teale.de/tags/google_gears"><kbd class="item-tag">google_gears</kbd></a>
-
-<a href="https://www.teale.de/tags/emacs"><kbd class="item-tag">emacs</kbd></a>
-
-<a href="https://www.teale.de/tags/nxml"><kbd class="item-tag">nxml</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/tech/programming/on-clojure-7/">On Clojure (part 7)</a></h4>
-    <h5>Tue Jan 13 2009</h5>
-    
-<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
-
-<a href="https://www.teale.de/tags/lisp"><kbd class="item-tag">lisp</kbd></a>
-
-<a href="https://www.teale.de/tags/apple"><kbd class="item-tag">apple</kbd></a>
-
-<a href="https://www.teale.de/tags/macosx"><kbd class="item-tag">macosx</kbd></a>
-
-<a href="https://www.teale.de/tags/core_data"><kbd class="item-tag">core_data</kbd></a>
-
-<a href="https://www.teale.de/tags/nicole"><kbd class="item-tag">nicole</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/tech/programming/on-clojure-6/">On Clojure (part 6)</a></h4>
-    <h5>Sun Nov 30 2008</h5>
-    
-<a href="https://www.teale.de/tags/clojure"><kbd class="item-tag">clojure</kbd></a>
-
-<a href="https://www.teale.de/tags/lisp"><kbd class="item-tag">lisp</kbd></a>
-
-<a href="https://www.teale.de/tags/aot"><kbd class="item-tag">aot</kbd></a>
-
-<a href="https://www.teale.de/tags/ant"><kbd class="item-tag">ant</kbd></a>
-
-<a href="https://www.teale.de/tags/lancet"><kbd class="item-tag">lancet</kbd></a>
-
-<a href="https://www.teale.de/tags/java"><kbd class="item-tag">java</kbd></a>
-
-
-
-</div>
- 
-    
-
-    
-    
-
-</main>
-
-        <footer>
-            <p class="copyright text-muted">Copyright © Geoffrey J. Teale. All rights reserved. Powered by <a href='https://gohugo.io'>Hugo</a> and <a href='https://github.com/calintat/minimal'>Minimal</a>.</p>
-        </footer>
-
-        
-
-        
-    </body>
+</script>
+</body>
 
 </html>
-

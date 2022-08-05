@@ -1,139 +1,215 @@
 <!DOCTYPE html>
-<html lang="en-gb">
-    <head>
-        
+<html lang="en" dir="auto">
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Maturity Matrices: A tool for DevX KPIs and OKRs (Part 2)</title>
-        
-        <style>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Maturity Matrices: A tool for DevX KPIs and OKRs (Part 2) | Also sprach tealeg...</title>
+<meta name="keywords" content="developer_experience, devx, dx, metrics, kpi, okr, maturity, cmmi">
+<meta name="description" content="Building a DevX Maturity Matrix I promised in Part I of this article that I&#39;d explain how I generate the headline numbers that I report as part of the KPIs or OKRs for the Developer eXperience of a product.
+The answer is rather simple but, at least initially, quite labourious.
+Reminder: what a maturity matrix is. A maturity matrix encodes a maturity level as a value (typically a positive integer) for every unique combination of product, feature, customer/developer type, and maturity type.">
+<meta name="author" content="Geoffrey J. Teale">
+<link rel="canonical" href="https://www.teale.de/post/devx/a-tool-for-devx-kpis-2/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://www.teale.de/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.teale.de/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.teale.de/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.teale.de/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.teale.de/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-    html body {
-        font-family: 'IBM Plex Serif', sans-serif;
-        background-color: white;
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Maturity Matrices: A tool for DevX KPIs and OKRs (Part 2)" />
+<meta property="og:description" content="Building a DevX Maturity Matrix I promised in Part I of this article that I&#39;d explain how I generate the headline numbers that I report as part of the KPIs or OKRs for the Developer eXperience of a product.
+The answer is rather simple but, at least initially, quite labourious.
+Reminder: what a maturity matrix is. A maturity matrix encodes a maturity level as a value (typically a positive integer) for every unique combination of product, feature, customer/developer type, and maturity type." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.teale.de/post/devx/a-tool-for-devx-kpis-2/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-05-06T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2022-05-06T00:00:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Maturity Matrices: A tool for DevX KPIs and OKRs (Part 2)"/>
+<meta name="twitter:description" content="Building a DevX Maturity Matrix I promised in Part I of this article that I&#39;d explain how I generate the headline numbers that I report as part of the KPIs or OKRs for the Developer eXperience of a product.
+The answer is rather simple but, at least initially, quite labourious.
+Reminder: what a maturity matrix is. A maturity matrix encodes a maturity level as a value (typically a positive integer) for every unique combination of product, feature, customer/developer type, and maturity type."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://www.teale.de/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Maturity Matrices: A tool for DevX KPIs and OKRs (Part 2)",
+      "item": "https://www.teale.de/post/devx/a-tool-for-devx-kpis-2/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Maturity Matrices: A tool for DevX KPIs and OKRs (Part 2)",
+  "name": "Maturity Matrices: A tool for DevX KPIs and OKRs (Part 2)",
+  "description": "Building a DevX Maturity Matrix I promised in Part I of this article that I\u0026#39;d explain how I generate the headline numbers that I report as part of the KPIs or OKRs for the Developer eXperience of a product.\nThe answer is rather simple but, at least initially, quite labourious.\nReminder: what a maturity matrix is. A maturity matrix encodes a maturity level as a value (typically a positive integer) for every unique combination of product, feature, customer/developer type, and maturity type.",
+  "keywords": [
+    "developer_experience", "devx", "dx", "metrics", "kpi", "okr", "maturity", "cmmi"
+  ],
+  "articleBody": " Building a DevX Maturity Matrix I promised in Part I of this article that I'd explain how I generate the headline numbers that I report as part of the KPIs or OKRs for the Developer eXperience of a product.\nThe answer is rather simple but, at least initially, quite labourious.\nReminder: what a maturity matrix is. A maturity matrix encodes a maturity level as a value (typically a positive integer) for every unique combination of product, feature, customer/developer type, and maturity type. We use this maturitly level value to set goal levels and to measure our curret maturity level against those goals. For more detail on this see Part I.\nSelf-evidently, To do this you need to define all these things:\nWhat exactly your products are a list of features that constitue the surface area of your developer experience for a product your customer/developer types your maturity types A way of quantifying the level of maturity for each level I think the products should be trivial enough to define, so I won't go into that. Let's take a tour of the other definitions.\nDevX feature list A DevX feature list will comprise of, at least, the following items:\nThe list of customer-developer visible features of your product The list of non-feature support functionality exposed to customer-developers (e.g. observability tools, or logging) The list of processes, automated or manual, that a customer-developer may engage in (e.g. onboarding, support requests, feature enablement) Customer or Developer types Broadly speaking a customer type identifies any developer with a distinct use case. For me this maps, or should map, 1:1 to a user profile. If you have user profiles you can probably just refer to each case by name - if your team are used to talking about \"Twanna\", \"Antje\" and \"Rakesh\", then it makes sense to use them here. As you'll see we won't surface this level of detail to anyone who wouldn't get those references. If you don't have user profiles, then you might be able to use job titles (for internal customers) or some kind of \"stub profile\", for example \"Python developer working on ML powered backends\".\nMaturity types and maturity levels Remember, a maturity level is a quantative statement about the current level and desired quality of developer experience. Unlike with the Capability Maturity Model I don't just do this as a simple, linear progression, because the cases differ too much. Instead, what I do is this (noting that these are examples, you need to think about your own rules):\nI break down developer experiences into mulitple types. For me these are:\ninterface maturity supporting services documentation and supporting materials I define a maturity level for each of these types as the sum of scores from a series of questions. Each question I ask has an assigned value which represents its relative importance to our perception of a good DevX. Pulling the information together Defining all these metric values is a significant amount of work. If you have the time to do a \"big bang\" first round assesment it's a great way to start, but if you don't my suggestion would be to pretend you're starting from scrathc and iteratively build up the list as your work on specific areas. That's how ongoing maintentance of this data works too. Essentially before you're done with an item of work you visit the \"maturity sticker\" for each DevX feature. I call it a \"maturity sticker\" because I think of it like the labels they print on products in shops, breaking down the nutrients, or grading the sustainability of the product. The \"maturity sticker\" is the most detailed breakdown of maturity, it represents the calculation of maturity for a unique combination of product, feature, customer/developer type, and maturity type.\nLet's start looking at some realistic examples to try and pull this idea together. What follows might give you an idea of the volume of data required and how we aggregate it. In reality I drop all of the \"N/A\" questions to keep things terse, but I'll show them here so you see how that's handled.\nExample Product The product in this example is an imaginary cloud based customer service application for companies offering building services.\nFeatures and process I'll create sticker for just 1 process: the onboarding process for engineers wishing to develop client applications based on this product. What we'll see in the data is that this process is currently only documented for Python developers, and that it isn't something that's available programmatically. I think that's a useful case in that it indicates that there's quite a lot of data we could choose to leave out, but in this case the user profiles are important.\nStub User Profiles For the sake of simplicitly we'll use just two \"stub\" user profiles. Both of these engineers work on software that automates aspects of the business. Rakesh uses machine learning to help automatically generate quotes based on information provided by customers. Antje builds frontends for displaying invoices to the customers.\nName Programming Language Specialities Works on Rakesh Python Machine Learning Customer Quotation Tool Antje Javascript Web Frontend Billing Maturity Stickers Now we'll produce the individual maturity stickers. As described above this will a series of questions with numeric values as their answers. In this case (and actually in reality) my questions are mostly about coverage rather than qualitative assesments. There's no reason why quality measures can't be included, but personally I've found it hard to find reliable qualitative assesments. Onboarding process maturity stickers First we'll answer the questions for Rakesh, our Python developer:\nProduct Build Base Feature Onboarding Process Profile Rakesh We'll ask first about interface maturity. In the case of onboarding we actually only support this process via the web UI. For obvious reasons you can't onboard via the API, because you can't access the API until you've onboarded. Still, I'll leave the questions here for you to see, in reality I'd simply remove any irrelevant questions because we compare only to our goal states, not across features/processes.\nMaturity Type Question Current Score Iteration Goal Goal Note Interface Does this feature / process exist? 1 1 1 It exists Is this possible via the API? 0 0 0 The onboarding process won't ever be possible via the API Does a high level API call exist to automate a multistep process? 0 0 0 Is this possible via the cli? 0 0 0 The onboarding process won't ever be possible via the CLI Does a single CLI command exist to automate a multistep process? 0 0 0 Does a language specific SDK provide this feature? 0 0 0 The onboarding process won't ever be possible via the SDK Does a single function/method exist in the SDK to automate a multistep process? 0 0 0 Is there a UI workflow for this? 1 1 1 Onboarding is always initiated via the web UI Total 2 2 2 Next we'll ask about support services, again, most of this is irrelevant for onboarding, but API calls it would be highly relevant.\nSupport Service Does this feature or process provide customer-developer visible logging? 0 0 0 No logging is envisaged for this process Does this feature or process produce human readable and customer-developer visible error messages? 0 1 1 See story: x Are error messages linked to documentation that might help resolve them? 0 0 1 Is this feature or process traceable / available in observability tools? 0 0 0 N/A Is this feature or process step-debuggable? 0 0 0 N/A Is the current version reachable from an older state via automated migration? 0 0 0 N/A Total 0 1 2 Finally we'll move onto documentation and supporting materials, and we can see that this part is highly relevant for this onboarding process, and that we have open stories that will improve these aspects in this iteration.\nDocumentation / Materials Reference documentation exists. 4 4 4 Reference documentation indexed and searchable on line. 0 2 2 See Story: x Reference documentation is generated from the code it documents. 0 0 0 N/A Reference documentation is available in a form where it can be proactively presented in IDEs. 0 0 0 N/A Concept documentaton describes all relevant concepts this feature/process touches on. 3 3 3 Major tutorial content covers this feature / process. 2 2 2 Feature/process specific Mini-tutorials cover this feature / process 0 0 0 We don't need this as major onboarding tutorial covers it Alternate media presentations (e.g. videos) exist for this feature / process. 1 1 1 Total 10 12 12 Having completed the sticker for Rakesh, we move onto Antje. What we see here is that our current onboarding process is somewhat Python specific, so whilst a Javascript customer could use it, it wouldn't be a great experience. I've actually given it a partial score (1 out of a possible 4) to reflect this. I don't tend to do this much, but for important areas that are heavily weighted there's some scope to do it if you wish.\nProduct Build Base Feature Onboarding Process Profile Antje Maturity Type Question Current Score Iteration Goal Goal Note Interface Does this feature / process exist? 0 1 1 See Story: y (Create onboarding for JS devs) Is this possible via the API? 0 0 0 The onboarding process won't ever be possible via the API Does a high level API call exist to automate a multistep process? 0 0 0 Is this possible via the cli? 0 0 0 The onboarding process won't ever be possible via the CLI Does a single CLI command exist to automate a multistep process? 0 0 0 Does a language specific SDK provide this feature? 0 0 0 The onboarding process won't ever be possible via the SDK Does a single function/method exist in the SDK to automate a multistep process? 0 0 0 Is there a UI workflow for this? 0 1 1 Onboarding is always initiated via the web UI Total 0 2 2 Support Service Does this feature or process provide customer-developer visible logging? 0 0 0 No logging is envisaged for this process Does this feature or process produce human readable and customer-developer visible error messages? 0 1 1 See story: x Are error messages linked to documentation that might help resolve them? 0 0 1 Is this feature or process traceable / available in observability tools? 0 0 0 N/A Is this feature or process step-debuggable? 0 0 0 N/A Is the current version reachable from an older state via automated migration? 0 0 0 N/A Total 0 1 2 Documentation / Materials Reference documentation exists. 1 4 4 Generic onboarding docs exist, they need specialisation, see Story y. Reference documentation indexed and searchable on line. 0 2 2 See Story: x Reference documentation is generated from the code it documents. 0 0 0 N/A Reference documentation is available in a form where it can be proactively presented in IDEs. 0 0 0 N/A Concept documentaton describes all relevant concepts this feature/process touches on. 3 3 3 Major tutorial content covers this feature / process. 1 2 2 Tutorial doesn't yet cover JS users -\u003e see Story y. Feature/process specific Mini-tutorials cover this feature / process 0 0 0 We don't need this as major onboarding tutorial covers it Alternate media presentations (e.g. videos) exist for this feature / process. 0 0 0 Total 5 11 11 Tips for making this data set smaller and easier to maintain Wow that's a lot of data, for just one process! In reality this can get out of hand quickly. We need some tips to reduce the load!\nDon't do this in a spreadsheet, use a relational database (you'll thank me when you want to expand your list of questions!) Develop a trivial interface to that DB (I intend to expand on this with actual tooling) Don't store any \"Not applicable\" values - you can always add them later. Don't break it down to the User Profile level until your really need to. Pragmatically I define an \"All Profiles\" profile for the generic case. That point is usually when you start having features that are only available to specific languages. If you used a relational database you should be able to easily report on where you currently choose not provide coverage for a profile. Keep your feature/process list from growing too long - you'll have to judge for yourself the right granularity. Now we aggregate! So, what happens next should be pretty obvious. If you look at all the \"total\" line in bold above it should be clear that we can just extract those ones and ignore the individual questions. Note: You still need to store the individual questions and answers, if you don't you'll have trouble knowing how to update them when you complete some task, and you'll end up having to go through all the questions again. I learned that one the hard way!\nOur totals only table looks like this:\nProduct Feature Profile Maturity Type Current Score Iteration Goal Goal BuildBase Onboarding Process Rakesh Interface 2 2 2 Support Services 0 1 2 Documentation / Materials 10 12 12 BuildBase Onboarding Process Antje Interface 0 2 2 Support Services 0 1 2 Documentation / Materials 5 11 11 Now there are two obvious ways to reduce this data to a more concise summary. We can either sum across all user profiles or sum across all maturity types:\nSum across all user profiles Product Feature Maturity Type Current Score Iteration Goal Goal BuildBase Onboarding Process Interface 2 4 4 Support Services 0 2 4 Documentation / Materials 15 23 23 Sum across all maturity types Product Feature Profile Current Score Iteration Goal Goal BuildBase Onboarding Process Rakesh 12 15 16 Antje 5 14 15 We can aggregate up another level so that we no longer see either User Profile or individual maturity types:\nTotal feature or process maturity Let's pretend now that we measured another feature too:\nProduct Feature Current Score Iteration Goal Goal BuildBase Onboarding Process 17 29 31 List outstanding invoices 22 30 55 … and of course we can then aggregate all the features into maturity scores for the whole product:\nTotal product maturity Let's pretend now that we measured another feature too:\nProduct Current Score Iteration Goal Goal BuildBase 39 59 86 And then our top level, reporting numbers:\nName % Ratio Current v Iteration Goal 66 39:59 Current v Goal 45 39:86 Iteration Goal v Goal 69 59:86 ",
+  "wordCount" : "2414",
+  "inLanguage": "en",
+  "datePublished": "2022-05-06T00:00:00Z",
+  "dateModified": "2022-05-06T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Geoffrey J. Teale"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.teale.de/post/devx/a-tool-for-devx-kpis-2/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Also sprach tealeg...",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.teale.de/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
     }
 
-    :root {
-        --accent: teal;
-        --border-width:  5px ;
-    }
+</script>
 
-</style>
-
-
-<link rel="stylesheet" href="https://www.teale.de/css/main.css">
-
-
- <link rel="stylesheet" href="https://www.teale.de/css/tealeg.css"> 
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM%20Plex%20Serif">
-
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
- 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scheme.min.js"></script>
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.97.3" />
-        
-
-        
-
-        
-            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        
-
-        
-
-    </head>
-
-    <body>
-        
-
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Maturity Matrices: A tool for DevX KPIs and OKRs (Part 2)</a>
-                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse">
-                    
-                        <ul class="nav navbar-nav">
-                            
-                                <li><a href="/">Home</a></li>
-                            
-                                <li><a href="/about/">About</a></li>
-                            
-                                <li><a href="/post/">Posts</a></li>
-                            
-                                <li><a href="/reference/">Reference</a></li>
-                            
-                                <li><a href="/tags/">Tags</a></li>
-                            
-                        </ul>
-                    
-                    
-                </div>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.teale.de/" accesskey="h" title="Also sprach tealeg... (Alt + H)">Also sprach tealeg...</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
             </div>
-        </nav>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://www.teale.de/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/post/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/reference/" title="Reference">
+                    <span>Reference</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
 
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Maturity Matrices: A tool for DevX KPIs and OKRs (Part 2)
+    </h1>
+    <div class="post-meta"><span title='2022-05-06 00:00:00 +0000 UTC'>Fri May 6 2022</span>&nbsp;·&nbsp;Geoffrey J. Teale
 
-<main>
-
-    <div>
-        <h2>Maturity Matrices: A tool for DevX KPIs and OKRs (Part 2)</h2>
-        <h5>Fri May 6 2022</h5>
-        
-<a href="https://www.teale.de/tags/developer_experience"><kbd class="item-tag">developer_experience</kbd></a>
-
-<a href="https://www.teale.de/tags/devx"><kbd class="item-tag">devx</kbd></a>
-
-<a href="https://www.teale.de/tags/dx"><kbd class="item-tag">dx</kbd></a>
-
-<a href="https://www.teale.de/tags/metrics"><kbd class="item-tag">metrics</kbd></a>
-
-<a href="https://www.teale.de/tags/kpi"><kbd class="item-tag">kpi</kbd></a>
-
-<a href="https://www.teale.de/tags/okr"><kbd class="item-tag">okr</kbd></a>
-
-<a href="https://www.teale.de/tags/maturity"><kbd class="item-tag">maturity</kbd></a>
-
-<a href="https://www.teale.de/tags/cmmi"><kbd class="item-tag">cmmi</kbd></a>
-
-
-    </div>
-
-    <div align="start" class="content">
+</div>
+  </header> 
+  <div class="post-content">
 <div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 Building a DevX Maturity Matrix
@@ -1082,129 +1158,93 @@ And then our top level, reporting numbers:</p>
 </div>
 </div>
 </div>
-</div>
 
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://www.teale.de/tags/developer_experience/">developer_experience</a></li>
+      <li><a href="https://www.teale.de/tags/devx/">devx</a></li>
+      <li><a href="https://www.teale.de/tags/dx/">dx</a></li>
+      <li><a href="https://www.teale.de/tags/metrics/">metrics</a></li>
+      <li><a href="https://www.teale.de/tags/kpi/">kpi</a></li>
+      <li><a href="https://www.teale.de/tags/okr/">okr</a></li>
+      <li><a href="https://www.teale.de/tags/maturity/">maturity</a></li>
+      <li><a href="https://www.teale.de/tags/cmmi/">cmmi</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
     
-    
-    
-        <h4 class="page-header">Related</h4>
-         <div class="item">
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://www.teale.de/">Also sprach tealeg...</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-    
-    
-    
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
 
-    
-    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
 
-    <h4><a href="/post/devx/a-tool-for-devx-kpis-1/">Maturity Matrices: A tool for DevX KPIs and OKRs (Part 1)</a></h4>
-    <h5>Thu May 5 2022</h5>
-    
-<a href="https://www.teale.de/tags/developer_experience"><kbd class="item-tag">developer_experience</kbd></a>
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
-<a href="https://www.teale.de/tags/devx"><kbd class="item-tag">devx</kbd></a>
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-<a href="https://www.teale.de/tags/dx"><kbd class="item-tag">dx</kbd></a>
-
-<a href="https://www.teale.de/tags/metrics"><kbd class="item-tag">metrics</kbd></a>
-
-<a href="https://www.teale.de/tags/kpi"><kbd class="item-tag">kpi</kbd></a>
-
-<a href="https://www.teale.de/tags/okr"><kbd class="item-tag">okr</kbd></a>
-
-<a href="https://www.teale.de/tags/maturity"><kbd class="item-tag">maturity</kbd></a>
-
-<a href="https://www.teale.de/tags/cmmi"><kbd class="item-tag">cmmi</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/devx/devx-is-a-quality-process/">DevX is a Quality Process</a></h4>
-    <h5>Thu May 5 2022</h5>
-    
-<a href="https://www.teale.de/tags/developer_experience"><kbd class="item-tag">developer_experience</kbd></a>
-
-<a href="https://www.teale.de/tags/devx"><kbd class="item-tag">devx</kbd></a>
-
-<a href="https://www.teale.de/tags/dx"><kbd class="item-tag">dx</kbd></a>
-
-<a href="https://www.teale.de/tags/quality"><kbd class="item-tag">quality</kbd></a>
-
-<a href="https://www.teale.de/tags/process"><kbd class="item-tag">process</kbd></a>
-
-<a href="https://www.teale.de/tags/qa"><kbd class="item-tag">qa</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/life/why-the-long-pauses/">Why the long pause?</a></h4>
-    <h5>Fri Apr 8 2022</h5>
-    
-<a href="https://www.teale.de/tags/life"><kbd class="item-tag">life</kbd></a>
-
-<a href="https://www.teale.de/tags/update"><kbd class="item-tag">update</kbd></a>
-
-<a href="https://www.teale.de/tags/ux"><kbd class="item-tag">ux</kbd></a>
-
-<a href="https://www.teale.de/tags/dx"><kbd class="item-tag">dx</kbd></a>
-
-<a href="https://www.teale.de/tags/user_experience"><kbd class="item-tag">user_experience</kbd></a>
-
-<a href="https://www.teale.de/tags/developer_experience"><kbd class="item-tag">developer_experience</kbd></a>
-
-<a href="https://www.teale.de/tags/devx"><kbd class="item-tag">devx</kbd></a>
-
-<a href="https://www.teale.de/tags/go"><kbd class="item-tag">go</kbd></a>
-
-<a href="https://www.teale.de/tags/golang"><kbd class="item-tag">golang</kbd></a>
-
-<a href="https://www.teale.de/tags/book"><kbd class="item-tag">book</kbd></a>
-
-<a href="https://www.teale.de/tags/canonical"><kbd class="item-tag">canonical</kbd></a>
-
-<a href="https://www.teale.de/tags/kids"><kbd class="item-tag">kids</kbd></a>
-
-<a href="https://www.teale.de/tags/heetch"><kbd class="item-tag">heetch</kbd></a>
-
-<a href="https://www.teale.de/tags/meta"><kbd class="item-tag">meta</kbd></a>
-
-
-
-</div>
- 
-    
-
-    
-    
-
-</main>
-
-        <footer>
-            <p class="copyright text-muted">Copyright © Geoffrey J. Teale. All rights reserved. Powered by <a href='https://gohugo.io'>Hugo</a> and <a href='https://github.com/calintat/minimal'>Minimal</a>.</p>
-        </footer>
-
-        
-
-        
-    </body>
+</script>
+</body>
 
 </html>
-

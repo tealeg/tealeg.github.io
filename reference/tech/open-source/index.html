@@ -1,174 +1,345 @@
 <!DOCTYPE html>
-<html lang="en-gb">
-    <head>
-        
+<html lang="en" dir="auto">
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Open Source</title>
-        
-        <style>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Open Source | Also sprach tealeg...</title>
+<meta name="keywords" content="">
+<meta name="description" content="Here is a summary of some of the open source projects I&rsquo;ve either authored or contributed to.
+Applications csv2xlsx (Author) Convert CSV files to XLSX files
+xlsx2csv (Author) Convert XLSX files to CSV files
+naturalsort (Author) Perform natural sorting of data on the command line
+XSLXFindReplace (Author) Command line find and replace for content in XLSX files
+regula (Contributor) Business rules engine
+Landscape Client (Contributor) Client daemon of the Landscape systems management tool for Ubuntu.">
+<meta name="author" content="Geoffrey J. Teale">
+<link rel="canonical" href="https://www.teale.de/reference/tech/open-source/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://www.teale.de/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.teale.de/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.teale.de/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.teale.de/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.teale.de/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-    html body {
-        font-family: 'IBM Plex Serif', sans-serif;
-        background-color: white;
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Open Source" />
+<meta property="og:description" content="Here is a summary of some of the open source projects I&rsquo;ve either authored or contributed to.
+Applications csv2xlsx (Author) Convert CSV files to XLSX files
+xlsx2csv (Author) Convert XLSX files to CSV files
+naturalsort (Author) Perform natural sorting of data on the command line
+XSLXFindReplace (Author) Command line find and replace for content in XLSX files
+regula (Contributor) Business rules engine
+Landscape Client (Contributor) Client daemon of the Landscape systems management tool for Ubuntu." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.teale.de/reference/tech/open-source/" /><meta property="article:section" content="reference" />
+<meta property="article:published_time" content="2019-05-16T02:35:08&#43;02:00" />
+<meta property="article:modified_time" content="2019-05-16T02:35:08&#43;02:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Open Source"/>
+<meta name="twitter:description" content="Here is a summary of some of the open source projects I&rsquo;ve either authored or contributed to.
+Applications csv2xlsx (Author) Convert CSV files to XLSX files
+xlsx2csv (Author) Convert XLSX files to CSV files
+naturalsort (Author) Perform natural sorting of data on the command line
+XSLXFindReplace (Author) Command line find and replace for content in XLSX files
+regula (Contributor) Business rules engine
+Landscape Client (Contributor) Client daemon of the Landscape systems management tool for Ubuntu."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "References",
+      "item": "https://www.teale.de/reference/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Open Source",
+      "item": "https://www.teale.de/reference/tech/open-source/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Open Source",
+  "name": "Open Source",
+  "description": "Here is a summary of some of the open source projects I\u0026rsquo;ve either authored or contributed to.\nApplications csv2xlsx (Author) Convert CSV files to XLSX files\nxlsx2csv (Author) Convert XLSX files to CSV files\nnaturalsort (Author) Perform natural sorting of data on the command line\nXSLXFindReplace (Author) Command line find and replace for content in XLSX files\nregula (Contributor) Business rules engine\nLandscape Client (Contributor) Client daemon of the Landscape systems management tool for Ubuntu.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Here is a summary of some of the open source projects I’ve either authored or contributed to.\nApplications csv2xlsx (Author) Convert CSV files to XLSX files\nxlsx2csv (Author) Convert XLSX files to CSV files\nnaturalsort (Author) Perform natural sorting of data on the command line\nXSLXFindReplace (Author) Command line find and replace for content in XLSX files\nregula (Contributor) Business rules engine\nLandscape Client (Contributor) Client daemon of the Landscape systems management tool for Ubuntu. I was part of the core Landscape team at Canonical for 6 years.\nDrivers Brother P-Touch 2420PC (Original Author) Original Cups driver for the Brother P-Touch 2420PC label printer. My original work was massively expanded by Renaud Bompuis\nLibraries Go apexorc (Author) Output Apex log messages to ORC files\napexovernsq (Author) An NSQ bridge for log entries from Apex log\ncallstack (Author) Find out what called a given function in the current callstack\nconfita (Contributor) Load configuration in cascade from multiple backends into a struct\nfelice (Contributor) Opinionated Kafka library\nidgen (Author) Bulk UUID generator\nregula (Contributor) Business rules engine\nstdlogtoapex (Author) Bridge Go’s log packge to Apex log\nxlsx (Author) Read and write Microsoft XLSX files\nEmacs modes YUI mode (Author) Emacs minor mode to properly indent YUI Javascript files.\n",
+  "wordCount" : "206",
+  "inLanguage": "en",
+  "datePublished": "2019-05-16T02:35:08+02:00",
+  "dateModified": "2019-05-16T02:35:08+02:00",
+  "author":{
+    "@type": "Person",
+    "name": "Geoffrey J. Teale"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.teale.de/reference/tech/open-source/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Also sprach tealeg...",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.teale.de/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
     }
 
-    :root {
-        --accent: teal;
-        --border-width:  5px ;
-    }
+</script>
 
-</style>
-
-
-<link rel="stylesheet" href="https://www.teale.de/css/main.css">
-
-
- <link rel="stylesheet" href="https://www.teale.de/css/tealeg.css"> 
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM%20Plex%20Serif">
-
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
- 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scheme.min.js"></script>
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.97.3" />
-        
-
-        
-
-        
-            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        
-
-        
-
-    </head>
-
-    <body>
-        
-
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Open Source</a>
-                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse">
-                    
-                        <ul class="nav navbar-nav">
-                            
-                                <li><a href="/">Home</a></li>
-                            
-                                <li><a href="/about/">About</a></li>
-                            
-                                <li><a href="/post/">Posts</a></li>
-                            
-                                <li><a href="/reference/">Reference</a></li>
-                            
-                                <li><a href="/tags/">Tags</a></li>
-                            
-                        </ul>
-                    
-                    
-                </div>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.teale.de/" accesskey="h" title="Also sprach tealeg... (Alt + H)">Also sprach tealeg...</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
             </div>
-        </nav>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://www.teale.de/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/post/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/reference/" title="Reference">
+                    <span>Reference</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
 
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Open Source
+    </h1>
+    <div class="post-meta"><span title='2019-05-16 02:35:08 +0200 CEST'>Thu May 16 2019</span>&nbsp;·&nbsp;Geoffrey J. Teale
 
-<main>
-
-    <div>
-        <h2>Open Source</h2>
-        <h5></h5>
-        
-
-    </div>
-
-    <div align="start" class="content"><p>Here is a summary of some of the open source projects I&rsquo;ve either authored or contributed to.</p>
-<h2 id="applications">Applications</h2>
-<h3 id="csv2xlsxhttpsgithubcomtealegcsv2xlsx-author"><a href="https://github.com/tealeg/csv2xlsx">csv2xlsx</a> (Author)</h3>
-<p>Convert CSV files to XLSX files</p>
-<h3 id="xlsx2csvhttpsgithubcomtealegxlsx2csv-author"><a href="https://github.com/tealeg/xlsx2csv">xlsx2csv</a> (Author)</h3>
-<p>Convert XLSX files to CSV files</p>
-<h3 id="naturalsorthttpsgithubcomtealegnaturalsort-author"><a href="https://github.com/tealeg/naturalsort">naturalsort</a> (Author)</h3>
-<p>Perform natural sorting of data on the command line</p>
-<h3 id="xslxfindreplacehttpsgithubcomtealegxslxfindreplace-author"><a href="https://github.com/tealeg/XSLXFindReplace">XSLXFindReplace</a> (Author)</h3>
-<p>Command line find and replace for content in XLSX files</p>
-<h3 id="regulahttpsgithubcomheetchregula-contributor"><a href="https://github.com/heetch/regula">regula</a> (Contributor)</h3>
-<p>Business rules engine</p>
-<h3 id="landscape-clienthttpslaunchpadnetlandscape-client-contributor"><a href="https://launchpad.net/landscape-client">Landscape Client</a> (Contributor)</h3>
-<p>Client daemon of the <a href="https://landscape.canonical.com/">Landscape</a> systems management tool for Ubuntu.  I was part of the core Landscape team at Canonical for 6 years.</p>
-<h2 id="drivers">Drivers</h2>
-<h3 id="brother-p-touch-2420pchttpetcnkadesigncomprintersql550labelprintercups-original-author"><a href="http://etc.nkadesign.com/Printers/QL550LabelPrinterCUPS">Brother P-Touch 2420PC</a> (Original Author)</h3>
-<p>Original <a href="https://www.cups.org/">Cups</a> driver for the Brother P-Touch 2420PC label printer. My original work was massively expanded by <a href="http://blog.nkadesign.com">Renaud Bompuis</a></p>
-<h2 id="libraries">Libraries</h2>
-<h3 id="go">Go</h3>
-<h4 id="apexorchttpsgithubcomavctapexorc-author"><a href="https://github.com/avct/apexorc">apexorc</a> (Author)</h4>
-<p>Output Apex log messages to ORC files</p>
-<h4 id="apexovernsqhttpsgithubcomavctapexovernsq-author"><a href="https://github.com/avct/apexovernsq">apexovernsq</a> (Author)</h4>
-<p>An NSQ bridge for log entries from Apex log</p>
-<h4 id="callstackhttpsgithubcomtealegcallstack-author"><a href="https://github.com/tealeg/callstack">callstack</a> (Author)</h4>
-<p>Find out what called a given function in the current callstack</p>
-<h4 id="confitahttpsgithubcomheetchconfita-contributor"><a href="https://github.com/heetch/confita">confita</a> (Contributor)</h4>
-<p>Load configuration in cascade from multiple backends into a struct</p>
-<h4 id="felicehttpsgithubcomheetchfelice-contributor"><a href="https://github.com/heetch/felice">felice</a> (Contributor)</h4>
-<p>Opinionated <a href="https://kafka.apache.org">Kafka</a> library</p>
-<h4 id="idgenhttpsgithubcomtealegidgen-author"><a href="https://github.com/tealeg/idgen">idgen</a> (Author)</h4>
-<p>Bulk UUID generator</p>
-<h4 id="regulahttpsgithubcomheetchregula-contributor-1"><a href="https://github.com/heetch/regula">regula</a> (Contributor)</h4>
-<p>Business rules engine</p>
-<h4 id="stdlogtoapexhttpsgithubcomavctstdlogtoapex-author"><a href="https://github.com/avct/stdlogtoapex">stdlogtoapex</a> (Author)</h4>
-<p>Bridge Go&rsquo;s log packge to Apex log</p>
-<h4 id="xlsxhttpsgithubcomtealegxlsx-author"><a href="https://github.com/tealeg/xlsx">xlsx</a> (Author)</h4>
-<p>Read and write Microsoft XLSX files</p>
-<h2 id="emacs-modes">Emacs modes</h2>
-<h3 id="yui-modehttpsgithubcomtealegyui-mode-author"><a href="https://github.com/tealeg/yui-mode">YUI mode</a> (Author)</h3>
-<p>Emacs minor mode to properly indent YUI Javascript files.</p>
 </div>
+  </header> 
+  <div class="post-content"><p>Here is a summary of some of the open source projects I&rsquo;ve either authored or contributed to.</p>
+<h2 id="applications">Applications<a hidden class="anchor" aria-hidden="true" href="#applications">#</a></h2>
+<h3 id="csv2xlsxhttpsgithubcomtealegcsv2xlsx-author"><a href="https://github.com/tealeg/csv2xlsx">csv2xlsx</a> (Author)<a hidden class="anchor" aria-hidden="true" href="#csv2xlsxhttpsgithubcomtealegcsv2xlsx-author">#</a></h3>
+<p>Convert CSV files to XLSX files</p>
+<h3 id="xlsx2csvhttpsgithubcomtealegxlsx2csv-author"><a href="https://github.com/tealeg/xlsx2csv">xlsx2csv</a> (Author)<a hidden class="anchor" aria-hidden="true" href="#xlsx2csvhttpsgithubcomtealegxlsx2csv-author">#</a></h3>
+<p>Convert XLSX files to CSV files</p>
+<h3 id="naturalsorthttpsgithubcomtealegnaturalsort-author"><a href="https://github.com/tealeg/naturalsort">naturalsort</a> (Author)<a hidden class="anchor" aria-hidden="true" href="#naturalsorthttpsgithubcomtealegnaturalsort-author">#</a></h3>
+<p>Perform natural sorting of data on the command line</p>
+<h3 id="xslxfindreplacehttpsgithubcomtealegxslxfindreplace-author"><a href="https://github.com/tealeg/XSLXFindReplace">XSLXFindReplace</a> (Author)<a hidden class="anchor" aria-hidden="true" href="#xslxfindreplacehttpsgithubcomtealegxslxfindreplace-author">#</a></h3>
+<p>Command line find and replace for content in XLSX files</p>
+<h3 id="regulahttpsgithubcomheetchregula-contributor"><a href="https://github.com/heetch/regula">regula</a> (Contributor)<a hidden class="anchor" aria-hidden="true" href="#regulahttpsgithubcomheetchregula-contributor">#</a></h3>
+<p>Business rules engine</p>
+<h3 id="landscape-clienthttpslaunchpadnetlandscape-client-contributor"><a href="https://launchpad.net/landscape-client">Landscape Client</a> (Contributor)<a hidden class="anchor" aria-hidden="true" href="#landscape-clienthttpslaunchpadnetlandscape-client-contributor">#</a></h3>
+<p>Client daemon of the <a href="https://landscape.canonical.com/">Landscape</a> systems management tool for Ubuntu.  I was part of the core Landscape team at Canonical for 6 years.</p>
+<h2 id="drivers">Drivers<a hidden class="anchor" aria-hidden="true" href="#drivers">#</a></h2>
+<h3 id="brother-p-touch-2420pchttpetcnkadesigncomprintersql550labelprintercups-original-author"><a href="http://etc.nkadesign.com/Printers/QL550LabelPrinterCUPS">Brother P-Touch 2420PC</a> (Original Author)<a hidden class="anchor" aria-hidden="true" href="#brother-p-touch-2420pchttpetcnkadesigncomprintersql550labelprintercups-original-author">#</a></h3>
+<p>Original <a href="https://www.cups.org/">Cups</a> driver for the Brother P-Touch 2420PC label printer. My original work was massively expanded by <a href="http://blog.nkadesign.com">Renaud Bompuis</a></p>
+<h2 id="libraries">Libraries<a hidden class="anchor" aria-hidden="true" href="#libraries">#</a></h2>
+<h3 id="go">Go<a hidden class="anchor" aria-hidden="true" href="#go">#</a></h3>
+<h4 id="apexorchttpsgithubcomavctapexorc-author"><a href="https://github.com/avct/apexorc">apexorc</a> (Author)<a hidden class="anchor" aria-hidden="true" href="#apexorchttpsgithubcomavctapexorc-author">#</a></h4>
+<p>Output Apex log messages to ORC files</p>
+<h4 id="apexovernsqhttpsgithubcomavctapexovernsq-author"><a href="https://github.com/avct/apexovernsq">apexovernsq</a> (Author)<a hidden class="anchor" aria-hidden="true" href="#apexovernsqhttpsgithubcomavctapexovernsq-author">#</a></h4>
+<p>An NSQ bridge for log entries from Apex log</p>
+<h4 id="callstackhttpsgithubcomtealegcallstack-author"><a href="https://github.com/tealeg/callstack">callstack</a> (Author)<a hidden class="anchor" aria-hidden="true" href="#callstackhttpsgithubcomtealegcallstack-author">#</a></h4>
+<p>Find out what called a given function in the current callstack</p>
+<h4 id="confitahttpsgithubcomheetchconfita-contributor"><a href="https://github.com/heetch/confita">confita</a> (Contributor)<a hidden class="anchor" aria-hidden="true" href="#confitahttpsgithubcomheetchconfita-contributor">#</a></h4>
+<p>Load configuration in cascade from multiple backends into a struct</p>
+<h4 id="felicehttpsgithubcomheetchfelice-contributor"><a href="https://github.com/heetch/felice">felice</a> (Contributor)<a hidden class="anchor" aria-hidden="true" href="#felicehttpsgithubcomheetchfelice-contributor">#</a></h4>
+<p>Opinionated <a href="https://kafka.apache.org">Kafka</a> library</p>
+<h4 id="idgenhttpsgithubcomtealegidgen-author"><a href="https://github.com/tealeg/idgen">idgen</a> (Author)<a hidden class="anchor" aria-hidden="true" href="#idgenhttpsgithubcomtealegidgen-author">#</a></h4>
+<p>Bulk UUID generator</p>
+<h4 id="regulahttpsgithubcomheetchregula-contributor-1"><a href="https://github.com/heetch/regula">regula</a> (Contributor)<a hidden class="anchor" aria-hidden="true" href="#regulahttpsgithubcomheetchregula-contributor-1">#</a></h4>
+<p>Business rules engine</p>
+<h4 id="stdlogtoapexhttpsgithubcomavctstdlogtoapex-author"><a href="https://github.com/avct/stdlogtoapex">stdlogtoapex</a> (Author)<a hidden class="anchor" aria-hidden="true" href="#stdlogtoapexhttpsgithubcomavctstdlogtoapex-author">#</a></h4>
+<p>Bridge Go&rsquo;s log packge to Apex log</p>
+<h4 id="xlsxhttpsgithubcomtealegxlsx-author"><a href="https://github.com/tealeg/xlsx">xlsx</a> (Author)<a hidden class="anchor" aria-hidden="true" href="#xlsxhttpsgithubcomtealegxlsx-author">#</a></h4>
+<p>Read and write Microsoft XLSX files</p>
+<h2 id="emacs-modes">Emacs modes<a hidden class="anchor" aria-hidden="true" href="#emacs-modes">#</a></h2>
+<h3 id="yui-modehttpsgithubcomtealegyui-mode-author"><a href="https://github.com/tealeg/yui-mode">YUI mode</a> (Author)<a hidden class="anchor" aria-hidden="true" href="#yui-modehttpsgithubcomtealegyui-mode-author">#</a></h3>
+<p>Emacs minor mode to properly indent YUI Javascript files.</p>
 
-</main>
 
-        <footer>
-            <p class="copyright text-muted">Copyright © Geoffrey J. Teale. All rights reserved. Powered by <a href='https://gohugo.io'>Hugo</a> and <a href='https://github.com/calintat/minimal'>Minimal</a>.</p>
-        </footer>
+  </div>
 
-        
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://www.teale.de/">Also sprach tealeg...</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-        
-    </body>
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
 
 </html>
-

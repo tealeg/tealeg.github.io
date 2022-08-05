@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>linux on Also sprach tealeg...</title>
     <link>https://www.teale.de/tags/linux/</link>
@@ -34,7 +34,7 @@ wget http://ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2 tar xf ffmpeg-snapshot.t
       
       <guid>https://www.teale.de/post/tech/emacs/truetype-in-emacs/</guid>
       <description>Listing installed TrueType fonts in Emacs In this new fangled age of TrueType support in Emacs it&amp;rsquo;s really useful to know the names of the Monospace fonts installed on your system in the format that Emacs understands. If you are on a Linux/UNIX system running Xorg with fontconfig installed then add this function to your .emacs file
-(defun list-monospace-truetype-fonts ()  &amp;#34;Provide a list of available monospaced truetype fonts on this machine&amp;#34;  (interactive)  (set-buffer (get-buffer-create &amp;#34;Monospaced Fonts&amp;#34;))  (call-process-shell-command &amp;#34;fc-list :spacing=mono:scalable=true family | sort&amp;#34; nil t)  (setq buffer-read-only t)  (switch-to-buffer-other-window (current-buffer))) You can set these fonts in a number of ways, currently I am getting the most joy using this form:</description>
+(defun list-monospace-truetype-fonts () &amp;#34;Provide a list of available monospaced truetype fonts on this machine&amp;#34; (interactive) (set-buffer (get-buffer-create &amp;#34;Monospaced Fonts&amp;#34;)) (call-process-shell-command &amp;#34;fc-list :spacing=mono:scalable=true family | sort&amp;#34; nil t) (setq buffer-read-only t) (switch-to-buffer-other-window (current-buffer))) You can set these fonts in a number of ways, currently I am getting the most joy using this form:</description>
     </item>
     
     <item>

@@ -1,325 +1,367 @@
 <!DOCTYPE html>
-<html lang="en-gb">
-    <head>
-        
+<html lang="en" dir="auto">
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Posts</title>
-        
-        <style>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Posts | Also sprach tealeg...</title>
+<meta name="keywords" content="">
+<meta name="description" content="Posts - Also sprach tealeg...">
+<meta name="author" content="Geoffrey J. Teale">
+<link rel="canonical" href="https://www.teale.de/post/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://www.teale.de/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.teale.de/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.teale.de/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.teale.de/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.teale.de/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://www.teale.de/post/index.xml">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-    html body {
-        font-family: 'IBM Plex Serif', sans-serif;
-        background-color: white;
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Posts" />
+<meta property="og:description" content="&lt;a href=&#39;/about/&#39;&gt;Geoffrey J. Teale&lt;/a&gt;&#39;s collection of &lt;a href=&#39;/post/&#39;&gt;thoughts.&lt;/a&gt;" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.teale.de/post/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content="&lt;a href=&#39;/about/&#39;&gt;Geoffrey J. Teale&lt;/a&gt;&#39;s collection of &lt;a href=&#39;/post/&#39;&gt;thoughts.&lt;/a&gt;"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://www.teale.de/post/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
     }
 
-    :root {
-        --accent: teal;
-        --border-width:  5px ;
-    }
+</script>
 
-</style>
-
-
-<link rel="stylesheet" href="https://www.teale.de/css/main.css">
-
-
- <link rel="stylesheet" href="https://www.teale.de/css/tealeg.css"> 
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM%20Plex%20Serif">
-
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
- 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scheme.min.js"></script>
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.97.3" />
-        
-            <link href="/post/index.xml" rel="alternate" type="application/rss&#43;xml" title="Also sprach tealeg..." />
-            <link href="/post/index.xml" rel="feed" type="application/rss&#43;xml" title="Also sprach tealeg..." />
-        
-
-        
-
-        
-            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        
-
-        
-
-    </head>
-
-    <body>
-        
-
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Posts</a>
-                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse">
-                    
-                        <ul class="nav navbar-nav">
-                            
-                                <li><a href="/">Home</a></li>
-                            
-                                <li><a href="/about/">About</a></li>
-                            
-                                <li><a href="/post/">Posts</a></li>
-                            
-                                <li><a href="/reference/">Reference</a></li>
-                            
-                                <li><a href="/tags/">Tags</a></li>
-                            
-                        </ul>
-                    
-                    
-                </div>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.teale.de/" accesskey="h" title="Also sprach tealeg... (Alt + H)">Also sprach tealeg...</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
             </div>
-        </nav>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://www.teale.de/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/post/" title="Posts">
+                    <span class="active">Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/reference/" title="Reference">
+                    <span>Reference</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.teale.de/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Posts
+  </h1>
+</header>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Maturity Matrices: A tool for DevX KPIs and OKRs (Part 2)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Building a DevX Maturity Matrix I promised in Part I of this article that I&#39;d explain how I generate the headline numbers that I report as part of the KPIs or OKRs for the Developer eXperience of a product.
+The answer is rather simple but, at least initially, quite labourious.
+Reminder: what a maturity matrix is. A maturity matrix encodes a maturity level as a value (typically a positive integer) for every unique combination of product, feature, customer/developer type, and maturity type....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-05-06 00:00:00 +0000 UTC'>Fri May 6 2022</span>&nbsp;·&nbsp;Geoffrey J. Teale</footer>
+  <a class="entry-link" aria-label="post link to Maturity Matrices: A tool for DevX KPIs and OKRs (Part 2)" href="https://www.teale.de/post/devx/a-tool-for-devx-kpis-2/"></a>
+</article>
 
-<main>
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>DevX is a Quality Process
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>DevX is not just about what we create For all the good that a Developer eXperience team can do, by creating documentation, improving APIs, building tools and libraries, and fostering community, this will only ever constitute part of the total developer experience. The foundation stones of a good developer experience are actually in the hands of the core product teams.
+Delivering a quality product, which does what it should, and does it reliably, is the bedrock on which any developer&#39;s eXperience is based....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-05-05 00:00:00 +0000 UTC'>Thu May 5 2022</span>&nbsp;·&nbsp;Geoffrey J. Teale</footer>
+  <a class="entry-link" aria-label="post link to DevX is a Quality Process" href="https://www.teale.de/post/devx/devx-is-a-quality-process/"></a>
+</article>
 
-    <h2>Posts</h2>
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Maturity Matrices: A tool for DevX KPIs and OKRs (Part 1)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Introduction This blog post will introduce the Maturity Matrix I have been developing to help report on the state of Developer eXperience for a given product.
+In this first part, I&#39;ll explain why I think it&#39;s needed, what I report from it, and what those reports mean. In Part II I&#39;ll explain how I produce these numbers.
+KPIs and OKRs for DevX are hard Knowing how to describe goals and measure performance against those goals is a challenge for every DevX team....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-05-05 00:00:00 +0000 UTC'>Thu May 5 2022</span>&nbsp;·&nbsp;Geoffrey J. Teale</footer>
+  <a class="entry-link" aria-label="post link to Maturity Matrices: A tool for DevX KPIs and OKRs (Part 1)" href="https://www.teale.de/post/devx/a-tool-for-devx-kpis-1/"></a>
+</article>
 
-     <div class="item">
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Why the long pause?
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The history of my blog If you look back through my historic posts (many of which I’ve recently migrated here from my historic blog spot blog), you’ll notice that I’ve been blogging, on and off, since 2007. That’s actually not true - I had done some previous blogging on another platform (all now lost), and actually I’d written occasional thoughts on various “home pages” going all the way back to 1995....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-04-08 12:49:00 +0200 CEST'>Fri Apr 8 2022</span>&nbsp;·&nbsp;Geoffrey J. Teale</footer>
+  <a class="entry-link" aria-label="post link to Why the long pause?" href="https://www.teale.de/post/life/why-the-long-pauses/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Software Engineers Don&#39;t Scale
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Software Engineers don’t scale … or how I learned to stop worrying and love commenting my code. NOTE: I originally published this on the Inside Heetch blog
+This article, by Mathew Skelton and Manuel Pais, reminds me that, for everything that’s been made simpler in this era of cloud computing and micro-services, we’ve paid a price in terms of cognitive load. We simply need to keep more context in mind when making or evaluating any change to our code....</p>
+  </div>
+  <footer class="entry-footer"><span title='2019-07-04 15:57:18 +0200 CEST'>Thu Jul 4 2019</span>&nbsp;·&nbsp;Geoffrey J. Teale</footer>
+  <a class="entry-link" aria-label="post link to Software Engineers Don&#39;t Scale" href="https://www.teale.de/post/tech/software-engineers-dont-scale/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>System Updates With Mixin
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>If you use ClearLinux’s mixin to add custom bundles to your installation, you will still be able to update your upstream bundles, however it will nolonger be as simple as doing a sudo swupd update. Here are the step’s you need to go through, assuming you defined your mixin repository in ~/mixin-repo:
+cd ~/mixin-repo createrepo_c . sudo mixin build sudo swupd update --migrate … this is at least the process I have used, and which worked for me....</p>
+  </div>
+  <footer class="entry-footer"><span title='2019-05-15 16:25:21 +0200 CEST'>Wed May 15 2019</span>&nbsp;·&nbsp;Geoffrey J. Teale</footer>
+  <a class="entry-link" aria-label="post link to System Updates With Mixin" href="https://www.teale.de/post/tech/clearlinux/system-updates-with-mixin/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Developer Care
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Those of you who know me may be aware that at the end of August 2018, I left my job at Avocet to join a new team at Heetch.
+The main allure of the role at Heetch was the chance to be part of a team deliberately set up to act as a catalyst for product developers. The concept under which we work is known as “Developer Care”, and back in November I wrote a fairly extensive blog post for Heetch about what that means and how it came to be....</p>
+  </div>
+  <footer class="entry-footer"><span title='2019-05-15 15:57:18 +0200 CEST'>Wed May 15 2019</span>&nbsp;·&nbsp;Geoffrey J. Teale</footer>
+  <a class="entry-link" aria-label="post link to Developer Care" href="https://www.teale.de/post/tech/developer-care/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Enabling H.264 playback in Firefox on Intel&#39;s Clearlinux
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>In common with most Linux distros, Intel’s ClearLinux doesn’t ship H.264 decoding by default. Given the novel nature of ClearLinux there isn’t a nice off the shelf solution to this yet, so we have to use a workaround. I’ll try and find a better way to achieve this, but for now this will get H.264 video working in YouTube / Twitter etc, for now:
+wget http://ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2 tar xf ffmpeg-snapshot.tar.tz2 cd ffmpeg-snapshot ....</p>
+  </div>
+  <footer class="entry-footer"><span title='2019-05-15 15:41:30 +0200 CEST'>Wed May 15 2019</span>&nbsp;·&nbsp;Geoffrey J. Teale</footer>
+  <a class="entry-link" aria-label="post link to Enabling H.264 playback in Firefox on Intel&#39;s Clearlinux" href="https://www.teale.de/post/tech/clearlinux/h264-firefox-clearlinux/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Convert OpenOffice.org Calc FODS XML to something meaningful
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Get the code: The code in this blog post is now available at:
+http://github.com/tealeg/FODS2XML
+Background For a while now I’ve been receiving data in Excel files that needed to be integrated into some better structured XML data. Originally I was using a little xls2csv from the catdoc package in Arch Linux to pull the data from the horrible bloated XLS files into something usable.
+The trouble is the conversion to CSV was a little error prone and it’s really hard to see such errors in a 40MB CSV file....</p>
+  </div>
+  <footer class="entry-footer"><span title='2010-08-19 04:53:00 +0200 CEST'>Thu Aug 19 2010</span>&nbsp;·&nbsp;Geoffrey J. Teale</footer>
+  <a class="entry-link" aria-label="post link to Convert OpenOffice.org Calc FODS XML to something meaningful" href="https://www.teale.de/post/tech/programming/convert-openoffice-fods-xml/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Project Greyhound: My Granddad&#39;s camera
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>How this began A year or so ago, whilst I was visiting England on a business trip I took the time to go down and visit my parents. During this visit my dad indulged my interest in old cameras by digging out a few of his own old cameras and a couple of his fathers. The oldest two in this group were a Kodak Number 2 Brownie, in very good order, and an extremely battered looking Ensign Greyhound folding camera....</p>
+  </div>
+  <footer class="entry-footer"><span title='2010-04-05 10:59:00 +0200 CEST'>Mon Apr 5 2010</span>&nbsp;·&nbsp;Geoffrey J. Teale</footer>
+  <a class="entry-link" aria-label="post link to Project Greyhound: My Granddad&#39;s camera" href="https://www.teale.de/post/life/photography/project-greyhound/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="https://www.teale.de/post/page/2/">Next »</a>
+  </nav>
+</footer>
+    </main>
     
-    
-    
-
-    
-    
-
-    <h4><a href="/post/devx/a-tool-for-devx-kpis-2/">Maturity Matrices: A tool for DevX KPIs and OKRs (Part 2)</a></h4>
-    <h5>Fri May 6 2022</h5>
-    
-<a href="https://www.teale.de/tags/developer_experience"><kbd class="item-tag">developer_experience</kbd></a>
-
-<a href="https://www.teale.de/tags/devx"><kbd class="item-tag">devx</kbd></a>
-
-<a href="https://www.teale.de/tags/dx"><kbd class="item-tag">dx</kbd></a>
-
-<a href="https://www.teale.de/tags/metrics"><kbd class="item-tag">metrics</kbd></a>
-
-<a href="https://www.teale.de/tags/kpi"><kbd class="item-tag">kpi</kbd></a>
-
-<a href="https://www.teale.de/tags/okr"><kbd class="item-tag">okr</kbd></a>
-
-<a href="https://www.teale.de/tags/maturity"><kbd class="item-tag">maturity</kbd></a>
-
-<a href="https://www.teale.de/tags/cmmi"><kbd class="item-tag">cmmi</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/devx/devx-is-a-quality-process/">DevX is a Quality Process</a></h4>
-    <h5>Thu May 5 2022</h5>
-    
-<a href="https://www.teale.de/tags/developer_experience"><kbd class="item-tag">developer_experience</kbd></a>
-
-<a href="https://www.teale.de/tags/devx"><kbd class="item-tag">devx</kbd></a>
-
-<a href="https://www.teale.de/tags/dx"><kbd class="item-tag">dx</kbd></a>
-
-<a href="https://www.teale.de/tags/quality"><kbd class="item-tag">quality</kbd></a>
-
-<a href="https://www.teale.de/tags/process"><kbd class="item-tag">process</kbd></a>
-
-<a href="https://www.teale.de/tags/qa"><kbd class="item-tag">qa</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/devx/a-tool-for-devx-kpis-1/">Maturity Matrices: A tool for DevX KPIs and OKRs (Part 1)</a></h4>
-    <h5>Thu May 5 2022</h5>
-    
-<a href="https://www.teale.de/tags/developer_experience"><kbd class="item-tag">developer_experience</kbd></a>
-
-<a href="https://www.teale.de/tags/devx"><kbd class="item-tag">devx</kbd></a>
-
-<a href="https://www.teale.de/tags/dx"><kbd class="item-tag">dx</kbd></a>
-
-<a href="https://www.teale.de/tags/metrics"><kbd class="item-tag">metrics</kbd></a>
-
-<a href="https://www.teale.de/tags/kpi"><kbd class="item-tag">kpi</kbd></a>
-
-<a href="https://www.teale.de/tags/okr"><kbd class="item-tag">okr</kbd></a>
-
-<a href="https://www.teale.de/tags/maturity"><kbd class="item-tag">maturity</kbd></a>
-
-<a href="https://www.teale.de/tags/cmmi"><kbd class="item-tag">cmmi</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/life/why-the-long-pauses/">Why the long pause?</a></h4>
-    <h5>Fri Apr 8 2022</h5>
-    
-<a href="https://www.teale.de/tags/life"><kbd class="item-tag">life</kbd></a>
-
-<a href="https://www.teale.de/tags/update"><kbd class="item-tag">update</kbd></a>
-
-<a href="https://www.teale.de/tags/ux"><kbd class="item-tag">ux</kbd></a>
-
-<a href="https://www.teale.de/tags/dx"><kbd class="item-tag">dx</kbd></a>
-
-<a href="https://www.teale.de/tags/user_experience"><kbd class="item-tag">user_experience</kbd></a>
-
-<a href="https://www.teale.de/tags/developer_experience"><kbd class="item-tag">developer_experience</kbd></a>
-
-<a href="https://www.teale.de/tags/devx"><kbd class="item-tag">devx</kbd></a>
-
-<a href="https://www.teale.de/tags/go"><kbd class="item-tag">go</kbd></a>
-
-<a href="https://www.teale.de/tags/golang"><kbd class="item-tag">golang</kbd></a>
-
-<a href="https://www.teale.de/tags/book"><kbd class="item-tag">book</kbd></a>
-
-<a href="https://www.teale.de/tags/canonical"><kbd class="item-tag">canonical</kbd></a>
-
-<a href="https://www.teale.de/tags/kids"><kbd class="item-tag">kids</kbd></a>
-
-<a href="https://www.teale.de/tags/heetch"><kbd class="item-tag">heetch</kbd></a>
-
-<a href="https://www.teale.de/tags/meta"><kbd class="item-tag">meta</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/tech/software-engineers-dont-scale/">Software Engineers Don&#39;t Scale</a></h4>
-    <h5>Thu Jul 4 2019</h5>
-    
-<a href="https://www.teale.de/tags/tech"><kbd class="item-tag">tech</kbd></a>
-
-<a href="https://www.teale.de/tags/management"><kbd class="item-tag">management</kbd></a>
-
-<a href="https://www.teale.de/tags/organisation"><kbd class="item-tag">organisation</kbd></a>
-
-<a href="https://www.teale.de/tags/teams"><kbd class="item-tag">teams</kbd></a>
-
-<a href="https://www.teale.de/tags/developer-care"><kbd class="item-tag">developer care</kbd></a>
-
-<a href="https://www.teale.de/tags/heetch"><kbd class="item-tag">heetch</kbd></a>
-
-<a href="https://www.teale.de/tags/scaling"><kbd class="item-tag">scaling</kbd></a>
-
-<a href="https://www.teale.de/tags/software"><kbd class="item-tag">software</kbd></a>
-
-<a href="https://www.teale.de/tags/engineering"><kbd class="item-tag">engineering</kbd></a>
-
-<a href="https://www.teale.de/tags/commenting"><kbd class="item-tag">commenting</kbd></a>
-
-<a href="https://www.teale.de/tags/documentation"><kbd class="item-tag">documentation</kbd></a>
-
-<a href="https://www.teale.de/tags/efficiency"><kbd class="item-tag">efficiency</kbd></a>
-
-<a href="https://www.teale.de/tags/devx"><kbd class="item-tag">devx</kbd></a>
-
-<a href="https://www.teale.de/tags/developer_experience"><kbd class="item-tag">developer_experience</kbd></a>
-
-<a href="https://www.teale.de/tags/dx"><kbd class="item-tag">dx</kbd></a>
-
-
-
-</div>
- 
-
-</main>
-
-
-
-<div class="pages">
-
-    
-
-    
-        <a class="icon pages-icon" href="/post/page/2/" rel="next">
-            <i class="fa fa-arrow-right"></i>
-        </a>
-    
-
-</div>
-
-
-
-        <footer>
-            <p class="copyright text-muted">Copyright © Geoffrey J. Teale. All rights reserved. Powered by <a href='https://gohugo.io'>Hugo</a> and <a href='https://github.com/calintat/minimal'>Minimal</a>.</p>
-        </footer>
-
-        
-
-        
-    </body>
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://www.teale.de/">Also sprach tealeg...</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
 
 </html>
-
