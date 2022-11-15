@@ -5,6 +5,7 @@
     <link>https://www.teale.de/categories/</link>
     <description>Recent content in Categories on Also sprach tealeg...</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language><atom:link href="https://www.teale.de/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-gb</language>
+    <copyright>Copyright © Geoffrey J. Teale. All rights reserved. &lt;a rel=&#39;me&#39; href=&#39;https://mastodon.online/@tealeg&#39;&gt;Mastodon&lt;/a&gt;</copyright><atom:link href="https://www.teale.de/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
